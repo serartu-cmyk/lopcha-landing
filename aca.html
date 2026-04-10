@@ -384,9 +384,19 @@ body{font-family:var(--font-body);color:var(--text-primary);background:var(--whi
   </div>
 </footer>
 <script>
-let currentLang = 'es';
+let currentLang = localStorage.getItem('lopcha_lang') || 'es';
+(function(){
+  if(currentLang === 'en'){
+    document.getElementById('langBtn').textContent = 'ES';
+    document.querySelectorAll('[data-es]').forEach(el => {
+      const tx = el.getAttribute('data-en');
+      if(tx !== null) el.innerHTML = tx;
+    });
+  }
+})();
 function toggleLang() {
   currentLang = currentLang === 'es' ? 'en' : 'es';
+  localStorage.setItem('lopcha_lang', currentLang);
   document.getElementById('langBtn').textContent = currentLang === 'es' ? 'EN' : 'ES';
   document.querySelectorAll('[data-es]').forEach(el => {
     const text = el.getAttribute('data-' + currentLang);
