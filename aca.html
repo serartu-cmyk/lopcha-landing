@@ -65,7 +65,6 @@ body{font-family:var(--font-body);color:var(--text-primary);background:var(--whi
 .hero-title{font-family:var(--font-display);font-size:52px;font-weight:700;line-height:1.07;letter-spacing:-0.02em;color:var(--white);margin-bottom:22px;}
 .hero-title .accent{color:var(--gold);font-style:italic;}
 .hero-sub{font-size:16px;color:rgba(255,255,255,0.7);line-height:1.7;max-width:540px;margin-bottom:36px;font-weight:300;}
-.hero-sub strong{color:var(nt-weight:300;}
 .hero-sub strong{color:var(--white);font-weight:600;}
 .hero-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:48px;}
 .btn-primary{font-family:var(--font-body);font-size:15px;font-weight:700;background:var(--gold);color:var(--navy);border:none;border-radius:10px;padding:15px 32px;cursor:pointer;transition:all 0.2s;text-decoration:none;display:inline-flex;align-items:center;gap:8px;}
@@ -116,3 +115,284 @@ body{font-family:var(--font-body);color:var(--text-primary);background:var(--whi
 .s-cta:hover{background:#0d3d27;}
 .enroll-section{padding:80px 48px;}
 .enroll-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;max-width:960px;margin:48px auto 0;}
+.enroll-list{display:flex;flex-direction:column;gap:20px;}
+.enroll-item{display:flex;gap:16px;align-items:flex-start;}
+.enroll-icon{width:44px;height:44px;border-radius:12px;background:var(--teal-light);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.enroll-title{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:4px;}
+.enroll-desc{font-size:13px;color:var(--text-secondary);line-height:1.6;font-weight:300;}
+.enroll-callout{background:linear-gradient(145deg,#0d3d27,#1a8050);border-radius:22px;padding:36px;color:var(--white);}
+.enroll-callout-title{font-family:var(--font-display);font-size:26px;font-weight:700;color:var(--gold);margin-bottom:10px;}
+.enroll-callout-sub{font-size:14px;color:rgba(255,255,255,0.65);line-height:1.65;margin-bottom:24px;font-weight:300;}
+.enroll-callout-btn{display:inline-block;background:var(--gold);color:var(--navy);font-family:var(--font-body);font-size:14px;font-weight:700;padding:14px 24px;border-radius:10px;text-decoration:none;}
+.enroll-callout-btn:hover{background:#e8960f;}
+.faq-section{padding:80px 48px;background:var(--off-white);}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:960px;margin:48px auto 0;}
+.faq-item{background:var(--white);border:1px solid var(--border-soft);border-radius:16px;padding:22px 24px;}
+.faq-q{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:8px;line-height:1.4;}
+.faq-a{font-size:13px;color:var(--text-secondary);line-height:1.65;font-weight:300;}
+.cta-section{padding:80px 48px;background:linear-gradient(135deg,#0d3d27 0%,#1a8050 100%);text-align:center;}
+.cta-title{font-family:var(--font-display);font-size:42px;font-weight:700;color:var(--white);margin-bottom:16px;}
+.cta-sub{font-size:16px;color:rgba(255,255,255,0.6);margin-bottom:36px;font-weight:300;line-height:1.6;}
+.cta-actions{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;}
+.trust-row{display:flex;align-items:center;justify-content:center;gap:28px;margin-top:36px;flex-wrap:wrap;}
+.trust-item{font-size:12px;color:rgba(255,255,255,0.4);display:flex;align-items:center;gap:6px;}
+.trust-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,0.2);}
+@media(max-width:900px){
+  .hero{padding:60px 24px 60px;}
+  .hero-title{font-size:38px;}
+  .tiers-grid{grid-template-columns:1fr 1fr;}
+  .enroll-grid{grid-template-columns:1fr;}
+  .faq-grid{grid-template-columns:1fr;}
+  .s-row{grid-template-columns:1fr;}
+  .section,.subsidy-section,.enroll-section,.faq-section,.cta-section{padding:60px 24px;}
+}
+
+</style>
+</head>
+<body>
+<nav class="nav" id="top">
+  <div class="nav-logo">
+    <a href="/"><img src="/logo.svg" alt="Lopcha Insurance Agency"></a>
+  </div>
+  <div class="nav-links">
+    <a href="/medicare" class="nav-link " data-es="Medicare" data-en="Medicare">Medicare</a>
+    <a href="/aca" class="nav-link active" data-es="ACA" data-en="ACA">ACA</a>
+    <a href="/vida" class="nav-link " data-es="Vida" data-en="Life">Vida</a>
+    <a href="/#ensuro" class="nav-link" data-es="Ensuro IA" data-en="Ensuro AI">Ensuro IA</a>
+    <a href="/#agencia" class="nav-link" data-es="Agencia Partner" data-en="Partner Agency">Agencia Partner</a>
+  </div>
+  <div class="nav-right">
+    <a href="tel:+17544651469" class="nav-link" style="display:flex;align-items:center;gap:5px;color:rgba(255,255,255,0.5);font-size:12px;"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>(754) 465-1469</a>
+    <button class="nav-lang" onclick="toggleLang()" id="langBtn">EN</button>
+    <a href="/#contacto" class="nav-cta" data-es="Cotización gratis" data-en="Free quote">Cotización gratis</a>
+  </div>
+</nav>
+<div class="breadcrumb">
+  <div class="bc-inner">
+    <a href="/" class="bc-link" data-es="Lopcha" data-en="Lopcha">Lopcha</a>
+    <span class="bc-sep">›</span>
+    <span class="bc-current" data-es="ACA / Obamacare" data-en="ACA / Obamacare">ACA / Obamacare</span>
+  </div>
+</div>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      <span class="hero-badge-text" data-es="ACA · Marketplace · Todo EE.UU." data-en="ACA · Marketplace · All USA">ACA · Marketplace · Todo EE.UU.</span>
+    </div>
+    <h1 class="hero-title" data-es="Subsidios ACA que la <span class='accent'>mayoria no reclama.</span>" data-en="ACA subsidies <span class='accent'>most people miss.</span>">Subsidios ACA que la <span class="accent">mayoria no reclama.</span></h1>
+    <p class="hero-sub" data-es="9 de cada 10 personas que aplican califican para ayuda economica. <strong>Nuestros agentes certificados</strong> encuentran el maximo subsidio para tu situacion en cualquier estado." data-en="9 out of 10 applicants qualify for financial assistance. <strong>Our certified agents</strong> find the maximum subsidy for your situation in any state.">9 de cada 10 personas que aplican califican para ayuda economica. <strong>Nuestros agentes certificados</strong> encuentran el maximo subsidio para tu situacion en cualquier estado.</p>
+    <div class="hero-actions">
+      <a href="/#contacto" class="btn-primary" data-es="Verificar mi subsidio →" data-en="Check my subsidy →">Verificar mi subsidio →</a>
+      <a href="#planes" class="btn-secondary" data-es="Ver tipos de plan" data-en="See plan types">Ver tipos de plan</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="h-stat-num">90%</div><div class="h-stat-label" data-es="Califican para subsidio" data-en="Qualify for subsidy">Califican para subsidio</div></div>
+      <div><div class="h-stat-num">$0</div><div class="h-stat-label" data-es="Costo del servicio" data-en="Service cost">Costo del servicio</div></div>
+      <div><div class="h-stat-num">4</div><div class="h-stat-label" data-es="Niveles de plan disponibles" data-en="Plan levels available">Niveles de plan disponibles</div></div>
+      <div><div class="h-stat-num">ES/EN</div><div class="h-stat-label" data-es="Servicio bilingue" data-en="Bilingual service">Servicio bilingue</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="planes">
+  <div class="section-label" data-es="Niveles de cobertura" data-en="Coverage levels">Niveles de cobertura</div>
+  <h2 class="section-title" data-es="Los 4 niveles del Marketplace" data-en="The 4 Marketplace levels">Los 4 niveles del Marketplace</h2>
+  <p class="section-sub" data-es="Todos los planes cubren condiciones preexistentes y servicios preventivos. La diferencia esta en como se reparten los costos entre tu y el seguro." data-en="All plans cover pre-existing conditions and preventive services. The difference is how costs are split between you and the insurance.">Todos los planes cubren condiciones preexistentes y servicios preventivos. La diferencia esta en como se reparten los costos entre tu y el seguro.</p>
+  <div class="tiers-grid">
+    <div class="tier-card tier-bronze">
+      <div class="tier-icon">🥉</div>
+      <div class="tier-name" data-es="Bronce" data-en="Bronze">Bronce</div>
+      <p class="tier-desc" data-es="Prima baja, mas gastos de bolsillo. Ideal si raramente vas al medico y quieres proteccion ante emergencias grandes." data-en="Low premium, higher out-of-pocket costs. Ideal if you rarely visit the doctor and want protection against major emergencies.">Prima baja, mas gastos de bolsillo. Ideal si raramente vas al medico y quieres proteccion ante emergencias grandes.</p>
+      <div class="tier-key" data-es="El seguro paga" data-en="Insurance pays">El seguro paga</div>
+      <div class="tier-val">60%</div>
+    </div>
+    <div class="tier-card tier-silver">
+      <div class="tier-icon">🥈</div>
+      <div class="tier-name" data-es="Plata" data-en="Silver">Plata</div>
+      <p class="tier-desc" data-es="El nivel mas popular. Equilibrio entre prima y gastos. Unico nivel que califica para Reducciones de Costos Compartidos (CSR)." data-en="The most popular level. Balance between premium and costs. The only level that qualifies for Cost Sharing Reductions (CSR).">El nivel mas popular. Equilibrio entre prima y gastos. Unico nivel que califica para Reducciones de Costos Compartidos (CSR).</p>
+      <div class="tier-key" data-es="El seguro paga" data-en="Insurance pays">El seguro paga</div>
+      <div class="tier-val">70%</div>
+    </div>
+    <div class="tier-card tier-gold">
+      <div class="tier-icon">🥇</div>
+      <div class="tier-name" data-es="Oro" data-en="Gold">Oro</div>
+      <p class="tier-desc" data-es="Prima mas alta, menos gastos cuando usas el seguro. Ideal si tienes condiciones cronicas o visitas al medico frecuentemente." data-en="Higher premium, fewer costs when you use insurance. Ideal if you have chronic conditions or visit the doctor frequently.">Prima mas alta, menos gastos cuando usas el seguro. Ideal si tienes condiciones cronicas o visitas al medico frecuentemente.</p>
+      <div class="tier-key" data-es="El seguro paga" data-en="Insurance pays">El seguro paga</div>
+      <div class="tier-val">80%</div>
+    </div>
+    <div class="tier-card tier-platinum">
+      <div class="tier-icon">💎</div>
+      <div class="tier-name" data-es="Platino" data-en="Platinum">Platino</div>
+      <p class="tier-desc" data-es="Maxima cobertura, gastos de bolsillo minimos. Para quien usa el seguro con mucha frecuencia y prefiere predictibilidad de gastos." data-en="Maximum coverage, minimal out-of-pocket costs. For those who use insurance very frequently and prefer predictable expenses.">Maxima cobertura, gastos de bolsillo minimos. Para quien usa el seguro con mucha frecuencia y prefiere predictibilidad de gastos.</p>
+      <div class="tier-key" data-es="El seguro paga" data-en="Insurance pays">El seguro paga</div>
+      <div class="tier-val">90%</div>
+    </div>
+  </div>
+</section>
+
+<section class="subsidy-section">
+  <div style="text-align:center;max-width:700px;margin:0 auto;">
+    <div class="section-label" data-es="Calculadora de subsidios" data-en="Subsidy calculator">Calculadora de subsidios</div>
+    <h2 class="section-title" data-es="¿Cuanto subsidio puedes recibir?" data-en="How much subsidy can you receive?">¿Cuanto subsidio puedes recibir?</h2>
+    <p class="section-sub" style="margin:0 auto 0;" data-es="Ingresa tu informacion basica para una estimacion inmediata. Un agente certificado te confirmara el monto exacto." data-en="Enter your basic information for an immediate estimate. A certified agent will confirm the exact amount.">Ingresa tu informacion basica para una estimacion inmediata. Un agente certificado te confirmara el monto exacto.</p>
+  </div>
+  <div class="subsidy-box">
+    <div class="subsidy-top">
+      <div class="subsidy-top-title" data-es="Estimador de Subsidio ACA" data-en="ACA Subsidy Estimator">Estimador de Subsidio ACA</div>
+      <div class="subsidy-top-sub" data-es="Estimacion orientativa · sin compromiso · gratuita" data-en="Rough estimate · no commitment · free">Estimacion orientativa · sin compromiso · gratuita</div>
+    </div>
+    <div class="subsidy-body">
+      <div class="s-row">
+        <div>
+          <label class="s-label" data-es="Personas en el hogar" data-en="Household members">Personas en el hogar</label>
+          <select class="s-input">
+            <option>1 persona</option>
+            <option selected>2 personas</option>
+            <option>3 personas</option>
+            <option>4 personas</option>
+            <option>5+ personas</option>
+          </select>
+        </div>
+        <div>
+          <label class="s-label" data-es="Ingreso familiar anual estimado" data-en="Estimated annual household income">Ingreso familiar anual estimado</label>
+          <select class="s-input">
+            <option>Menos de $20,000</option>
+            <option selected>$20,000 — $40,000</option>
+            <option>$40,000 — $60,000</option>
+            <option>$60,000 — $80,000</option>
+            <option>Mas de $80,000</option>
+          </select>
+        </div>
+      </div>
+      <div class="s-result">
+        <div>
+          <div class="s-result-text" data-es="Subsidio mensual estimado" data-en="Estimated monthly subsidy">Subsidio mensual estimado</div>
+          <div style="font-size:12px;color:var(--teal);opacity:0.6;font-weight:300;margin-top:3px;" data-es="Para 2 personas · $30K/año · plan Plata" data-en="For 2 people · $30K/year · Silver plan">Para 2 personas · $30K/año · plan Plata</div>
+        </div>
+        <div style="text-align:right;">
+          <div class="s-result-amount">~$620</div>
+          <div style="font-size:11px;color:var(--teal);opacity:0.6;" data-es="/mes" data-en="/month">/mes</div>
+        </div>
+      </div>
+      <a href="/#contacto" class="s-cta" data-es="Confirmar monto exacto con un agente →" data-en="Confirm exact amount with an agent →">Confirmar monto exacto con un agente →</a>
+      <div style="font-size:11px;color:var(--text-muted);text-align:center;margin-top:12px;font-weight:300;" data-es="El subsidio real depende de tu ingreso exacto, estado y composicion del hogar." data-en="The actual subsidy depends on your exact income, state and household composition.">El subsidio real depende de tu ingreso exacto, estado y composicion del hogar.</div>
+    </div>
+  </div>
+</section>
+
+<section class="enroll-section">
+  <div style="text-align:center;max-width:700px;margin:0 auto 0;">
+    <div class="section-label" data-es="Periodos de inscripcion" data-en="Enrollment periods">Periodos de inscripcion</div>
+    <h2 class="section-title" data-es="¿Cuando puedes inscribirte?" data-en="When can you enroll?">¿Cuando puedes inscribirte?</h2>
+  </div>
+  <div class="enroll-grid">
+    <div class="enroll-list">
+      <div class="enroll-item">
+        <div class="enroll-icon">📅</div>
+        <div>
+          <div class="enroll-title" data-es="Periodo Abierto de Inscripcion" data-en="Open Enrollment Period">Periodo Abierto de Inscripcion</div>
+          <p class="enroll-desc" data-es="Del 1 de noviembre al 15 de enero. Cualquier persona puede inscribirse o cambiar de plan durante este periodo anual." data-en="November 1 to January 15. Anyone can enroll or change plans during this annual period.">Del 1 de noviembre al 15 de enero. Cualquier persona puede inscribirse o cambiar de plan durante este periodo anual.</p>
+        </div>
+      </div>
+      <div class="enroll-item">
+        <div class="enroll-icon">⚡</div>
+        <div>
+          <div class="enroll-title" data-es="Periodo Especial de Inscripcion" data-en="Special Enrollment Period">Periodo Especial de Inscripcion</div>
+          <p class="enroll-desc" data-es="Si perdiste tu seguro de trabajo, tuviste un hijo, te casaste, o te mudaste, puedes inscribirte en cualquier momento del año." data-en="If you lost your work insurance, had a child, got married, or moved, you can enroll any time of year.">Si perdiste tu seguro de trabajo, tuviste un hijo, te casaste, o te mudaste, puedes inscribirte en cualquier momento del año.</p>
+        </div>
+      </div>
+      <div class="enroll-item">
+        <div class="enroll-icon">💰</div>
+        <div>
+          <div class="enroll-title" data-es="Medicaid (en cualquier momento)" data-en="Medicaid (anytime)">Medicaid (en cualquier momento)</div>
+          <p class="enroll-desc" data-es="Si tu ingreso es bajo, puedes calificar para Medicaid y inscribirte durante todo el año, sin esperar un periodo especifico." data-en="If your income is low, you may qualify for Medicaid and can enroll throughout the year, without waiting for a specific period.">Si tu ingreso es bajo, puedes calificar para Medicaid y inscribirte durante todo el año, sin esperar un periodo especifico.</p>
+        </div>
+      </div>
+    </div>
+    <div class="enroll-callout">
+      <div class="enroll-callout-title" data-es="¿Sin seguro ahora mismo?" data-en="No insurance right now?">¿Sin seguro ahora mismo?</div>
+      <p class="enroll-callout-sub" data-es="Puede que califiques para un Periodo Especial de Inscripcion hoy mismo. Nuestros agentes verifican tu elegibilidad en minutos y manejan todo el proceso sin costo." data-en="You may qualify for a Special Enrollment Period today. Our agents verify your eligibility in minutes and handle the entire process at no cost.">Puede que califiques para un Periodo Especial de Inscripcion hoy mismo. Nuestros agentes verifican tu elegibilidad en minutos y manejan todo el proceso sin costo.</p>
+      <a href="/#contacto" class="enroll-callout-btn" data-es="Verificar elegibilidad →" data-en="Check eligibility →">Verificar elegibilidad →</a>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section" id="faq">
+  <div style="text-align:center;max-width:700px;margin:0 auto;">
+    <div class="section-label" data-es="Preguntas frecuentes" data-en="Frequently asked questions">Preguntas frecuentes</div>
+    <h2 class="section-title" data-es="Todo sobre el ACA" data-en="Everything about ACA">Todo sobre el ACA</h2>
+  </div>
+  <div class="faq-grid">
+    <div class="faq-item">
+      <div class="faq-q" data-es="¿Que es el APTC o subsidio fiscal?" data-en="What is APTC or tax subsidy?">¿Que es el APTC o subsidio fiscal?</div>
+      <p class="faq-a" data-es="El Advanced Premium Tax Credit (APTC) es una ayuda del gobierno que reduce tu prima mensual directamente. Se calcula basado en tu ingreso y el numero de personas en tu hogar. La mayoria lo recibe mes a mes sin esperar la declaracion de impuestos." data-en="The Advanced Premium Tax Credit (APTC) is government assistance that reduces your monthly premium directly. It's calculated based on your income and household size. Most receive it monthly without waiting for tax filing.">El Advanced Premium Tax Credit (APTC) es una ayuda del gobierno que reduce tu prima mensual directamente. Se calcula basado en tu ingreso y el numero de personas en tu hogar. La mayoria lo recibe mes a mes sin esperar la declaracion de impuestos.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" data-es="¿Cubre el ACA condiciones preexistentes?" data-en="Does ACA cover pre-existing conditions?">¿Cubre el ACA condiciones preexistentes?</div>
+      <p class="faq-a" data-es="Si. Por ley, ninguna aseguradora del Marketplace puede negarte cobertura ni cobrarte mas por diabetes, cancer, problemas del corazon u otras condiciones preexistentes. Esta es una de las protecciones mas importantes del ACA." data-en="Yes. By law, no Marketplace insurer can deny you coverage or charge you more for diabetes, cancer, heart problems or other pre-existing conditions. This is one of the most important ACA protections.">Si. Por ley, ninguna aseguradora del Marketplace puede negarte cobertura ni cobrarte mas por diabetes, cancer, problemas del corazon u otras condiciones preexistentes. Esta es una de las protecciones mas importantes del ACA.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" data-es="¿Puedo obtener ACA si soy trabajador independiente?" data-en="Can I get ACA if I'm self-employed?">¿Puedo obtener ACA si soy trabajador independiente?</div>
+      <p class="faq-a" data-es="Si, el ACA fue diseñado especialmente para personas sin acceso a seguro de empleador. Los trabajadores independientes, freelancers y duenos de negocios suelen calificar para los mejores subsidios." data-en="Yes, ACA was designed especially for people without access to employer insurance. Self-employed workers, freelancers and business owners often qualify for the best subsidies.">Si, el ACA fue diseñado especialmente para personas sin acceso a seguro de empleador. Los trabajadores independientes, freelancers y duenos de negocios suelen calificar para los mejores subsidios.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" data-es="¿Atienden en estados fuera de Florida?" data-en="Do you serve states outside Florida?">¿Atienden en estados fuera de Florida?</div>
+      <p class="faq-a" data-es="Si. Nuestros agentes estan certificados y licenciados en multiples estados. Podemos inscribirte en el Marketplace de tu estado sin importar donde vivas, todo por telefono o videollamada." data-en="Yes. Our agents are certified and licensed in multiple states. We can enroll you in your state's Marketplace no matter where you live, all by phone or video call.">Si. Nuestros agentes estan certificados y licenciados en multiples estados. Podemos inscribirte en el Marketplace de tu estado sin importar donde vivas, todo por telefono o videollamada.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" data-es="¿Tiene costo el servicio de Lopcha?" data-en="Does Lopcha's service have a cost?">¿Tiene costo el servicio de Lopcha?</div>
+      <p class="faq-a" data-es="No. Nuestros agentes son compensados directamente por las aseguradoras, por lo que el servicio de asesoria, comparacion e inscripcion no tiene ningun costo para ti." data-en="No. Our agents are compensated directly by insurers, so the advisory, comparison and enrollment service has no cost to you.">No. Nuestros agentes son compensados directamente por las aseguradoras, por lo que el servicio de asesoria, comparacion e inscripcion no tiene ningun costo para ti.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" data-es="¿Que documentos necesito para inscribirme?" data-en="What documents do I need to enroll?">¿Que documentos necesito para inscribirme?</div>
+      <p class="faq-a" data-es="Generalmente necesitas: numero de Seguro Social o ITIN, estimado de ingreso del año en curso, informacion de miembros del hogar y, si aplica, informacion del seguro actual. Nuestros agentes te guian paso a paso." data-en="You generally need: Social Security number or ITIN, current year income estimate, household member information and, if applicable, current insurance information. Our agents guide you step by step.">Generalmente necesitas: numero de Seguro Social o ITIN, estimado de ingreso del año en curso, informacion de miembros del hogar y, si aplica, informacion del seguro actual. Nuestros agentes te guian paso a paso.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2 class="cta-title" data-es="Reclama tu subsidio ACA hoy." data-en="Claim your ACA subsidy today.">Reclama tu subsidio ACA hoy.</h2>
+  <p class="cta-sub" data-es="Inscripcion gratuita · Sin presion · Servicio en espanol · Multiples estados" data-en="Free enrollment · No pressure · Spanish service · Multiple states">Inscripcion gratuita · Sin presion · Servicio en espanol · Multiples estados</p>
+  <div class="cta-actions">
+    <a href="/#contacto" class="btn-primary" style="font-size:16px;padding:17px 36px;" data-es="Verificar mi elegibilidad →" data-en="Check my eligibility →">Verificar mi elegibilidad →</a>
+    <a href="tel:+17544651469" class="btn-secondary" style="font-size:16px;padding:17px 28px;">📞 (754) 465-1469</a>
+  </div>
+  <div class="trust-row">
+    <span class="trust-item"><span class="trust-dot"></span><span data-es="Agentes certificados federalmente" data-en="Federally certified agents">Agentes certificados federalmente</span></span>
+    <span class="trust-item"><span class="trust-dot"></span><span data-es="Servicio en espanol e ingles" data-en="Service in Spanish and English">Servicio en espanol e ingles</span></span>
+    <span class="trust-item"><span class="trust-dot"></span><span data-es="Sunrise, FL · Multiples estados" data-en="Sunrise, FL · Multiple states">Sunrise, FL · Multiples estados</span></span>
+    <span class="trust-item"><span class="trust-dot"></span><span data-es="Sin costo de inscripcion" data-en="No enrollment cost">Sin costo de inscripcion</span></span>
+  </div>
+</section>
+<footer class="footer">
+  <div>
+    <div class="footer-logo"><a href="/"><img src="/logo.svg" alt="Lopcha Insurance Agency"></a></div>
+    <div class="footer-copy">© 2026 Lopcha Services LLC · Sunrise, FL · (754) 465-1469<br>
+    <span data-es="Agentes licenciados en múltiples estados · Medicare · ACA · Seguro de Vida" data-en="Licensed agents in multiple states · Medicare · ACA · Life Insurance">Agentes licenciados en múltiples estados · Medicare · ACA · Seguro de Vida</span></div>
+  </div>
+  <div>
+    <div class="footer-links">
+      <a href="/" class="footer-link" data-es="Inicio" data-en="Home">Inicio</a>
+      <a href="/medicare" class="footer-link">Medicare</a>
+      <a href="/aca" class="footer-link">ACA</a>
+      <a href="/vida" class="footer-link" data-es="Vida" data-en="Life">Vida</a>
+      <a href="/#contacto" class="footer-link" data-es="Contacto" data-en="Contact">Contacto</a>
+    </div>
+    <div style="font-size:12px;color:rgba(255,255,255,0.3);">lopcha.com</div>
+  </div>
+</footer>
+<script>
+let currentLang = 'es';
+function toggleLang() {
+  currentLang = currentLang === 'es' ? 'en' : 'es';
+  document.getElementById('langBtn').textContent = currentLang === 'es' ? 'EN' : 'ES';
+  document.querySelectorAll('[data-es]').forEach(el => {
+    const text = el.getAttribute('data-' + currentLang);
+    if (text !== null) el.innerHTML = text;
+  });
+}
+</script>
+</body>
+            </html>
