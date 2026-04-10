@@ -30,614 +30,478 @@
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{font-family:var(--font-body);color:var(--text-primary);background:var(--white);overflow-x:hidden;line-height:1;}ha.com/aca">
-<meta property="og:image" content="https://lopcha.com/og-image.png">
-<title>Seguro ACA · Obamacare — Lopcha Insurance Agency</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-<style>
-
-:root{
-  --navy:#001c3d;--navy-mid:#002a5c;
-  --gold:#F5A623;--gold-light:#FDF3E0;--gold-dark:#C47F0A;
-  --white:#FFFFFF;--off-white:#F8F9FB;
-  --text-primary:#0D1B2A;--text-secondary:#4A5568;--text-muted:#8FA3B8;
-  --border:rgba(0,28,61,0.10);--border-soft:rgba(0,28,61,0.06);
-  --teal:#1D9E75;--teal-light:#E1F5EE;
-  --purple:#5B3FA6;--purple-light:#EDE9FA;--purple-dark:#3D2875;
-  --font-display:'Playfair Display',Georgia,serif;
-  --font-body:'Plus Jakarta Sans',sans-serif;
-}
-*{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{font-family:var(--font-body);color:var(--text-primary);background:var(--white);overflow-x:hidden;line-height:1;}bc-inner{display:flex;align-items:center;gap:8px;font-size:12px;}
+body{font-family:var(--font-body);color:var(--text-primary);background:var(--white);overflow-x:hidden;line-height:1;}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:64px;background:var(--navy);position:sticky;top:0;z-index:100;}
+.nav-logo img{height:36px;width:auto;display:block;}
+.nav-links{display:flex;align-items:center;gap:26px;}
+.nav-link{font-size:13px;color:rgba(255,255,255,0.6);cursor:pointer;transition:color 0.2s;font-weight:400;text-decoration:none;}
+.nav-link:hover{color:var(--white);}
+.nav-link.active{color:var(--gold);}
+.nav-right{display:flex;align-items:center;gap:10px;}
+.nav-lang{font-size:12px;color:rgba(255,255,255,0.5);background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:6px;padding:5px 10px;cursor:pointer;transition:all 0.2s;}
+.nav-lang:hover{background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.9);}
+.nav-cta{font-family:var(--font-body);font-size:13px;font-weight:600;background:var(--gold);color:var(--navy);border:none;border-radius:8px;padding:9px 20px;cursor:pointer;transition:all 0.2s;text-decoration:none;}
+.nav-cta:hover{background:#e8960f;}
+.breadcrumb{padding:14px 48px;background:var(--off-white);border-bottom:1px solid var(--border-soft);}
+.bc-inner{display:flex;align-items:center;gap:8px;font-size:12px;}
 .bc-link{color:var(--text-muted);text-decoration:none;}
 .bc-link:hover{color:var(--navy);}
-.nav-breadcrumb{margin-bottom:30px;font-size:13px;display:flex;gap:4px;}
-.nav-breadcrumb a{color:var(--teal);text-decoration:none;}
-.nav-breadcrumb a:hover{text-decoration:underline;}
-.section{border-bottom:1px solid var(--border);padding:40px 0;margin:0;}
-.section.last{border-bottom:none;}
-.section h2{font-family:var(--font-display);font-size:32px;color:var(--navy);margin-bottom:20px;font-weight:700;}
-.section p{color:var(--text-secondary);line-height:1.6;margin:12px 0;font-size:15px;}
-.section ul{margin:16px 0;padding-left:20px;}
-.section li{color:var(--text-secondary);margin:10px 0;line-height:1.6;}
-.callout{border:1px solid rgba(245,166,35,0.2);border-radius:8px;padding:24px;background:rgba(245,166,35,0.05);margin:24px 0;}
-.callout.gold p,.callout.gold li{color:var(--text-primary);}
-.callout.blue{border:1px solid rgba(29,158,117,0.2);background:rgba(29,158,117,0.05);}
-.table-container{margin:20px 0;overflow-x:auto;}
-.table-container table{width:100%;border-collapse:collapse;}
-.table-container th{background:var(--off-white);border:1px solid var(--border);padding:12px;text-align:left;font-weight:600;color:var(--navy);}
-.table-container td{border:1px solid var(--border);padding:12px;color:var(--text-secondary);}
-.table-container tr:nth-child(even){background:rgba(0,28,61,0.02);}
-.faq{margin:32px 0;}
-.faq-item{border-bottom:1px solid var(--border);padding:18px 0;margin:20px 0;}
-.faq-question{font-family:var(--font-body);font-size:15px;font-weight:500;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none;}
-.faq-question::after{content:'→';font-size:16px;transition:transform 0.3s;}
-.faq-item.open .faq-question::after{transform:rotate(90deg);}
-.faq-answer{margin-top:12px;color:var(--text-secondary);line-height:1.6;display:none;}
-.faq-item.open .faq-answer{display:block;}
-.pricing-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin:32px 0;}
-.pricing-card{border:1px solid var(--border);border-radius:8px;padding:32px;background:var(--white);transition:all 0.3s;text-align:center;}
-.pricing-card:hover{border-color:var(--gold);box-shadow:0 8px 24px rgba(0,28,61,0.1);}
-.pricing-card h3{color:var(--navy);margin-bottom:12px;font-size:18px;font-weight:700;}
-.pricing-card.featured{border-color:var(--gold);background:var(--gold-light);}
-.pricing-amount{color:var(--gold);margin-bottom:8px;font-weight:700;font-size:14px;}
-.h-stat-label{font-size:13px;color:var(--text-secondary);}
-.h-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:32px;padding:32px 0;border-bottom:1px solid var(--border);}
-.h-stat{text-align:center;}
-.h-stat-num{font-size:32px;font-weight:700;color:var(--gold);margin-bottom:8px;}
-.h-stat-text{font-size:14px;color:var(--text-secondary);}
-.h-cta{padding:20px 0;border-bottom:1px solid var(--border);}
-.tier{margin-bottom:48px;padding:32px;background:var(--off-white);border-radius:8px;}
-.tier-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;}
-.tier-bronze{background:linear-gradient(135deg,rgba(184,134,11,0.1) 0%,rgba(184,134,11,0.05) 100%);}
-.tier-bronze{background:linear-gradient(135deg,rgba(212,175,55,0.1) 0%,rgba(212,175,55,0.05) 100%);}
-.tier-silver{background:linear-gradient(135deg,rgba(192,192,192,0.1) 0%,rgba(192,192,192,0.05) 100%);}
-.tier-gold{background:linear-gradient(135deg,rgba(245,166,35,0.15) 0%,rgba(245,166,35,0.08) 100%);}
-.tier-platinum{background:linear-gradient(135deg,rgba(230,230,250,0.15) 0%,rgba(230,230,250,0.08) 100%);}.tier-title{font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--navy);}
-.tier-subtitle{color:var(--text-secondary);font-size:13px;}
-.tier-benefits{list-style:none;padding:0;margin:20px 0;}
-.tier-benefits li{padding:8px 0;color:var(--text-secondary);font-size:14px;position:relative;padding-left:24px;}
-.tier-benefits li::before{content:'✓';position:absolute;left:0;color:var(--teal);font-weight:700;}
-.tier-key{font-size:13px;font-weight:600;color:var(--navy);margin-top:20px;padding-top:20px;border-top:1px solid rgba(0,28,61,0.1);}
-.subsidy-calc{background:var(--off-white);padding:32px;border-radius:8px;margin:32px 0;}
-.subsidy-calc h3{color:var(--navy);margin-bottom:20px;font-size:18px;font-weight:700;}
-.subsidy-form{display:grid;gap:16px;}
-.form-group{display:flex;flex-direction:column;}
-.form-group label{font-size:13px;font-weight:600;color:var(--navy);margin-bottom:6px;}
-.form-group input,.form-group select{padding:10px;border:1px solid var(--border);border-radius:4px;font-size:14px;font-family:var(--font-body);}
-.form-group input:focus,.form-group select:focus{outline:none;border-color:var(--teal);}
-.subsidy-body{padding:20px;background:rgba(29,158,117,0.05);border-radius:4px;border-left:4px solid var(--teal);margin-top:12px;}
-.subsidy-title{font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--teal);margin-bottom:8px;}
-.subsidy-amount{font-size:24px;font-weight:700;color:var(--navy);}
+.bc-sep{color:var(--text-muted);}
+.bc-current{color:var(--navy);font-weight:500;}
+.footer{padding:32px 48px;background:var(--navy);display:flex;align-items:flex-start;justify-content:space-between;gap:32px;}
+.footer-logo img{height:28px;width:auto;display:block;margin-bottom:10px;}
+.footer-copy{font-size:12px;color:rgba(255,255,255,0.3);line-height:1.6;max-width:440px;}
+.footer-links{display:flex;gap:20px;margin-bottom:8px;}
+.footer-link{font-size:12px;color:rgba(255,255,255,0.4);cursor:pointer;text-decoration:none;}
+.footer-link:hover{color:rgba(255,255,255,0.8);}
+
+
+.hero{position:relative;overflow:hidden;padding:90px 48px 80px;background:linear-gradient(160deg,#0d3d27 0%,#146b42 55%,#1a8050 100%);}
+.hero-bg{position:absolute;ind);text-decoration:none;}
+.bc-link:hover{color:var(--navy);}
+.bc-sep{color:var(--text-muted);}
+.bc-current{color:var(--navy);font-weight:500;}
+.footer{padding:32px 48px;background:var(--navy);display:flex;align-items:flex-start;justify-content:space-between;gap:32px;}
+.footer-logo img{height:28px;width:auto;display:block;margin-bottom:10px;}
+.footer-copy{font-size:12px;color:rgba(255,255,255,0.3);line-height:1.6;max-width:440px;}
+.footer-links{display:flex;gap:20px;margin-bottom:8px;}
+.footer-link{font-size:12px;color:rgba(255,255,255,0.4);cursor:pointer;text-decoration:none;}
+.footer-link:hover{color:rgba(255,255,255,0.8);}
+
+
+.hero{position:relative;overflow:hidden;padding:90px 48px 80px;background:linear-gradient(160deg,#0d3d27 0%,#146b42 55%,#1a8050 100%);}
+.hero-bg{position:absolute;inset:0;background-image:radial-gradient(circle at 80% 20%,rgba(245,166,35,0.08) 0%,transparent 50%),radial-gradient(circle at 10% 80%,rgba(255,255,255,0.03) 0%,transparent 40%);pointer-events:none;}
+.hero-inner{position:relative;z-index:2;max-width:700px;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,166,35,0.15);border:1px solid rgba(245,166,35,0.3);border-radius:20px;padding:6px 14px;margin-bottom:28px;}
+.hero-badge-dot{width:7px;height:7px;background:var(--gold);border-radius:50%;}
+.hero-badge-text{font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);}
+.hero-title{font-family:var(--font-display);font-size:52px;font-weight:700;line-height:1.07;letter-spacing:-0.02em;color:var(--white);margin-bottom:22px;}
+.hero-title .accent{color:var(--gold);font-style:italic;}
+.hero-sub{font-size:16px;color:rgba(255,255,255,0.7);line-height:1.7;max-width:540px;margin-bottom:36px;font-weight:300;}
+.hero-sub strong{color:var(--white);font-weight:600;}
+.hero-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:48px;}
+.btn-primary{font-family:var(--font-body);font-size:15px;font-weight:700;background:var(--gold);color:var(--navy);border:none;border-radius:10px;padding:15px 32px;cursor:pointer;transition:all 0.2s;text-decoration:none;display:inline-flex;align-items:center;gap:8px;}
+.btn-primary:hover{background:#e8960f;transform:translateY(-1px);box-shadow:0 8px 24px rgba(245,166,35,0.35);}
+.btn-secondary{font-family:var(--font-body);font-size:15px;font-weight:500;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.2);border-radius:10px;padding:15px 28px;cursor:pointer;transition:all 0.2s;text-decoration:none;}
+.btn-secondary:hover{background:rgba(255,255,255,0.15);}
+.hero-stats{display:flex;gap:36px;flex-wrap:wrap;}
+.h-stat-num{font-family:var(--font-display);font-size:28px;font-weight:700;color:var(--gold);}
+.h-stat-label{font-size:12px;color:rgba(255,255,255,0.45);font-weight:300;margin-top:2px;}
+.section{padding:80px 48px;}
+.section-label{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:12px;}
+.section-title{font-family:var(--font-display);font-size:40px;font-weight:700;line-height:1.12;color:var(--navy);margin-bottom:16px;letter-spacing:-0.01em;}
+.section-sub{font-size:16px;color:var(--text-secondary);line-height:1.7;max-width:560px;font-weight:300;margin-bottom:48px;}
+.tiers-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px;}
+.tier-card{border-radius:18px;padding:28px 22px;border:2px solid transparent;transition:all 0.3s;text-align:center;}
+.tier-card:hover{transform:translateY(-4px);}
+.tier-bronze{background:linear-gradient(145deg,#FDF0E6,#FADDBC);border-color:rgba(180,90,30,0.2);}
+.tier-silver{background:linear-gradient(145deg,#F2F2F4,#E2E4EC);border-color:rgba(100,100,130,0.2);}
+.tier-gold{background:linear-gradient(145deg,#FDFAE6,#F7F0BC);border-color:rgba(180,155,30,0.25);}
+.tier-platinum{background:linear-gradient(145deg,#E8E8F8,#D5D5F0);border-color:rgba(80,60,160,0.2);}
+.tier-icon{font-size:32px;margin-bottom:12px;}
+.tier-name{font-family:var(--font-display);font-size:22px;font-weight:700;margin-bottom:6px;}
+.tier-bronze .tier-name{color:#8B4513;}
+.tier-silver .tier-name{color:#4a4a6a;}
+.tier-gold .tier-name{color:#8a6010;}
+.tier-platinum .tier-name{color:#3C3489;}
+.tier-desc{font-size:13px;line-height:1.6;font-weight:300;margin-bottom:16px;color:var(--text-secondary);}
+.tier-key{font-size:12px;font-weight:600;margin-bottom:4px;color:var(--navy);}
+.tier-val{font-family:var(--font-display);font-size:26px;font-weight:700;}r(--white);border:1px solid var(--border);border-radius:24px;overflow:hidden;}
+.subsidy-top{background:linear-gradient(135deg,#0d3d27,#1a8050);padding:28px 36px;}
+.subsidy-top-title{font-family:var(--font-display);font-size:24px;font-weight:700;color:var(--white);margin-bottom:6px;}
+.subsidy-top-sub{font-size:13px;color:rgba(255,255,255,0.6);font-weight:300;}
+.subsidy-body{padding:32px 36px;}
+.s-label{font-size:12px;font-weight:600;color:var(--text-secondary);margin-bottom:8px;display:block;}
+.s-input{width:100%;border:1px solid var(--border);border-radius:10px;padding:11px 16px;font-family:var(--font-body);font-size:15px;color:var(--text-primary);outline:none;transition:border-color 0.2s;background:var(--off-white);}
+.s-input:focus{border-color:var(--teal);background:var(--white);}
+.s-row{display:flex;gap:16px;margin-bottom:16px;}
+.s-col{flex:1;}
+.s-btn{background:var(--teal);color:var(--white);border:none;border-radius:10px;padding:13px 24px;font-family:var(--font-body);font-size:14px;font-weight:600;cursor:pointer;transition:all 0.2s;margin-top:12px;width:100%;}
+.s-btn:hover{background:#199064;}
 .subsidy-note{font-size:12px;color:var(--text-muted);margin-top:12px;font-style:italic;}
-.timeline{position:relative;padding:20px 0;}
-.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--gold);}
-.timeline-item{padding:0 0 30px 30px;position:relative;}
-.timeline-item::before{content:'●';position:absolute;left:-8px;top:0;font-size:18px;color:var(--gold);}
-.timeline-item h4{color:var(--navy);font-size:16px;font-weight:700;margin-bottom:8px;}
-.timeline-item p{color:var(--text-secondary);font-size:14px;line-height:1.6;}
-.tabs{display:flex;gap:0;border-bottom:1px solid var(--border);margin:24px 0;}
-.tab-btn{padding:12px 20px;background:transparent;border:none;color:var(--text-secondary);cursor:pointer;font-weight:600;font-size:14px;transition:all 0.3s;border-bottom:3px solid transparent;margin-bottom:-1px;}
-.tab-btn.active{color:var(--navy);border-bottom-color:var(--gold);}
-.tab-content{display:none;}
-.tab-content.active{display:block;}
-.hero{background:var(--navy);color:var(--white);padding:80px 0;position:relative;overflow:hidden;}
-.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 80% 20%,rgba(29,158,117,0.1) 0%,transparent 50%);}
-.hero .container{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
-.hero-text h1{font-family:var(--font-display);font-size:48px;line-height:1.2;margin-bottom:20px;font-weight:700;}
-.hero-text p{font-size:18px;line-height:1.6;margin-bottom:30px;color:rgba(255,255,255,0.9);}
-.hero-cta{display:inline-block;background:var(--gold);color:var(--navy);padding:14px 32px;border-radius:6px;font-weight:600;font-size:15px;text-decoration:none;transition:all 0.3s;border:none;cursor:pointer;}
-.hero-cta:hover{background:var(--gold-dark);transform:translateY(-2px);}
-.hero-visual{text-align:right;}
-.hero-visual img{max-width:100%;height:auto;display:block;}
-.section-default{background:var(--white);padding:80px 0;}
-.section-alternate{background:var(--off-white);padding:80px 0;}
-.section-header{margin-bottom:48px;}
-.section-header h2{font-family:var(--font-display);font-size:36px;color:var(--navy);margin-bottom:12px;font-weight:700;}
-.section-header p{font-size:16px;color:var(--text-secondary);max-width:600px;}
-.cta-btn{display:inline-block;background:var(--gold);color:var(--navy);padding:12px 28px;border-radius:6px;text-decoration:none;font-weight:600;transition:all 0.3s;border:2px solid var(--gold);cursor:pointer;font-size:14px;}.cta-btn:hover{background:var(--navy);color:var(--white);border-color:var(--navy);}
-.cta-btn-secondary{background:transparent;color:var(--gold);border-color:var(--gold);}
-.cta-btn-secondary:hover{background:var(--gold);color:var(--navy);}
-.comparison-table{width:100%;border-collapse:collapse;margin:32px 0;}
-.comparison-table th{background:var(--navy);color:var(--white);padding:16px;text-align:left;font-weight:600;}
-.comparison-table td{border-bottom:1px solid var(--border);padding:16px;color:var(--text-secondary);}
-.comparison-table tr:nth-child(even){background:var(--off-white);}
-.comparison-table .check{color:var(--teal);font-weight:700;}
-.text-container{line-height:1.8;}
-.text-container h2{font-family:var(--font-display);font-size:28px;color:var(--navy);margin:32px 0 20px 0;font-weight:700;}
-.text-container a:not(.cta-btn):not(.nav-link):not(.social-icon){color:var(--teal);text-decoration:none;transition:color 0.3s;font-weight:500;}
-.text-container a:not(.cta-btn):not(.nav-link):not(.social-icon):hover{color:var(--navy);text-decoration:underline;}
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;}
-.text-container h3{font-size:20px;font-weight:700;margin:24px 0 12px 0;color:var(--navy);}
-.text-container p+p{margin-top:20px;}
-.text-container ul{margin:20px 0;padding-left:20px;}
-.text-container li{margin:10px 0;line-height:1.6;}
-.badge{display:inline-block;background:var(--teal-light);color:var(--teal);padding:6px 12px;border-radius:4px;font-size:13px;font-weight:600;margin-right:8px;margin-bottom:8px;}
-.badge-gold{background:var(--gold-light);color:var(--gold-dark);}
-.badge-purple{background:var(--purple-light);color:var(--purple-dark);}
-.success-story{background:var(--off-white);padding:30px;border-radius:8px;border-left:4px solid var(--teal);}
-.success-story h4{color:var(--navy);margin-bottom:10px;font-size:16px;font-weight:700;}
-.success-story p{color:var(--text-secondary);font-size:14px;line-height:1.6;margin:8px 0;}
+.subsidy-info{padding:20px 24px;background:var(--teal-light);border-radius:12px;margin-top:24px;border-left:4px solid var(--teal);}
+.subsidy-info-text{font-size:13px;color:var(--navy);line-height:1.6;font-weight:300;}
+.subsidy-info-text strong{font-weight:600;}.faqs{background:var(--off-white);padding:80px 48px;}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px;}
+.faq-item{background:var(--white);border:1px solid var(--border-soft);border-radius:14px;padding:28px;transition:all 0.3s;cursor:pointer;}
+.faq-item:hover{border-color:var(--teal);box-shadow:0 8px 24px rgba(29,158,117,0.15);}
+.faq-q{display:flex;align-items:flex-start;gap:12px;font-weight:600;color:var(--navy);font-size:15px;margin-bottom:16px;}
+.faq-q-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.faq-a{font-size:14px;color:var(--text-secondary);line-height:1.6;font-weight:300;display:none;}
+.faq-item.open .faq-a{display:block;}
+.faq-item.open .faq-q-icon{transform:rotate(180deg);}
+.cta-section{padding:80px 48px;background:linear-gradient(135deg,#0d3d27 0%,#1a8050 100%);text-align:center;}
+.cta-pre{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,166,35,0.8);margin-bottom:12px;}
+.cta-title{font-family:var(--font-display);font-size:48px;font-weight:700;color:var(--white);margin-bottom:24px;line-height:1.15;letter-spacing:-0.01em;}
+.cta-sub{font-size:18px;color:rgba(255,255,255,0.8);margin-bottom:40px;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.5;font-weight:300;}
+.cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.resp-l{display:none;}
+@media(max-width:1024px){
+.tiers-grid{grid-template-columns:repeat(2,1fr);}
+}.faq-grid{grid-template-columns:1fr;}
+.tiers-grid{grid-template-columns:repeat(2,1fr);}
+.nav{padding:0 24px;}
+.section,.subsidy-section,.cta-section{padding:60px 24px;}
+}
 @media(max-width:768px){
-.container{padding:20px 16px;}
-.grid-2,.grid-3{grid-template-columns:1fr;gap:20px;}
-.hero-text h1{font-size:32px;line-height:1.3;}
-.section-header h2{font-size:24px;margin-bottom:16px;}
+.hero{padding:60px 24px 50px;}
+.nav{height:56px;padding:0 16px;}
+.nav-logo img{height:32px;}
+.nav-links{gap:16px;}
+.nav-link{font-size:12px;}
+.nav-cta{padding:7px 16px;font-size:12px;}
+.section-title{font-size:32px;}
+.hero-title{font-size:36px;}
+.cta-title{font-size:36px;}
+.tiers-grid{grid-template-columns:1fr;}
+.hero-stats{gap:20px;}.footer{flex-direction:column;gap:24px;}
+.footer-links{flex-direction:column;gap:12px;}
+.resp-l{display:block;}
+.resp-h{display:none;}
 }
 </style>
 </head>
 <body>
-
-<nav class="navbar">
-<div class="container">
-<div class="nav-brand">Lopcha</div>
-<ul class="nav-menu">
-<li><a href="/" class="nav-link">Inicio</a></li>
-<li><a href="/seguros" class="nav-link">Seguros</a></li>
-<li><a href="/es/seguros/vida" class="nav-link">Vida</a></li>
-<li><a href="https://app.lopcha.com" class="nav-link">Portal</a></li>
-<li><a href="tel:+18885827524" class="nav-link">+1 (888) 582-7524</a></li>
-</ul>
+<nav class="nav">
+<div class="nav-logo"><img src="https://cdn.lopcha.com/logo-white-sm.svg" alt="Lopcha Logo"></div>
+<div class="nav-links">
+<a class="nav-link active" href="https://lopcha.com">Inicio</a>
+<a class="nav-link" href="https://lopcha.com/aca">ACA</a>
+<a class="nav-link" href="https://lopcha.com/medicare">Medicare</a>
+<a class="nav-link" href="https://lopcha.com/vida">Vida</a>
+<a class="nav-link" href="https://lopcha.com/blog">Blog</a>
 </div>
-</nav>
+<div class="nav-right">
+<select class="nav-lang">
+<option>EN</option>
+<option selected>ES</option>
+</select>
+<button class="nav-cta">Cotizar</button>
+</div>
+</nav><div class="breadcrumb">
+<div class="bc-inner">
+<a class="bc-link" href="https://lopcha.com">Inicio</a>
+<span class="bc-sep">/</span>
+<span class="bc-current">ACA - Obamacare</span>
+</div>
+</div>
 
 <section class="hero">
-<div class="container">
-<div class="hero-text">
-<h1>Seguro ACA & Obamacare</h1>
-<p>Planes del Marketplace con subsidios disponibles. Agentes certificados bilingües en múltiples estados. Inscripción completamente gratuita.</p>
-<a href="https://app.lopcha.com" class="cta-btn">Obtener Presupuesto</a>
+<div class="hero-bg"></div>
+<div class="hero-inner">
+<div class="hero-badge">
+<div class="hero-badge-dot"></div>
+<div class="hero-badge-text">Abierta la inscripcion</div>
 </div>
+<h1 class="hero-title">Seguro ACA <span class="accent">sin costo</span> para muchos</h1>
+<p class="hero-sub">Planes del Marketplace federal con subsidios disponibles. <strong>Afiliacion 100% gratuita.</strong> Agentes bilingues certificados en multiples estados.</p>
+<div class="hero-actions">
+<button class="btn-primary">Cotizar Ahora</button>
+<button class="btn-secondary">Ver Opciones</button>
 </div>
-</section>
-
-<section class="section-default">
-<div class="container">
-<div class="section-header">
-<h2>¿Qué es el Seguro ACA?</h2>
+<div class="hero-stats">
+<div><div class="h-stat-num">50+</div>
+<div class="h-stat-label">Planes disponibles</div>
 </div>
-<div class="text-container">
-<p>El <strong>Seguro ACA (Ley de Cuidado de Salud Asequible)</strong>, también conocido como <strong>Obamacare</strong>, es un seguro de salud que ofrece <strong>cobertura médica asequible</strong> para individuos y familias en los Estados Unidos.</p>
-<p>A través del <strong>Marketplace de Salud</strong>, puedes encontrar planes que se ajustan a tu presupuesto y necesidades de salud. Muchos estadounidenses califican para <strong>subsidios y créditos fiscales</strong> que reducen significativamente el costo mensual de las primas.</p>
-
-<h3>Características Principales del Seguro ACA</h3>
-<ul>
-<li><strong>Cobertura Integral:</strong> Protege acceso a servicios esenciales como exámenes médicos, hospitalizaciones y medicamentos recetados.</li>
-<li><strong>Subsidios Disponibles:</strong> Muchas personas califican para créditos que reducen el costo de las primas.</li>
-<li><strong>Sin Exclusiones por Condiciones Preexistentes:</strong> No puedes ser rechazado por problemas de salud previos.</li>
-<li><strong>Cobertura Preventiva:</strong> Acceso a servicios preventivos sin costo adicional.</li>
-<li><strong>Planes Flexibles:</strong> Elige entre Bronce, Plata, Oro y Platino según tu nivel de cobertura deseado.</li>
-</ul>
-
+<div>
+<div class="h-stat-num">$0</div>
+<div class="h-stat-label">Costo de afiliacion</div>
 </div>
-</div>
-</section><section class="section-default">
-<div class="container">
-<div class="section-header">
-<h2>¿Por Qué Elegir Lopcha?</h2>
-</div>
-<div class="grid-3">
-<div class="text-container">
-<h3>Agentes Certificados</h3>
-<p>Nuestros agentes están completamente certificados y capacitados para ayudarte a entender todas tus opciones de cobertura.</p>
-</div>
-<div class="text-container">
-<h3>Bilingües</h3>
-<p>Hablamos español e inglés para asegurar que entiendas completamente tus opciones y derechos de cobertura.</p>
-</div>
-<div class="text-container">
-<h3>Totalmente Gratuito</h3>
-<p>Nuestro servicio es 100% gratuito. No hay cargos ocultos ni comisiones que pagues directamente.</p>
+<div>
+<div class="h-stat-num">40k+</div>
+<div class="h-stat-label">Familias aseguradas</div>
 </div>
 </div>
 </div>
 </section>
 
-<section class="section-alternate">
-<div class="container">
-<div class="section-header">
-<h2>Tipos de Planes Disponibles</h2>
-<p>En el Marketplace de Salud, encontrarás cuatro niveles de planes:</p>
+<section class="section">
+<div class="section-label">Planes disponibles</div>
+<h2 class="section-title">Cuatro Niveles de Cobertura</h2>
+<p class="section-sub">Elige el nivel de cobertura que mejor se ajuste a tu presupuesto y necesidades de salud.</p>
+<div class="tiers-grid">
+<div class="tier-card tier-bronze">
+<div class="tier-icon">🥉</div>
+<h3 class="tier-name">Bronze</h3>
+<p class="tier-desc">Cobertura basica para emergencias</p>
+<div class="tier-key">Deducible</div>
+<div class="tier-val">Mas alto</div>
+</div><div class="tier-card tier-silver">
+<div class="tier-icon">🥈</div>
+<h3 class="tier-name">Silver</h3>
+<p class="tier-desc">Plan equilibrado - Mas popular</p>
+<div class="tier-key">Deducible</div>
+<div class="tier-val">Moderado</div>
 </div>
-<div class="text-container">
-
-<h3>Plan Bronce</h3>
-<p>El plan más económico con la prima mensual más baja. Ideal si necesitas cobertura básica pero quieres mantener una prima baja. Tienes un deducible más alto.</p>
-
-<h3>Plan Plata</h3>
-<p>Ofrece un equilibrio entre prima y deducible. La mayoría de los subsidios se aplican automáticamente a los planes Plata, haciendo que sean muy populares.</p>
-
-<h3>Plan Oro</h3>
-<p>Una opción más completa con primas más altas pero deducibles más bajos. Ideal para quienes utilizan servicios médicos frecuentemente.</p>
-
-<h3>Plan Platino</h3>
-<p>El plan más completo con la cobertura más amplia. Tiene la prima más alta pero el deducible más bajo, cubriendo hasta el 90% de los costos de atención médica.</p>
-
+<div class="tier-card tier-gold">
+<div class="tier-icon">🥇</div>
+<h3 class="tier-name">Gold</h3>
+<p class="tier-desc">Cobertura premium con bajo costo</p>
+<div class="tier-key">Deducible</div>
+<div class="tier-val">Bajo</div>
 </div>
-</div>
-</section>
-
-<section class="section-default">
-<div class="container">
-<div class="section-header">
-<h2>Subsidios y Créditos Fiscales</h2>
-</div>
-<div class="text-container">
-<p>Una de las mayores ventajas del seguro ACA es que <strong>muchos estadounidenses califican para subsidios</strong> que reducen significativamente el costo de las primas.</p>
-
-<h3>¿Quién Califica para Subsidios?</h3>
-<p>Para calificar para subsidios ACA, debes cumplir con estos requisitos:</p>
-<ul>
-<li>Ser ciudadano estadounidense o inmigrante legal</li>
-<li>Vivir en los Estados Unidos</li>
-<li>Tu ingreso debe estar entre el 100% y 400% del Nivel Federal de Pobreza (FPL)</li>
-<li>No tener cobertura de seguro de salud calificada de tu empleador</li>
-</ul>
-
-<h3>Tipos de Créditos</h3>
-<p><strong>Crédito Impositivo Anticipado del Seguro de Salud (APTC):</strong> Este crédito reduce directamente tu prima mensual. Si calificas, el dinero se envía directamente al asegurador.</p>
-<p><strong>Reducción de Costo Compartido (CSR):</strong> Reduce tu deducible, copagos y coaseguros, haciendo que los servicios de salud sean más asequibles cuando necesites atención.</p>
-
-<h3>Cómo Funcionan los Subsidios</h3>
-<p>Si calificas para un subsidio, tu prima mensual se reduce automáticamente. Por ejemplo, si un plan cuesta $400/mes pero calificas para un subsidio de $250, solo pagarías $150/mes.</p>
-
+<div class="tier-card tier-platinum">
+<div class="tier-icon">💎</div>
+<h3 class="tier-name">Platinum</h3>
+<p class="tier-desc">Maximo beneficio y minimo costo</p>
+<div class="tier-key">Deducible</div>
+<div class="tier-val">Muy bajo</div>
 </div>
 </div>
-</section><section class="section-alternate">
-<div class="container">
-<div class="section-header">
-<h2>Proceso de Inscripción</h2>
+</section><section class="subsidy-section">
+<h2 class="section-title" style="margin-bottom:12px;">¿Calificas para subsidios?</h2>
+<p class="section-sub" style="margin-bottom:36px;">Muchas familias califican para subsidios y créditos que reducen tu pago mensual a casi $0.</p>
+<div class="subsidy-box">
+<div class="subsidy-top">
+<h3 class="subsidy-top-title">Calcula tu subsidio</h3>
+<p class="subsidy-top-sub">Responde 3 preguntas y descubre cuanto puedes ahorrar</p>
 </div>
-<div class="text-container">
-
-<h3>Paso 1: Determina tu Elegibilidad</h3>
-<p>Lo primero es saber si calificas para subsidios. Nuestros agentes pueden ayudarte a completar una evaluación rápida de elegibilidad.</p>
-
-<h3>Paso 2: Elige tu Plan</h3>
-<p>Compara los planes disponibles basado en tus necesidades de salud, presupuesto y preferencias de médico.</p>
-
-<h3>Paso 3: Completa la Solicitud</h3>
-<p>Llena la solicitud del Marketplace con información personal, de ingresos y de hogar. Te ayudaremos en cada paso.</p>
-
-<h3>Paso 4: Recibe Confirmación</h3>
-<p>Una vez aprobado, recibirás una carta de confirmación con tu número de póliza y fecha de inicio de cobertura.</p>
-
+<div class="subsidy-body">
+<label class="s-label">Ingreso familiar anual</label>
+<input type="number" class="s-input" placeholder="$0">
+<div class="s-row">
+<div class="s-col">
+<label class="s-label">Numero de personas</label>
+<input type="number" class="s-input" placeholder="1">
+</div>
+<div class="s-col">
+<label class="s-label">Edad del solicitante</label>
+<input type="number" class="s-input" placeholder="25">
+</div>
+</div><button class="s-btn">Calcular Subsidio</button>
+<p class="subsidy-note">* Calculo estimado. Consulta con un agente para resultado final.</p>
+<div class="subsidy-info">
+<p class="subsidy-info-text"><strong>Tip:</strong> Si tu ingreso esta entre 100% y 400% del nivel federal de pobreza, probablemente califiques para subsidios significativos.</p>
+</div>
 </div>
 </div>
 </section>
 
-<section class="section-default">
-<div class="container">
-<div class="section-header">
-<h2>Períodos de Inscripción</h2>
+<section class="faqs">
+<h2 class="section-title">Preguntas Frecuentes</h2>
+<p class="section-sub">Respuestas a las dudas mas comunes sobre el seguro ACA.</p>
+<div class="faq-grid">
+<div class="faq-item" data-faq="1">
+<div class="faq-q">
+<span class="faq-q-icon">❓</span>
+<span>¿Que es el Marketplace de seguros ACA?</span>
 </div>
-<div class="text-container">
-
-<h3>Período de Inscripción Abierta (Open Enrollment)</h3>
-<p>El período de inscripción abierta ocurre cada año, generalmente de <strong>noviembre a enero</strong>. Durante este tiempo, cualquier persona puede inscribirse en un plan o hacer cambios a su cobertura actual.</p>
-
-<h3>Períodos de Inscripción Especial (Qualifying Life Events)</h3>
-<p>Si experimentas un evento de vida calificado, puedes inscribirse fuera del período regular. Estos eventos incluyen:</p>
-<ul>
-<li>Pérdida de cobertura de salud (despido, fin de cobertura del cónyuge)</li>
-<li>Matrimonio o divorcio</li>
-<li>Nacimiento o adopción de un hijo</li>
-<li>Cambio de residencia (mudanza a otro estado)</li>
-<li>Cambio de ingresos (aumento o disminución)</li>
-<li>Otros cambios en circunstancias personales</li>
-</ul>
-
-<h3>Próximo Período de Inscripción</h3>
-<p>Si no puedes inscribirse ahora, pregunta a nuestros agentes si tienes un período de inscripción especial calificado. Estamos aquí para ayudarte a navegar estas opciones.</p>
-
+<p class="faq-a">El Marketplace es el mercado federal de seguros medicos donde puedes comparar y comprar planes de salud con precios subsidiados. Es administrado por el gobierno federal.</p>
+</div><div class="faq-item" data-faq="2">
+<div class="faq-q">
+<span class="faq-q-icon">❓</span>
+<span>¿Cuales son los tres tipos de subsidios ACA?</span>
 </div>
+<p class="faq-a">Los subsidios incluyen: (1) Credito Tributario Anticipado (APTC) que reduce tu pago mensual, (2) Reducciones de Gastos Compartidos (CSR) que bajan deducibles y copagos, y (3) Creditos tributarios que puedes reclamar en impuestos.</p>
 </div>
-</section>
-
-<section class="section-alternate">
-<div class="container">
-<div class="section-header">
-<h2>Preguntas Frecuentes (FAQ)</h2>
+<div class="faq-item" data-faq="3">
+<div class="faq-q">
+<span class="faq-q-icon">❓</span>
+<span>¿Soy elegible para el ACA?</span>
 </div>
-<div class="text-container">
-
-<h3>¿Cuánto cuesta el seguro ACA?</h3>
-<p>Los costos varían según el plan que elijas, tu edad, ubicación e ingresos. Con subsidios, muchas personas pagan entre $0-$150/mes por cobertura de salud. Te ayudaremos a encontrar el mejor plan según tu presupuesto.</p>
-
-<h3>¿Puedo cambiar de plan después de inscribirme?</h3>
-<p>Puedes cambiar de plan durante el período de inscripción abierta (noviembre-enero) o si tienes un evento de vida calificado. Nuestros agentes pueden ayudarte con los cambios.</p>
-
-<h3>¿Qué sucede si no tengo seguro?</h3>
-<p>Aunque ya no hay un impuesto federal por no tener seguro, tener cobertura es importante para protegerte de costos médicos catastróficos. Además, si te enfermas sin cobertura, los costos pueden ser muy altos.</p>
-
-<h3>¿El seguro ACA cubre a mis dependientes?</h3>
-<p>Sí, puedes agregar a tu cónyuge e hijos menores de 26 años a tu plan. Esto generalmente reduce el costo total de la cobertura familiar.</p>
-
-<h3>¿Necesito un agente para inscribirme?</h3>
-<p>No es obligatorio, pero nuestros agentes pueden simplificar el proceso. Podemos ayudarte a entender tus opciones, calcular subsidios potenciales y completar la solicitud sin costo alguno.</p>
-
-<h3>¿Es confidencial la información que comparto?</h3>
-<p>Sí, toda la información que compartes es confidencial y está protegida por leyes federales de privacidad de salud (HIPAA).</p>
-
-<h3>¿Qué pasa si mi ingreso cambia después de inscribirme?</h3>
-<p>Si tu ingreso aumenta o disminuye significativamente, puedes reportarlo al Marketplace. Esto podría cambiar el monto de tu subsidio. Es importante mantener tu información actualizada.</p>
-
-<h3>¿Qué diferencia hay entre ACA y Medicare?</h3>
-<p><strong>ACA:</strong> Para personas menores de 65 años que no califican para Medicare. Basado en ingresos y residencia.</p>
-<p><strong>Medicare:</strong> Para personas de 65 años o mayores, o ciertas personas más jóvenes con discapacidades. Basado en el historial de trabajo.</p><h3>¿Puedo tener ACA y Medicaid al mismo tiempo?</h3>
-<p>Generalmente no. Si calificas para Medicaid (basado en ingresos bajos), no necesitarás un plan ACA. Sin embargo, circunstancias pueden variar según tu estado.</p>
-
-<h3>¿Cómo afecta mi situación de inmigración mi elegibilidad?</h3>
-<p>La mayoría de los inmigrantes legales califican para los planes ACA después de 5 años de residencia legal. DACA, refugiados y solicitantes de asilo también pueden calificar. Habla con nuestros agentes sobre tu situación específica.</p>
-
+<p class="faq-a">Si eres ciudadano estadounidense o inmigrante legal, tienes al menos 18 años, y resides en los Estados Unidos, probablemente califiques. No necesitas tener empleo.</p>
+</div>
+<div class="faq-item" data-faq="4">
+<div class="faq-q">
+<span class="faq-q-icon">❓</span>
+<span>¿Puedo cambiar de plan durante el ano?</span>
+</div>
+<p class="faq-a">Generalmente no, a menos que tengas un evento calificado (matrimonio, nacimiento, perdida de empleo, etc.). La temporada de inscripcion abierta es anualmente.</p>
+</div><div class="faq-item" data-faq="5">
+<div class="faq-q">
+<span class="faq-q-icon">❓</span>
+<span>¿Que documentos necesito?</span>
+</div>
+<p class="faq-a">Necesitaras prueba de identidad, documento de inmigracion (si aplica), informacion de ingresos (2 ultimas declaraciones de impuestos o recibos de pago), y numero de seguro social.</p>
+</div>
+<div class="faq-item" data-faq="6">
+<div class="faq-q">
+<span class="faq-q-icon">❓</span>
+<span>¿Como funciona la cobertura preventiva?</span>
+</div>
+<p class="faq-a">Los planes ACA cubren servicios preventivos sin costo compartido (copago, coaseguro o deducible). Esto incluye chequeos, vaccunas, cancer screening, y otros servicios esenciales.</p>
+</div>
+<div class="faq-item" data-faq="7">
+<div class="faq-q">
+<span class="faq-q-icon">❓</span>
+<span>¿Puedo perder mi subsidio?</span>
+</div>
+<p class="faq-a">Si tus ingresos cambian significativamente (cambio de empleo, bonus, o efectos de COVID), debes actualizar tu solicitud en el Marketplace para ajustar tu subsidio.</p>
+</div><div class="faq-item" data-faq="8">
+<div class="faq-q">
+<span class="faq-q-icon">❓</span>
+<span>¿Como me inscribo en el ACA?</span>
+</div>
+<p class="faq-a">Puedes inscribirte directamente en HealthCare.gov durante la temporada de inscripcion abierta. Nosotros podemos ayudarte sin costo extra, y podemos tramitar fuera de temporada si calificas.</p>
 </div>
 </div>
 </section>
 
-<section class="section-default">
-<div class="container">
-<div class="section-header">
-<h2>Historias de Éxito</h2>
-<p>Mira cómo Lopcha ha ayudado a miles de personas a obtener cobertura de salud asequible.</p>
+<section class="cta-section">
+<div class="cta-pre">Listo para comenzar?</div>
+<h2 class="cta-title">Obtén tu cotizacion hoy</h2>
+<p class="cta-sub">Responde solo 3 preguntas y descubre cuales son tus opciones. Toma menos de 2 minutos y no hay obligacion de compra.</p>
+<div class="cta-actions">
+<button class="btn-primary">Cotizar Ahora</button>
+<button class="btn-secondary">Hablar con un Agente</button>
 </div>
-
-<div class="grid-3">
-<div class="success-story">
-<h4>María García</h4>
-<p>Como trabajadora independiente, María necesitaba encontrar cobertura asequible. Nuestros agentes la ayudaron a encontrar un plan Plata con subsidios que cuesta solo $80/mes. Ahora tiene tranquilidad sabiendo que está cubierta.</p>
-</div>
-
-<div class="success-story">
-<h4>Carlos López</h4>
-<p>Perdió la cobertura de su empleador. Los agentes de Lopcha lo ayudaron a navegar su período de inscripción especial y encontró un plan perfecto en menos de 2 horas, pagando menos de lo que pagaba antes.</p>
-</div>
-
-<div class="success-story">
-<h4>Familia Rodríguez</h4>
-<p>Buscaban cobertura familiar y les parecía demasiado caro. Lopcha los ayudó a obtener subsidios que cubrieron el 70% de sus primas. Ahora la familia tiene cobertura completa por menos de $200/mes.</p>
-</div>
-</div>
-
-</div>
-</section>
-
-<section class="section-alternate">
-<div class="container">
-<div class="section-header">
-<h2>Estados Donde Operamos</h2>
-<p>Nuestros agentes certificados están disponibles en múltiples estados. Cuéntanos en cuál estado vives y te conectaremos con el agente adecuado.</p>
-</div>
-<div class="text-container">
-<p>Operamos en estados incluyendo: California, Texas, Florida, Nueva York, Illinois, Pensilvania, Ohio, Georgia, Nueva Carolina del Norte, Michigan y muchos más.</p>
-<p>Si tu estado no está listado, contáctanos de todas formas. Podemos ayudarte o conectarte con recursos locales.</p>
-</div>
-</div>
-</section>
-
-<section class="section-default">
-<div class="container">
-<div class="section-header">
-<h2>¿Por Qué es Importante el Seguro de Salud?</h2>
-</div>
-<div class="text-container">
-
-<h3>Protección Financiera</h3>
-<p>Un evento de salud inesperado puede resultar en facturas médicas de miles de dólares. Sin seguro, podrías enfrentar deudas abrumadoras que afecten tu crédito y futuro financiero.</p>
-
-<h3>Acceso a Cuidado Preventivo</h3>
-<p>Con un plan ACA, tienes acceso a exámenes preventivos sin costo adicional. Detectar problemas de salud temprano es menos costoso que tratarlos después.</p>
-
-<h3>Medicamentos Recetados</h3>
-<p>La mayoría de los planes ACA cubren medicamentos recetados, con copagos asequibles. Sin seguro, los medicamentos pueden costar cientos de dólares al mes.</p>
-
-<h3>Tranquilidad Mental</h3>
-<p>Saber que tienes cobertura de salud te permite vivir sin estrés constante sobre qué sucedería si te enfermaras o sufrieras un accidente.</p>
-
-</div>
-</div>
-</section><section class="section-alternate">
-<div class="container">
-<div class="section-header">
-<h2>Cambios Recientes en la ACA (2024-2025)</h2>
-</div>
-<div class="text-container">
-
-<h3>Subsidios Aumentados</h3>
-<p>A partir de 2024, se aprobó legislación que extiende y aumenta los subsidios de primas para muchas personas. Esto significa primas más bajas para miles de estadounidenses.</p>
-
-<h3>Mayor Acceso a Medicamentos</h3>
-<p>Los límites en gastos de bolsillo continúan bajando, haciendo que los medicamentos y servicios preventivos sean más asequibles.</p>
-
-<h3>Más Opciones de Planes</h3>
-<p>Cada año, hay más opciones de planes disponibles en el Marketplace, permitiéndote elegir la cobertura que mejor se ajuste a tus necesidades.</p>
-
-</div>
-</div>
-</section>
-
-<section class="section-default">
-<div class="container">
-<div class="section-header">
-<h2>¿Cuál es el Primer Paso?</h2>
-<p>No necesitas navegar esto solo. Nuestros agentes certificados y bilingües están aquí para ayudarte.</p>
-</div>
-<div class="text-container">
-
-<h3>Opción 1: Llamar a Nuestros Agentes</h3>
-<p>Llama a <strong>+1 (888) 582-7524</strong> para hablar directamente con un agente. Responderemos tus preguntas y te ayudaremos a entender tus opciones. No hay cargo alguno.</p>
-
-<h3>Opción 2: Obtener un Presupuesto en Línea</h3>
-<p>Visita nuestro portal en <a href="https://app.lopcha.com">app.lopcha.com</a> para obtener instantáneamente un presupuesto personalizado basado en tu información.</p>
-
-<h3>Opción 3: Chat en Vivo</h3>
-<p>Tenemos agentes disponibles para chat en vivo durante el horario de atención. Es la forma más rápida de obtener respuestas a tus preguntas específicas.</p>
-
-</div>
-</div>
-</section>
-
-<section class="section-alternate">
-<div class="container">
-<div class="section-header">
-<h2>Lo Que Nuestros Clientes Dicen</h2>
-</div>
-
-<div class="grid-2">
-<div class="text-container">
-<h3>"Agentes Muy Profesionales"</h3>
-<p>"Los agentes de Lopcha fueron muy profesionales y pacientes. Explicaron todo en español, y en solo 30 minutos comprendí mis opciones y elegí el plan perfecto. Muy recomendado."</p>
-<p style="font-size: 13px; color: var(--text-muted); margin-top: 12px;">— Juan M., Texas</p>
-</div>
-
-<div class="text-container">
-<h3>"Ahorré $200/mes"</h3>
-<p>"No sabía que calificaba para subsidios. Lopcha me ayudó y ahora pago $200 menos al mes en mi prima. ¡Increíble! Gracias Lopcha."</p>
-<p style="font-size: 13px; color: var(--text-muted); margin-top: 12px;">— Rosa G., California</p>
-</div>
-
-<div class="text-container">
-<h3>"Proceso Fácil y Rápido"</h3>
-<p>"Pensé que sería complicado, pero Lopcha lo hizo tan fácil. Desde la primera llamada hasta tener mi cobertura activa fue menos de una semana."</p>
-<p style="font-size: 13px; color: var(--text-muted); margin-top: 12px;">— Miguel R., Florida</p>
-</div>
-
-<div class="text-container">
-<h3>"Soporte Excepcional"</h3>
-<p>"Lo que más me gustó fue el seguimiento. Después de inscribirme, me llamaron para asegurarme de que todo estaba bien. Ese nivel de cuidado es raro."</p>
-<p style="font-size: 13px; color: var(--text-muted); margin-top: 12px;">— Ana L., Nueva York</p>
-</div>
-</div>
-
-</div>
-</section><section class="section-default">
-<div class="container">
-<div class="section-header">
-<h2>Información Importante</h2>
-</div>
-<div class="text-container">
-
-<h3>Acerca de Lopcha</h3>
-<p>Lopcha es una agencia de seguros certificada que ha ayudado a miles de familias a encontrar cobertura de salud asequible. Estamos comprometidos con la excelencia en servicio al cliente y la educación sobre seguros de salud.</p>
-
-<h3>Nuestro Compromiso</h3>
-<p>Nos compromentemos a:</p>
-<ul>
-<li>Proporcionar asesoramiento honesto y transparente</li>
-<li>Explicar todas las opciones sin presión</li>
-<li>Asistencia completamente gratuita</li>
-<li>Servicio en español e inglés</li>
-<li>Proteger tu privacidad y información personal</li>
-</ul>
-
-<h3>Certificaciones y Regulaciones</h3>
-<p>Lopcha está certificada como Navegador de Salud Autorizado (Authorized Health Insurance Broker) y cumple con todas las regulaciones federales y estatales. Nuestros agentes son verificados y capacitados anualmente.</p>
-
-</div>
-</div>
-</section>
-
-<section class="section-alternate">
-<div class="container">
-<div class="section-header">
-<h2>Próximos Pasos</h2>
-</div>
-<div class="text-container">
-
-<h3>Hoy Mismo</h3>
-<p>Llama al <strong>+1 (888) 582-7524</strong> o visita <a href="https://app.lopcha.com">app.lopcha.com</a> para comenzar tu viaje hacia la cobertura de salud asequible.</p>
-
-<h3>Lo Que Necesitarás</h3>
-<p>Para obtener un presupuesto rápido, ten listo:</p>
-<ul>
-<li>Tu edad y la edad de cualquier dependiente</li>
-<li>Tu código postal</li>
-<li>Tu estado de ingreso anual aproximado (para subsidios)</li>
-<li>Tu situación laboral actual</li>
-</ul>
-
-<h3>Preguntas Finales</h3>
-<p>¿Tienes preguntas? Nuestros agentes están disponibles de lunes a viernes, 8 AM a 8 PM EST, y sábados 9 AM a 5 PM EST. ¡Llama hoy!</p>
-
-</div>
-</div>
-</section>
-
-<footer class="footer">
-<div class="container">
-<div class="footer-content">
-<h4>Lopcha Insurance Agency</h4>
-<p>Tu socio en seguro de salud asequible</p>
-<p><strong>Teléfono:</strong> +1 (888) 582-7524</p>
-<p><strong>Email:</strong> <a href="mailto:info@lopcha.com">info@lopcha.com</a></p>
-<p><strong>Website:</strong> <a href="https://lopcha.com">https://lopcha.com</a></p>
+</section><footer class="footer">
+<div>
+<div class="footer-logo"><img src="https://cdn.lopcha.com/logo-white-sm.svg" alt="Lopcha Logo"></div>
+<p class="footer-copy">Lopcha Insurance Agency es un intermediario de seguros certificado. Tenemos agentes bilingues disponibles en multiples estados para ayudarte con tus necesidades de seguros.</p>
 </div>
 <div class="footer-links">
-<a href="/privacidad">Política de Privacidad</a>
-<a href="/terminos">Términos de Servicio</a>
-<a href="/contacto">Contacto</a>
-<a href="https://app.lopcha.com">Portal de Clientes</a>
-</div>
+<a class="footer-link" href="https://lopcha.com/privacy">Privacidad</a>
+<a class="footer-link" href="https://lopcha.com/terms">Terminos</a>
+<a class="footer-link" href="https://lopcha.com/contact">Contacto</a>
+<a class="footer-link" href="https://lopcha.com/blog">Blog</a>
 </div>
 </footer>
 
-</body>
-</html>ero de Seguro Social o ITIN, estimado de ingreso del año en curso, informacion de miembros del hogar y, si aplica, informacion del seguro actual. Nuestros agentes te guian paso a paso." data-en="You generally need: Social Security number or ITIN, estimated income for current year, household member information and, if applicable, current insurance information. Our agents guide you step by step.">You generally need: Social Security number or ITIN, estimated income for current year, household member information and, if applicable, current insurance information. Our agents guide you step by step.
-      </label>
-    </div>
-
-    <div class="form-group">
-      <label for="income_est" data-es="Ingreso Anual Estimado" data-en="Estimated Annual Income">Estimated Annual Income</label>
-      <input type="number" id="income_est" data-es="¿Cuál es tu ingreso anual estimado?" data-en="What is your estimated annual income?">
-    </div>
-
-    <div class="form-group">
-      <label for="current_insurance" data-es="¿Tienes seguro actualmente?" data-en="Do you have insurance currently?">Do you have insurance currently?</label>
-      <select id="current_insurance" data-es="¿Qué tipo de cobertura tienes o tenías?" data-en="What type of coverage do you have or had?">
-        <option value="">Select...</option>
-        <option data-es="Ninguno" data-en="None">None</option>
-        <option data-es="Empleador" data-en="Employer">Employer</option>
-        <option data-es="Medicare" data-en="Medicare">Medicare</option>
-        <option data-es="Medicaid" data-en="Medicaid">Medicaid</option>
-        <option data-es="Individual/ACA" data-en="Individual/ACA">Individual/ACA</option>
-      </select>
-    </div>
-
-    <button type="submit" class="cta-btn" id="submit_btn" data-es="Obtener Presupuesto Ahora" data-en="Get Quote Now">Get Quote Now</button>
-  </form>
-
-  <div id="quote_result" style="margin-top: 20px; padding: 20px; background: var(--teal-light); border-radius: 8px; display: none;">
-    <h4 data-es="Tu Presupuesto Estimado" data-en="Your Estimated Quote">Your Estimated Quote</h4>
-    <p data-es="Los planes disponibles para ti empezarían en alrededor de:" data-en="Available plans for you would start at around:"><strong id="quote_amount">$0</strong> <span data-es="por mes" data-en="per month">/month</span></p>
-    <p data-es="Este es un estimado basado en tu información. Contacta a un agente para obtener un presupuesto exacto." data-en="This is an estimate based on your information. Contact an agent for an exact quote.">This is an estimate based on your information. Contact an agent for an exact quote.</p>
-    <a href="https://app.lopcha.com" class="cta-btn" data-es="Continuar en el Portal" data-en="Continue to Portal">Continue to Portal</a>
-  </div>
-</div>
-
 <script>
-const langToggle = document.getElementById('lang-toggle');
-const langOptions = document.getElementById('lang-options');
-let currentLang = 'EN';
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.addEventListener('click', () => {
+    item.classList.toggle('open');
+  });
+});
+</script>
+</body>
+</html>irse o cambiar de plan durante este periodo anual." data-en="November 1 to January 15. Anyone can enroll or change plans during this annual period.">Del 1 de noviembre al 15 de enero. Cualquier persona puede inscribirse o cambiar de plan durante este periodo anual.</p>
+        </div>
+      </div>
+      <div class="enroll-item">
+        <div class="enroll-icon">⚡</div>
+        <div>
+          <div class="enroll-title" data-es="Periodo Especial de Inscripcion" data-en="Special Enrollment Period">Periodo Especial de Inscripcion</div>
+          <p class="enroll-desc" data-es="Si perdiste tu seguro de trabajo, tuviste un hijo, te casaste, o te mudaste, puedes inscribirte en cualquier momento del año." data-en="If you lost your work insurance, had a child, got married, or moved, you can enroll any time of year.">Si perdiste tu seguro de trabajo, tuviste un hijo, te casaste, o te mudaste, puedes inscribirte en cualquier momento del año.</p>
+        </div>
+      </div>
+    </div>
+    <div class="enroll-callout">
+      <div class="enroll-callout-title" data-es="¿Sin seguro ahora?" data-en="No insurance now?">¿Sin seguro ahora?</div>
+      <p class="enroll-callout-sub" data-es="Si tienes ingresos limitados, podrías calificar para Medicaid o subsidios ACA sin esperar un periodo especifico." data-en="If you have limited income, you could qualify for Medicaid or ACA subsidies without waiting for a specific period.">Si tienes ingresos limitados, podrías calificar para Medicaid o subsidios ACA sin esperar un periodo especifico.</p>
+      <a href="#contacto" class="enroll-callout-btn" data-es="Verificar eligibilidad →" data-en="Check eligibility →">Verificar eligibilidad →</a>
+    </div>
+  </div>
+</section><section class="subsidy-box" style="margin:0;padding:60px 48px;">
+  <div style="text-align:center;max-width:900px;margin:0 auto;">
+    <h2 class="section-title" data-es="Entendiendo el Subsidio ACA" data-en="Understanding the ACA Subsidy">Entendiendo el Subsidio ACA</h2>
+    <p class="section-sub" data-es="El gobierno que reduce tu prima mensual directamente. Se calcula basado en tu ingreso y el numero de personas en tu hogar. La mayoria lo recibe mes a mes sin esperar la declaracion de impuestos del proximo año." data-en="The government helps reduce your monthly premium directly. It's calculated based on your income and household size. Most people receive it monthly without waiting for next year's tax return.">El gobierno que reduce tu prima mensual directamente. Se calcula basado en tu ingreso y el numero de personas en tu hogar. La mayoria lo recibe mes a mes sin esperar la declaracion de impuestos del proximo año.</p>
+    <div class="subsidy-grid" style="display:grid;grid-template-columns:repeat(3, 1fr);gap:24px;margin-top:36px;">
+      <div style="background:#f5f5f5;padding:24px;border-radius:12px;text-align:center;">
+        <div style="font-size:28px;font-weight:700;color:#1D9E75;margin-bottom:8px;">15-20k</div>
+        <div style="font-size:13px;color:#4A5568;">Ingreso anual<br>tipico</div>
+      </div>
+      <div style="background:#f5f5f5;padding:24px;border-radius:12px;text-align:center;">
+        <div style="font-size:28px;font-weight:700;color:#F5A623;margin-bottom:8px;">50-80%</div>
+        <div style="font-size:13px;color:#4A5568;">Reduccion en<br>prima mensual</div>
+      </div>
+      <div style="background:#f5f5f5;padding:24px;border-radius:12px;text-align:center;">
+        <div style="font-size:28px;font-weight:700;color:#1D9E75;margin-bottom:8px;">$0-50</div>
+        <div style="font-size:13px;color:#4A5568;">Costo mensual<br>promedio</div>
+      </div>
+    </div>
+  </div>
+</section><section class="faqs" style="padding:80px 48px;">
+  <div style="max-width:900px;margin:0 auto;">
+    <h2 class="section-title" data-es="Preguntas Frecuentes sobre ACA" data-en="Frequently Asked Questions about ACA">Preguntas Frecuentes sobre ACA</h2>
+    <div class="faq-grid" style="display:grid;grid-template-columns:1fr;gap:16px;margin-top:36px;">
+      <div class="faq-item">
+        <div class="faq-q" data-es="¿Cubre el ACA condiciones preexistentes?" data-en="Does the ACA cover pre-existing conditions?">¿Cubre el ACA condiciones preexistentes?</div>
+        <p class="faq-a" data-es="Si. Por ley, ninguna aseguradora del Marketplace puede negar cobertura o cobrar mas por condiciones preexistentes. Esta proteccion es parte de la ley desde su inicio." data-en="Yes. By law, no Marketplace insurer can deny coverage or charge more for pre-existing conditions. This protection has been part of the law since its inception.">Si. Por ley, ninguna aseguradora del Marketplace puede negar cobertura o cobrar mas por condiciones preexistentes. Esta proteccion es parte de la ley desde su inicio.</p>
+      </div><div class="faq-item">
+        <div class="faq-q" data-es="¿Puedo obtener ACA si soy trabajador independiente?" data-en="Can I get ACA if I'm self-employed?">¿Puedo obtener ACA si soy trabajador independiente?</div>
+        <p class="faq-a" data-es="Absolutamente. Los trabajadores independientes, contratistas, y negoociantes pueden comprar seguros ACA. Basamos tu subsidio en tu ingreso neto del negocio, lo que muchas veces resulta en los mejores subsidios." data-en="Absolutely. Self-employed, contractors, and business owners can purchase ACA insurance. We base your subsidy on your net business income, which often results in the best subsidies.">Absolutamente. Los trabajadores independientes, contratistas, y negoociantes pueden comprar seguros ACA. Basamos tu subsidio en tu ingreso neto del negocio, lo que muchas veces resulta en los mejores subsidios.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" data-es="¿Atienden en estados fuera de Florida?" data-en="Do you serve states outside Florida?">¿Atienden en estados fuera de Florida?</div>
+        <p class="faq-a" data-es="Si. Tenemos agentes certificados en multiples estados. Llamanos para confirmar si servimos tu area." data-en="Yes. We have certified agents in multiple states. Call us to confirm if we serve your area.">Si. Tenemos agentes certificados en multiples estados. Llamanos para confirmar si servimos tu area.</p>
+      </div><div class="faq-item">
+        <div class="faq-q" data-es="¿Tiene costo el servicio de Lopcha?" data-en="Does Lopcha's service have a cost?">¿Tiene costo el servicio de Lopcha?</div>
+        <p class="faq-a" data-es="No. Nuestro servicio es completamente gratuito. Nos pagamos a traves de comisiones de las aseguradoras, pero tu precio final es el mismo con o sin nuestro help." data-en="No. Our service is completely free. We're paid through commissions from insurers, but your final price is the same with or without our help.">No. Nuestro servicio es completamente gratuito. Nos pagamos a traves de comisiones de las aseguradoras, pero tu precio final es el mismo con o sin nuestro help.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" data-es="¿Que documentos necesito para inscribirme?" data-en="What documents do I need to enroll?">¿Que documentos necesito para inscribirme?</div>
+        <p class="faq-a" data-es="Generalmente necesitas un documento de identidad (pasaporte, licencia de conducir, etc.), numero de seguro social (o ITIN para inmigrantes), y evidencia de ingresos (formulario W-2, 1099, o declaracion de impuestos)." data-en="You generally need an ID (passport, driver's license, etc.), social security number (or ITIN for immigrants), and proof of income (W-2, 1099, or tax return).">Generalmente necesitas un documento de identidad (pasaporte, licencia de conducir, etc.), numero de seguro social (o ITIN para inmigrantes), y evidencia de ingresos (formulario W-2, 1099, o declaracion de impuestos).</p>
+      </div><div class="faq-item">
+        <div class="faq-q" data-es="¿Puedo cambiar de plan durante el año?" data-en="Can I change plans during the year?">¿Puedo cambiar de plan durante el año?</div>
+        <p class="faq-a" data-es="No normalmente, a menos que tengas un evento calificado (matrimonio, nacimiento, perdida de empleo, etc.). La temporada abierta es del 1 noviembre al 15 enero." data-en="Not normally, unless you have a qualifying event (marriage, birth, job loss, etc.). Open enrollment runs November 1 to January 15.">No normalmente, a menos que tengas un evento calificado (matrimonio, nacimiento, perdida de empleo, etc.). La temporada abierta es del 1 noviembre al 15 enero.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-if (langToggle) {
-  langToggle.addEventListener('click', () => {
-    langOptions.style.display = langOptions.style.display === 'none' ? 'block' : 'none';
+<section style="padding:80px 48px;background:#f8f9fb;text-align:center;">
+  <h2 class="section-title" data-es="Listo para Cotizar?" data-en="Ready to Quote?">Listo para Cotizar?</h2>
+  <p class="section-sub" data-es="Llamanos hoy y obtén respuestas a todas tus preguntas. Una consulta toma menos de 10 minutos." data-en="Call us today and get answers to all your questions. A consultation takes less than 10 minutes.">Llamanos hoy y obtén respuestas a todas tus preguntas. Una consulta toma menos de 10 minutos.</p>
+  <button class="btn-primary" style="margin-top:24px;">Contactar Ahora</button>
+</section><footer class="footer">
+  <div>
+    <div class="footer-logo"><img src="https://cdn.lopcha.com/logo-white-sm.svg" alt="Lopcha Logo"></div>
+    <p class="footer-copy" data-es="Lopcha Insurance Agency es un intermediario de seguros certificado. Operamos en multiples estados y tenemos un equipo bilingue listo para servir." data-en="Lopcha Insurance Agency is a certified insurance intermediary. We operate in multiple states and have a bilingual team ready to serve.">Lopcha Insurance Agency es un intermediario de seguros certificado. Operamos en multiples estados y tenemos un equipo bilingue listo para servir.</p>
+  </div>
+  <div>
+    <div style="font-weight:600;color:white;margin-bottom:12px;">Enlaces</div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <a class="footer-link" href="/">Inicio</a>
+      <a class="footer-link" href="/aca">ACA</a>
+      <a class="footer-link" href="/medicare">Medicare</a>
+      <a class="footer-link" href="/vida">Vida</a>
+    </div>
+  </div>
+  <div>
+    <div style="font-weight:600;color:white;margin-bottom:12px;">Legal</div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <a class="footer-link" href="/privacy">Privacidad</a>
+      <a class="footer-link" href="/terms">Terminos</a>
+      <a class="footer-link" href="/contact">Contacto</a>
+    </div>
+  </div>
+</footer></body></html>v>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2 class="cta-title" data-es="Reclama tu subsidio ACA hoy." data-en="Claim your ACA subsidy today.">Reclama tu subsidio ACA hoy.</h2>
+  <p class="cta-sub" data-es="Inscripcion gratuita · Sin presion · Servicio en espanol · Multiples estados" data-en="Free enrollment · No pressure · Spanish service · Multiple states">Inscripcion gratuita · Sin presion · Servicio en espanol · Multiples estados</p>
+  <div class="cta-actions">
+    <a href="/#contacto" class="btn-primary" style="font-size:16px;padding:17px 36px;" data-es="Verificar mi elegibilidad →" data-en="Check my eligibility →">Verificar mi elegibilidad →</a>
+    <a href="tel:+17544651469" class="btn-secondary" style="font-size:16px;padding:17px 28px;">📞 (754) 465-1469</a>
+  </div>
+  <div class="trust-row">
+    <span class="trust-item"><span class="trust-dot"></span><span data-es="Agentes certificados federalmente" data-en="Federally certified agents">Agentes certificados federalmente</span></span>
+    <span class="trust-item"><span class="trust-dot"></span><span data-es="Servicio en espanol e ingles" data-en="Service in Spanish and English">Servicio en espanol e ingles</span></span>
+    <span class="trust-item"><span class="trust-dot"></span><span data-es="Sunrise, FL · Multiples estados" data-en="Sunrise, FL · Multiple states">Sunrise, FL · Multiples estados</span></span>
+    <span class="trust-item"><span class="trust-dot"></span><span data-es="Sin costo de inscripcion" data-en="No enrollment cost">Sin costo de inscripcion</span></span>
+  </div>
+</section>
+<footer class="footer">
+  <div>
+    <div class="footer-logo"><a href="/"><img src="/logo.svg" alt="Lopcha Insurance Agency"></a></div>
+    <div class="footer-copy">© 2026 Lopcha Services LLC · Sunrise, FL · (754) 465-1469<br>
+    <span data-es="Agentes licenciados en múltiples estados · Medicare · ACA · Seguro de Vida" data-en="Licensed agents in multiple states · Medicare · ACA · Life Insurance">Agentes licenciados en múltiples estados · Medicare · ACA · Seguro de Vida</span></div>
+  </div>
+  <div>
+    <div class="footer-links">
+      <a href="/" class="footer-link" data-es="Inicio" data-en="Home">Inicio</a>
+      <a href="/medicare" class="footer-link">Medicare</a>
+      <a href="/aca" class="footer-link">ACA</a>
+      <a href="/vida" class="footer-link" data-es="Vida" data-en="Life">Vida</a>
+      <a href="/#contacto" class="footer-link" data-es="Contacto" data-en="Contact">Contacto</a>
+    </div>
+    <div style="font-size:12px;color:rgba(255,255,255,0.3);">lopcha.com</div>
+  </div>
+</footer>
+<script>
+let currentLang = 'es';
+function toggleLang() {
+  currentLang = currentLang === 'es' ? 'en' : 'es';
+  document.getElementById('langBtn').textContent = currentLang === 'es' ? 'EN' : 'ES';
+  document.querySelectorAll('[data-es]').forEach(el => {
+    const text = el.getAttribute('data-' + currentLang);
+    if (text !== null) el.innerHTML = text;
   });
 }
-
-function setLanguage(lang) {
-  currentLang = lang.toUpperCase();
-  localStorage.setItem('preferred_lang', lang);
-  updateLanguage();
-  if (langOptions) langOptions.style.display = 'none';
-}
-
-function updateLanguage() {
-  currentLang = (currentLang || localStorage.getItem('preferred_lang') || 'EN').toUpperCase();
-  const attr = 'data-' + (currentLang === 'ES' ? 'es' : 'en').toLowerCase();
-  document.querySelectorAll('[data-es]').forEach(el => {
-    const text = el.getAttribute(attr);
-    if (text !== null) 
+</script>
+</body>
+</html>
