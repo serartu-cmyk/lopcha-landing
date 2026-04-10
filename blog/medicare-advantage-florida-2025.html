@@ -126,12 +126,12 @@
 /* FOOTER */
 .footer{background:var(--navy);}
 /* RESPONSIVE */
-@media(max-width:900px){.article-hero-img{height:280px;}.article-body-img{height:240px;}.article-layout{grid-template-columns:1fr;gap:40px;padding:40px 24px 60px;}.article-hero{padding:40px 24px 36px;}.article-hero-title{font-size:28px;}.article-sidebar{position:static;}.related-grid{grid-template-columns:1fr 1fr;}.related-section{padding:40px 24px;}}
+@media(max-width:900px){.article-layout{grid-template-columns:1fr;gap:40px;padding:40px 24px 60px;}.article-hero{padding:40px 24px 36px;}.article-hero-title{font-size:28px;}.article-sidebar{position:static;}.related-grid{grid-template-columns:1fr 1fr;}.related-section{padding:40px 24px;}}
 @media(max-width:600px){.nav{padding:0 20px;}.nav-links{display:none;}.related-grid{grid-template-columns:1fr;}}
 
 <style>
-.article-hero-img{width:100%;height:460px;object-fit:cover;object-position:center center;display:block;border-radius:0;}
-.article-body-img{width:100%;height:380px;object-fit:cover;object-position:center center;border-radius:12px;margin:32px 0;display:block;box-shadow:0 4px 24px rgba(0,0,0,0.10);}
+.article-hero-img{width:100%;aspect-ratio:16/6;object-fit:cover;object-position:center 30%;display:block;border-radius:0;}
+.article-body-img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center center;border-radius:12px;margin:32px 0;display:block;box-shadow:0 4px 24px rgba(0,0,0,0.10);}
 </style>
 </style>
 </head>
@@ -179,7 +179,7 @@
   </div>
 </div>
 
-<img src="/blog/img/medicare-advantage-florida-hero.webp" alt="Pareja de adultos mayores latinos felices en South Florida" class="article-hero-img" loading="eager" width="1920" height="1047">
+<img src="/blog/img/medicare-advantage-florida-hero.webp" alt="Pareja de adultos mayores latinos felices en South Florida" class="article-hero-img" loading="eager" width="1920" height="720">
 
 <div class="article-layout">
   <article class="article-body">
@@ -192,7 +192,7 @@
     </div>
 
     <h2>¿Qué es Medicare Advantage?</h2>
-<img src="/blog/img/medicare-advantage-florida-doctor.webp" alt="Doctor latino consultando con paciente mayor en clínica de South Florida" class="article-body-img" loading="lazy" width="1920" height="1047">
+<img src="/blog/img/medicare-advantage-florida-doctor.webp" alt="Doctor latino consultando con paciente mayor en clínica de South Florida" class="article-body-img" loading="lazy" width="1920" height="1080">
 
     <p>Medicare Advantage, también llamado Medicare Parte C, es ofrecido por compañías de seguros privadas aprobadas por Medicare. Estos planes cubren todo lo que cubre el Medicare Original (Partes A y B), pero generalmente añaden beneficios adicionales.</p>
     <p>En Florida, los planes Advantage son extremadamente populares por una razón simple: <strong>la competencia entre aseguradoras es muy alta</strong>, lo que obliga a las compañías a ofrecer planes cada vez más completos y con primas más bajas.</p>
