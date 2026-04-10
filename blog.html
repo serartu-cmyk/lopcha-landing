@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Guías sobre Medicare, ACA/Obamacare y Seguro de Vida en South Florida — Miami, Hialeah, Doral, Broward. Artículos educativos de Lopcha Insurance Agency.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://lopcha.com/blog">
+<meta property="og:title" content="Blog de Seguros — Medicare, ACA y Vida | Lopcha Insurance">
+<meta property="og:description" content="Guías sobre Medicare, ACA/Obamacare y Seguro de Vida en South Florida.">
+<meta property="og:url" content="https://lopcha.com/blog">
+<title>Blog · Medicare, ACA y Seguro de Vida en South Florida | Lopcha Insurance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --navy:#001c3d;--navy-mid:#002a5c;
+  --gold:#F5A623;--gold-light:#FDF3E0;--gold-dark:#C47F0A;
+  --white:#FFFFFF;--off-white:#F8F9FB;
+  --text-primary:#0D1B2A;--text-secondary:#4A5568;--text-muted:#8FA3B8;
+  --border:rgba(0,28,61,0.10);--border-soft:rgba(0,28,61,0.06);
+  --teal:#1D9E75;--teal-light:#E1F5EE;
+  --font-display:'Playfair Display',Georgia,serif;
+  --font-body:'Plus Jakarta Sans',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);color:var(--text-primary);background:var(--white);overflow-x:hidden;line-height:1;}
+
+/* NAV */
+.nav{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:64px;background:var(--navy);position:sticky;top:0;z-index:100;}
+.nav-logo img{height:36px;width:auto;display:block;}
+.nav-links{display:flex;align-items:center;gap:26px;}
+.nav-link{font-size:13px;color:rgba(255,255,255,0.6);cursor:pointer;transition:color 0.2s;font-weight:400;text-decoration:none;}
+.nav-link:hover{color:var(--white);}
+.nav-right{display:flex;align-items:center;gap:10px;}
+.nav-lang{font-size:12px;color:rgba(255,255,255,0.5);background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:6px;padding:5px 10px;cursor:pointer;transition:all 0.2s;}
+.nav-lang:hover{background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.9);}
+.nav-cta{font-family:var(--font-body);font-size:13px;font-weight:600;background:var(--gold);color:var(--navy);border:none;border-radius:8px;padding:9px 20px;cursor:pointer;transition:all 0.2s;text-decoration:none;}
+.nav-cta:hover{background:#e8960f;}
+/* NAV DROPDOWN */
+.nav-dropdown{position:relative;}
+.nav-dropdown-trigger{font-size:13px;color:rgba(255,255,255,0.6);cursor:pointer;transition:color 0.2s;font-weight:400;text-decoration:none;display:flex;align-items:center;gap:4px;background:none;border:none;padding:0;font-family:var(--font-body);}
+.nav-dropdown-trigger:hover{color:var(--white);}
+.nav-dropdown-trigger svg{transition:transform 0.2s;}
+.nav-dropdown:hover .nav-dropdown-trigger{color:var(--white);}
+.nav-dropdown:hover .nav-dropdown-trigger svg{transform:rotate(180deg);}
+.nav-dropdown-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--white);border-radius:12px;padding:12px 8px 8px 8px;min-width:170px;box-shadow:0 8px 32px rgba(0,28,61,0.14);border:1px solid var(--border);opacity:0;visibility:hidden;transition:all 0.18s;pointer-events:none;}
+.nav-dropdown:hover .nav-dropdown-menu{opacity:1;visibility:visible;pointer-events:all;}
+.nav-dropdown-item{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;text-decoration:none;color:var(--text-primary);font-size:13px;font-weight:500;transition:background 0.15s;}
+.nav-dropdown-item:hover{background:var(--off-white);}
+.nav-dropdown-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.nd-medicare{background:#3498DB;}.nd-aca{background:#1D9E75;}.nd-vida{background:#9B59B6;}
+
+
+
+/* HERO */
+.hero{position:relative;overflow:hidden;padding:80px 48px 72px;background:var(--white);}
+.hero-glow1{position:absolute;top:-60px;right:-80px;width:480px;height:480px;background:radial-gradient(circle,rgba(245,166,35,0.07) 0%,transparent 65%);pointer-events:none;}
+.hero-glow2{position:absolute;bottom:-60px;left:-60px;width:360px;height:360px;background:radial-gradient(circle,rgba(0,28,61,0.04) 0%,transparent 65%);pointer-events:none;}
+.hero-inner{position:relative;z-index:2;max-width:800px;margin:0 auto;text-align:center;}
+.products-row{display:inline-flex;align-items:center;gap:6px;margin-bottom:28px;flex-wrap:wrap;justify-content:center;}
+.prod-pill{font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:5px 12px;border-radius:20px;}
+.pp-navy{background:var(--navy);color:var(--white);}
+.pp-gold{background:var(--gold);color:var(--navy);}
+.pp-teal{background:var(--teal-light);color:#0F6E56;border:1px solid rgba(29,158,117,0.2);}
+.pp-purple{background:#EEEDFE;color:#3C3489;}
+.prod-dot{font-size:14px;color:var(--text-muted);}
+.hero-title{font-family:var(--font-display);font-size:54px;font-weight:700;line-height:1.08;letter-spacing:-0.02em;color:var(--navy);margin-bottom:20px;}
+.hero-title .accent{color:var(--gold);font-style:italic;}
+.hero-sub{font-size:16px;color:var(--text-secondary);line-height:1.7;max-width:580px;margin:0 auto 36px;font-weight:300;}
+.hero-sub strong{color:var(--navy);font-weight:600;}
+.profiles-row{display:flex;align-items:stretch;justify-content:center;gap:12px;margin-bottom:40px;}
+.profile-card{flex:1;max-width:250px;background:var(--off-white);border:1px solid var(--border);border-radius:14px;padding:18px 20px;text-align:left;}
+.profile-tag{font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:3px 8px;border-radius:4px;display:inline-block;margin-bottom:10px;}
+.pt-gold{background:var(--gold-light);color:var(--gold-dark);}
+.pt-teal{background:var(--teal-light);color:#0F6E56;}
+.pt-navy{background:rgba(0,28,61,0.08);color:var(--navy);}
+.profile-title{font-size:13px;font-weight:600;color:var(--text-primary);margin-bottom:6px;}
+.profile-pain{font-size:12px;color:var(--text-secondary);line-height:1.5;font-weight:300;font-style:italic;}
+.hero-actions{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:44px;flex-wrap:wrap;}
+.btn-navy{font-family:var(--font-body);font-size:15px;font-weight:600;background:var(--navy);color:var(--white);border:none;border-radius:10px;padding:14px 28px;cursor:pointer;transition:all 0.2s;text-decoration:none;display:inline-block;}
+.btn-navy:hover{background:var(--navy-mid);transform:translateY(-1px);}
+.btn-outline{font-family:var(--font-body);font-size:15px;font-weight:400;background:transparent;color:var(--navy);border:1px solid var(--border);border-radius:10px;padding:14px 28px;cursor:pointer;transition:all 0.2s;text-decoration:none;display:inline-block;}
+.btn-outline:hover{background:var(--off-white);}
+.btn-gold{font-family:var(--font-body);font-size:15px;font-weight:600;background:var(--gold);color:var(--navy);border:none;border-radius:10px;padding:14px 24px;cursor:pointer;transition:all 0.2s;text-decoration:none;display:inline-block;}
+.btn-gold:hover{background:#e8960f;transform:translateY(-1px);}
+.btn-ghost{font-family:var(--font-body);font-size:14px;font-weight:400;background:transparent;color:rgba(255,255,255,0.65);border:1px solid rgba(255,255,255,0.2);border-radius:10px;padding:13px 20px;cursor:pointer;transition:all 0.2s;text-decoration:none;display:inline-block;}
+.btn-ghost:hover{border-color:rgba(255,255,255,0.45);color:var(--white);}
+.hero-proof{display:flex;align-items:center;justify-content:center;gap:8px;}
+.proof-avatars{display:flex;}
+.proof-avatar{width:30px;height:30px;border-radius:50%;border:2px solid var(--white);margin-left:-9px;font-size:10px;font-weight:600;display:flex;align-items:center;justify-content:center;color:var(--white);}
+.proof-avatar:first-child{margin-left:0;}
+.pa1{background:#0F6E56}.pa2{background:#185FA5}.pa3{background:#854F0B}.pa4{background:#3C3489}.pa5{background:#6D2B35}
+.proof-text{font-size:13px;color:var(--text-muted);margin-left:6px;}
+.proof-text strong{color:var(--navy);font-weight:600;}
+
+/* STATS BAR */
+.stats-bar{display:grid;grid-template-columns:repeat(4,1fr);background:var(--navy);}
+.stat-item{padding:26px 0;text-align:center;border-right:1px solid rgba(255,255,255,0.08);}
+.stat-item:last-child{border-right:none;}
+.stat-num{font-family:var(--font-display);font-size:22px;font-weight:700;color:var(--white);line-height:1;letter-spacing:-0.02em;}
+.stat-num span{color:var(--gold);}
+.stat-lbl{font-size:11px;color:rgba(255,255,255,0.45);margin-top:6px;line-height:1.4;}
+
+/* SECTIONS */
+.section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:14px;}
+.section-title{font-family:var(--font-display);font-size:38px;font-weight:700;line-height:1.1;color:var(--navy);margin-bottom:16px;}
+.section-title em{color:var(--gold);font-style:italic;}
+.section-sub{font-size:16px;color:var(--text-secondary);line-height:1.7;font-weight:300;max-width:640px;margin:0 auto 24px;}
+.section-sub strong{color:var(--navy);font-weight:600;}
+
+/* ENSURO */
+.ensuro-section{background:var(--white);padding:80px 48px;border-top:1px solid var(--border-soft);}
+.ensuro-inner{max-width:960px;margin:0 auto;}
+.ensuro-header{text-align:center;margin-bottom:48px;}
+.free-badge{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;color:#0F6E56;background:var(--teal-light);border:1px solid rgba(15,110,86,0.2);border-radius:20px;padding:6px 16px;}
+.free-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);animation:pulse 2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
+.demo-layout{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;}
+.report-mock{border:1px solid var(--border);border-radius:16px;overflow:hidden;}
+.report-topbar{background:var(--navy);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;}
+.report-logo-row{display:flex;align-items:center;gap:8px;}
+.report-logo-dots{display:grid;grid-template-columns:1fr 1fr;gap:2px;width:16px;}
+.rld{width:6px;height:6px;border-radius:50%;}
+.rld-r{background:#E8453C}.rld-y{background:#F5A623}.rld-p{background:#9B59B6}.rld-b{background:#3498DB}
+.report-logo-text{font-size:13px;font-weight:600;color:white;}
+.report-logo-sub{font-size:8px;color:rgba(255,255,255,0.45);letter-spacing:0.08em;}
+.report-confidential{font-size:9px;color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.08);border-radius:4px;padding:3px 8px;}
+.report-body{padding:20px;background:var(--white);}
+.report-case-header{border-bottom:1px solid var(--border);padding-bottom:14px;margin-bottom:16px;}
+.report-case-name{font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--navy);}
+.report-case-meta{font-size:11px;color:var(--text-muted);margin-top:3px;}
+.report-section{margin-bottom:14px;}
+.report-section-label{font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:7px;}
+.result-badge{display:flex;align-items:center;gap:10px;background:rgba(0,28,61,0.04);border:1px solid var(--border);border-radius:10px;padding:10px 14px;}
+.result-badge-icon{width:32px;height:32px;border-radius:8px;background:var(--navy);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.result-badge-type{font-size:10px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;}
+.result-badge-value{font-size:13px;font-weight:600;color:var(--navy);margin-top:1px;}
+.urgency-row{display:flex;align-items:center;gap:8px;padding:8px 12px;background:#F0FDF4;border:1px solid rgba(29,158,117,0.2);border-radius:8px;}
+.urgency-dot{width:8px;height:8px;border-radius:50%;background:var(--teal);flex-shrink:0;}
+.urgency-text{font-size:11px;color:#0F6E56;line-height:1.45;}
+.urgency-text strong{font-weight:600;}
+.steps-list{display:flex;flex-direction:column;gap:6px;}
+.step-row{display:flex;align-items:flex-start;gap:8px;}
+.step-num-badge{width:18px;height:18px;border-radius:50%;background:var(--navy);color:var(--gold);font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.step-text{font-size:11px;color:var(--text-secondary);line-height:1.5;}
+.costs-table{width:100%;border-radius:8px;overflow:hidden;border:1px solid rgba(29,158,117,0.2);}
+.costs-header{display:grid;grid-template-columns:1fr 1fr 1fr;background:#F0FDF4;}
+.costs-row{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid rgba(29,158,117,0.1);}
+.costs-cell{font-size:9px;padding:5px 8px;color:var(--text-secondary);}
+.costs-cell.head{font-weight:700;color:#0F6E56;font-size:8px;text-transform:uppercase;letter-spacing:0.05em;}
+.costs-cell.val{font-weight:600;color:var(--navy);}
+.costs-cell.green{color:var(--teal);font-weight:600;}
+.tip-box{background:#FFFBEB;border:1px solid rgba(245,166,35,0.25);border-radius:8px;padding:10px 12px;margin-top:10px;}
+.tip-label{font-size:9px;font-weight:700;color:var(--gold-dark);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px;}
+.tip-text{font-size:10px;color:var(--text-secondary);line-height:1.55;}
+.report-footer{padding:12px 20px;background:var(--off-white);border-top:1px solid var(--border);text-align:center;}
+.report-footer-text{font-size:9px;color:var(--text-muted);line-height:1.5;}
+.report-download{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:600;color:var(--navy);background:var(--white);border:1px solid var(--border);border-radius:6px;padding:5px 10px;margin-top:6px;cursor:pointer;}
+.ensuro-right{display:flex;flex-direction:column;gap:14px;}
+.ensuro-headline{font-family:var(--font-display);font-size:26px;font-weight:700;line-height:1.15;color:var(--navy);margin-bottom:4px;}
+.ensuro-headline em{color:var(--gold);font-style:italic;}
+.ensuro-body{font-size:14px;color:var(--text-secondary);line-height:1.7;font-weight:300;}
+.feature-row{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;background:var(--off-white);border:1px solid var(--border);border-radius:12px;}
+.feature-icon{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.fi-navy{background:var(--navy)}.fi-teal{background:var(--teal-light)}.fi-gold{background:var(--gold-light)}
+.feature-title{font-size:13px;font-weight:600;color:var(--navy);margin-bottom:3px;}
+.feature-desc{font-size:12px;color:var(--text-secondary);line-height:1.5;font-weight:300;}
+.profiles-addressed{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.pa-card{padding:14px 16px;border-radius:10px;border:1px solid var(--border);}
+.pa-card-navy{background:var(--navy);border-color:transparent;}
+.pa-card-white{background:var(--white);}
+.pa-tag-lbl{font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px;}
+.c-gold{color:var(--gold)}.c-teal{color:var(--teal)}
+.pa-card-title{font-size:12px;font-weight:600;margin-bottom:4px;}
+.pa-card-navy .pa-card-title{color:var(--white);}
+.pa-card-white .pa-card-title{color:var(--navy);}
+.pa-card-desc{font-size:11px;line-height:1.5;font-weight:300;}
+.pa-card-navy .pa-card-desc{color:rgba(255,255,255,0.55);}
+.pa-card-white .pa-card-desc{color:var(--text-secondary);}
+.ensuro-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-top:44px;}
+.estat{background:var(--white);padding:20px 18px;text-align:center;}
+.estat-num{font-family:var(--font-display);font-size:24px;font-weight:700;color:var(--navy);line-height:1;}
+.estat-num span{color:var(--gold);}
+.estat-lbl{font-size:11px;color:var(--text-muted);margin-top:5px;line-height:1.4;}
+
+/* ACA */
+.aca-section{background:var(--navy);padding:80px 48px;position:relative;overflow:hidden;}
+.aca-bg{position:absolute;inset:0;opacity:0.03;background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:28px 28px;pointer-events:none;}
+.aca-inner{max-width:900px;margin:0 auto;position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.aca-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+.aca-title{font-family:var(--font-display);font-size:36px;font-weight:700;line-height:1.1;color:var(--white);margin-bottom:16px;}
+.aca-title em{color:var(--gold);font-style:italic;}
+.aca-body{font-size:15px;color:rgba(255,255,255,0.6);line-height:1.7;font-weight:300;margin-bottom:28px;}
+.aca-body strong{color:rgba(255,255,255,0.9);font-weight:600;}
+.aca-cta-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.aca-cards{display:flex;flex-direction:column;gap:12px;}
+.aca-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.10);border-radius:14px;padding:18px 20px;display:flex;align-items:flex-start;gap:14px;}
+.aca-card-icon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.aci-gold{background:rgba(245,166,35,0.15)}.aci-teal{background:rgba(29,158,117,0.15)}.aci-blue{background:rgba(52,152,219,0.15)}
+.aca-card-title{font-size:13px;font-weight:600;color:var(--white);margin-bottom:4px;}
+.aca-card-body{font-size:12px;color:rgba(255,255,255,0.55);line-height:1.55;font-weight:300;}
+.aca-badge{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:600;color:var(--gold);background:rgba(245,166,35,0.12);border:1px solid rgba(245,166,35,0.2);border-radius:20px;padding:4px 10px;margin-top:6px;}
+
+/* VIDA */
+.vida-section{background:var(--off-white);padding:80px 48px;border-top:1px solid var(--border-soft);}
+.vida-inner{max-width:960px;margin:0 auto;}
+.vida-header{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:48px;}
+.vida-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:14px;}
+.vida-title{font-family:var(--font-display);font-size:36px;font-weight:700;line-height:1.1;color:var(--navy);margin-bottom:16px;}
+.vida-title em{color:var(--gold);font-style:italic;}
+.vida-body{font-size:15px;color:var(--text-secondary);line-height:1.7;font-weight:300;margin-bottom:24px;}
+.vida-body strong{color:var(--navy);font-weight:600;}
+.vida-override-badge{display:inline-flex;align-items:center;gap:10px;background:var(--navy);border-radius:12px;padding:12px 18px;}
+.vob-icon{width:32px;height:32px;border-radius:8px;background:rgba(245,166,35,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.vob-label{font-size:11px;font-weight:500;color:rgba(255,255,255,0.55);}
+.vob-value{font-size:14px;font-weight:600;color:var(--white);}
+.vida-hook{background:var(--navy);border-radius:16px;padding:28px;position:relative;overflow:hidden;}
+.vida-hook-bg{position:absolute;inset:0;opacity:0.04;background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:24px 24px;pointer-events:none;}
+.vida-hook-inner{position:relative;z-index:2;}
+.vida-hook-title{font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--white);line-height:1.2;margin-bottom:10px;}
+.vida-hook-title em{color:var(--gold);font-style:italic;}
+.vida-hook-body{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.65;font-weight:300;}
+.vida-hook-body strong{color:rgba(255,255,255,0.9);font-weight:600;}
+.vida-hook-divider{border:none;border-top:1px solid rgba(255,255,255,0.08);margin:16px 0;}
+.vida-hook-stats{display:grid;grid-template-columns:repeat(3,1fr);}
+.vhs{text-align:center;padding:0 10px;border-right:1px solid rgba(255,255,255,0.08);}
+.vhs:last-child{border-right:none;}
+.vhs-num{font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--gold);line-height:1;}
+.vhs-lbl{font-size:10px;color:rgba(255,255,255,0.4);margin-top:4px;line-height:1.4;}
+.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.product-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px;transition:all 0.2s;}
+.product-card:hover{border-color:rgba(0,28,61,0.2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,28,61,0.06);}
+.product-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
+.product-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;}
+.pi-blue{background:#EBF4FD}.pi-purple{background:#F0EEFB}.pi-teal{background:var(--teal-light)}.pi-gold{background:var(--gold-light)}
+.product-badge{font-size:10px;font-weight:600;padding:3px 9px;border-radius:6px;}
+.pb-blue{background:#EBF4FD;color:#185FA5}.pb-purple{background:#F0EEFB;color:#534AB7}.pb-teal{background:var(--teal-light);color:#0F6E56}.pb-gold{background:var(--gold-light);color:var(--gold-dark)}
+.product-name{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:3px;letter-spacing:-0.01em;}
+.product-tagline{font-size:12px;color:var(--text-muted);margin-bottom:14px;}
+.story-block{background:var(--off-white);border-radius:10px;padding:13px 15px;margin-bottom:14px;border-left:3px solid;}
+.sb-blue{border-left-color:#3498DB}.sb-purple{border-left-color:#9B59B6}.sb-teal{border-left-color:var(--teal)}.sb-gold{border-left-color:var(--gold)}
+.story-label{font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:5px;}
+.story-text{font-size:12px;color:var(--text-secondary);line-height:1.55;font-style:italic;font-weight:300;}
+.story-text strong{font-style:normal;color:var(--navy);font-weight:600;}
+.who-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+.who-chip{font-size:11px;font-weight:500;color:var(--text-secondary);background:var(--off-white);border:1px solid var(--border);border-radius:20px;padding:4px 10px;}
+.override-row{display:flex;align-items:center;justify-content:space-between;margin-top:14px;padding-top:14px;border-top:1px solid var(--border);}
+.override-label{font-size:11px;color:var(--text-muted);}
+.override-val{font-size:12px;font-weight:600;color:var(--navy);display:flex;align-items:center;gap:5px;}
+.override-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.vida-cta-strip{margin-top:44px;background:var(--navy);border-radius:16px;padding:32px 36px;display:flex;align-items:center;justify-content:space-between;gap:32px;position:relative;overflow:hidden;}
+.vida-cta-bg{position:absolute;inset:0;opacity:0.03;background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:24px 24px;pointer-events:none;}
+.vida-cta-left{position:relative;z-index:2;}
+.vida-cta-title{font-family:var(--font-display);font-size:24px;font-weight:700;color:var(--white);line-height:1.2;margin-bottom:8px;}
+.vida-cta-title em{color:var(--gold);font-style:italic;}
+.vida-cta-body{font-size:14px;color:rgba(255,255,255,0.55);font-weight:300;line-height:1.6;max-width:460px;}
+.vida-cta-right{position:relative;z-index:2;flex-shrink:0;}
+
+/* FAQ */
+.faq-section{background:var(--white);padding:80px 48px;border-top:1px solid var(--border-soft);}
+.faq-inner{max-width:780px;margin:0 auto;}
+.faq-header{text-align:center;margin-bottom:48px;}
+.faq-title{font-family:var(--font-display);font-size:38px;font-weight:700;color:var(--navy);margin-bottom:12px;line-height:1.1;}
+.faq-sub{font-size:15px;color:var(--text-secondary);font-weight:300;line-height:1.6;}
+.faq-list{display:flex;flex-direction:column;border:1px solid var(--border);border-radius:16px;overflow:hidden;}
+.faq-item{background:var(--white);border-bottom:1px solid var(--border);}
+.faq-item:last-child{border-bottom:none;}
+.faq-question{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;cursor:pointer;gap:16px;user-select:none;transition:background 0.15s;}
+.faq-question:hover{background:var(--off-white);}
+.faq-q-left{display:flex;align-items:center;gap:12px;}
+.faq-num{width:24px;height:24px;border-radius:50%;background:var(--navy);color:var(--gold);font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.faq-q-text{font-size:14px;font-weight:600;color:var(--navy);line-height:1.4;}
+.faq-chevron{width:20px;height:20px;border-radius:50%;background:var(--off-white);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.25s;}
+.faq-chevron svg{transition:transform 0.25s;}
+.faq-item.open .faq-chevron{background:var(--navy);border-color:var(--navy);}
+.faq-item.open .faq-chevron svg{transform:rotate(180deg);}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height 0.35s ease;}
+.faq-answer-inner{padding:0 24px 20px 60px;font-size:14px;color:var(--text-secondary);line-height:1.7;font-weight:300;}
+.faq-item.open .faq-answer{max-height:300px;}
+.faq-tag{display:inline-block;font-size:10px;font-weight:600;padding:2px 8px;border-radius:4px;margin-right:6px;margin-bottom:8px;}
+.tag-modelo{background:var(--gold-light);color:var(--gold-dark);}
+.tag-ensuro{background:var(--teal-light);color:#0F6E56;}
+.tag-proceso{background:rgba(0,28,61,0.07);color:var(--navy);}
+.tag-agencia{background:#EEEDFE;color:#3C3489;}
+
+/* MEETING FORM */
+.meeting-section{padding:80px 48px;background:var(--off-white);border-top:1px solid var(--border-soft);}
+.meeting-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+.meeting-perks{margin-top:28px;display:flex;flex-direction:column;gap:12px;}
+.meeting-perk{display:flex;align-items:flex-start;gap:10px;}
+.perk-check{width:20px;height:20px;border-radius:50%;background:var(--teal-light);border:1px solid rgba(29,158,117,0.2);flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:1px;}
+.perk-text{font-size:14px;color:var(--text-secondary);line-height:1.5;font-weight:300;}
+.perk-text strong{color:var(--navy);font-weight:600;}
+.meeting-card{background:var(--white);border:1px solid var(--border);border-radius:24px;padding:36px;}
+.profile-selector{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px;}
+.profile-option{position:relative;}
+.profile-option input[type="radio"]{position:absolute;opacity:0;width:0;height:0;}
+.profile-label{display:flex;align-items:center;gap:10px;padding:13px 14px;border-radius:12px;border:1.5px solid var(--border);background:var(--off-white);cursor:pointer;transition:all 0.2s;user-select:none;}
+.profile-label:hover{border-color:rgba(0,28,61,0.25);}
+.profile-option input:checked+.profile-label{border-color:var(--navy);background:var(--white);box-shadow:0 0 0 1px var(--navy);}
+.profile-radio{width:16px;height:16px;border-radius:50%;border:1.5px solid var(--border);background:var(--white);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.2s;}
+.profile-option input:checked+.profile-label .profile-radio{border-color:var(--navy);background:var(--navy);}
+.profile-radio-dot{width:6px;height:6px;border-radius:50%;background:var(--white);opacity:0;transition:opacity 0.15s;}
+.profile-option input:checked+.profile-label .profile-radio-dot{opacity:1;}
+.profile-info{display:flex;flex-direction:column;}
+.profile-name{font-size:13px;font-weight:600;color:var(--navy);line-height:1.2;}
+.profile-sub{font-size:11px;color:var(--text-muted);font-weight:300;margin-top:2px;}
+.form-divider{border:none;border-top:1px solid var(--border-soft);margin:0 0 20px;}
+.form-dynamic-header{margin-bottom:20px;}
+.form-eyebrow-dyn{font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:4px;}
+.form-title-dyn{font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--navy);line-height:1.2;}
+.form-subtitle-dyn{font-size:13px;color:var(--text-muted);margin-top:4px;line-height:1.5;}
+.form-group{margin-bottom:14px;}
+.form-label{font-size:11px;font-weight:600;color:var(--text-secondary);letter-spacing:0.05em;text-transform:uppercase;margin-bottom:6px;display:block;}
+.form-input{width:100%;font-family:var(--font-body);font-size:14px;padding:11px 14px;border:1px solid var(--border);border-radius:8px;background:var(--off-white);color:var(--text-primary);outline:none;transition:all 0.2s;}
+.form-input::placeholder{color:var(--text-muted);}
+.form-input:focus{border-color:var(--navy);background:var(--white);}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.form-select{width:100%;font-family:var(--font-body);font-size:14px;padding:11px 14px;border:1px solid var(--border);border-radius:8px;background:var(--off-white);color:var(--text-muted);outline:none;appearance:none;}
+.agency-field{overflow:hidden;max-height:0;opacity:0;transition:max-height 0.3s ease,opacity 0.25s ease,margin 0.3s ease;margin-bottom:0;}
+.agency-field.visible{max-height:80px;opacity:1;margin-bottom:14px;}
+.form-submit{width:100%;font-family:var(--font-body);font-size:15px;font-weight:600;background:var(--navy);color:var(--white);border:none;border-radius:8px;padding:14px;cursor:pointer;margin-top:8px;transition:all 0.2s;}
+.form-submit:hover{background:var(--navy-mid);}
+.form-submit:disabled{opacity:0.6;cursor:not-allowed;}
+.form-note{font-size:11px;color:var(--text-muted);text-align:center;margin-top:12px;line-height:1.5;}
+.form-success{display:none;text-align:center;padding:24px;background:var(--teal-light);border-radius:12px;border:1px solid rgba(29,158,117,0.2);}
+.form-success.visible{display:block;}
+.form-success-icon{font-size:32px;margin-bottom:10px;}
+.form-success-title{font-size:16px;font-weight:600;color:#0F6E56;margin-bottom:6px;}
+.form-success-text{font-size:13px;color:#1D9E75;font-weight:300;line-height:1.5;}
+
+/* FOOTER */
+.footer{padding:32px 48px;background:var(--navy);display:flex;align-items:flex-start;justify-content:space-between;gap:32px;}
+.footer-logo img{height:28px;width:auto;display:block;margin-bottom:10px;}
+.footer-copy{font-size:12px;color:rgba(255,255,255,0.3);line-height:1.6;max-width:440px;}
+.footer-links{display:flex;gap:20px;margin-bottom:8px;}
+.footer-link{font-size:12px;color:rgba(255,255,255,0.4);cursor:pointer;text-decoration:none;}
+.footer-link:hover{color:rgba(255,255,255,0.8);}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.hero-anim-1{animation:fadeUp 0.4s ease both;}
+.hero-anim-2{animation:fadeUp 0.5s 0.1s ease both;}
+.hero-anim-3{animation:fadeUp 0.5s 0.18s ease both;}
+.hero-anim-4{animation:fadeUp 0.5s 0.24s ease both;}
+.hero-anim-5{animation:fadeUp 0.5s 0.30s ease both;}
+.hero-anim-6{animation:fadeUp 0.5s 0.36s ease both;}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav{padding:0 20px;}
+  .nav-links{display:none;}
+  .hero{padding:48px 20px 40px;}
+  .hero-title{font-size:36px;}
+  .profiles-row{flex-direction:column;align-items:center;}
+  .profile-card{max-width:100%;width:100%;}
+  .stats-bar{grid-template-columns:repeat(2,1fr);}
+  .ensuro-section,.aca-section,.vida-section,.faq-section,.meeting-section{padding:60px 20px;}
+  .demo-layout,.aca-inner,.vida-header,.meeting-inner,.partnership-top{grid-template-columns:1fr;}
+  .products-grid{grid-template-columns:1fr;}
+  .ensuro-stats{grid-template-columns:repeat(2,1fr);}
+  .form-row{grid-template-columns:1fr;}
+  .footer{flex-direction:column;padding:32px 20px;}
+  .vida-cta-strip{flex-direction:column;text-align:center;}
+  .section-title{font-size:30px;}
+  .aca-title,.vida-title{font-size:28px;}
+}
+
+
+.footer{background:var(--navy);}
+.blog-hero{background:var(--navy);padding:60px 48px 56px;text-align:center;position:relative;overflow:hidden;}
+.blog-hero::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(circle,rgba(245,166,35,0.12) 0%,transparent 65%);pointer-events:none;}
+.blog-hero-eyebrow{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;position:relative;}
+.blog-hero-title{font-family:var(--font-display);font-size:42px;font-weight:700;color:var(--white);line-height:1.1;margin-bottom:14px;position:relative;}
+.blog-hero-title em{color:var(--gold);font-style:italic;}
+.blog-hero-sub{font-size:15px;color:rgba(255,255,255,0.6);font-weight:300;max-width:560px;margin:0 auto;position:relative;}
+.blog-main{max-width:1080px;margin:0 auto;padding:64px 48px 80px;}
+.blog-filter{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+.blog-filter-label{font-size:12px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-right:4px;}
+.filter-btn{font-family:var(--font-body);font-size:12px;font-weight:500;padding:7px 16px;border-radius:20px;cursor:pointer;transition:all 0.18s;border:1px solid var(--border);}
+.filter-btn.active,.filter-btn:hover{background:var(--navy);color:var(--white);border-color:var(--navy);}
+.filter-btn:not(.active){background:var(--white);color:var(--text-secondary);}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+.blog-card{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all 0.22s;text-decoration:none;display:block;color:inherit;}
+.blog-card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,28,61,0.1);border-color:rgba(0,28,61,0.15);}
+.blog-card-img{height:180px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.bci-medicare{background:linear-gradient(135deg,#001c3d 0%,#0a3a6e 100%);}
+.bci-aca{background:linear-gradient(135deg,#0a4a34 0%,#1D9E75 100%);}
+.bci-vida{background:linear-gradient(135deg,#2d1b4e 0%,#7B4FBD 100%);}
+.bci-general{background:linear-gradient(135deg,#1a1a2e 0%,#2a4a7f 100%);}
+.blog-card-icon{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.15);}
+.blog-card-category{position:absolute;top:14px;left:14px;font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:4px 10px;border-radius:12px;}
+.bcat-medicare{background:rgba(52,152,219,0.9);color:#fff;}
+.bcat-aca{background:rgba(29,158,117,0.9);color:#fff;}
+.bcat-vida{background:rgba(155,89,182,0.9);color:#fff;}
+.bcat-general{background:rgba(245,166,35,0.9);color:#001c3d;}
+.blog-card-body{padding:22px 22px 20px;}
+.blog-card-meta{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+.blog-card-date,.blog-card-read{font-size:11px;color:var(--text-muted);}
+.blog-card-dot{width:3px;height:3px;border-radius:50%;background:var(--text-muted);}
+.blog-card-title{font-family:var(--font-display);font-size:17px;font-weight:700;line-height:1.3;color:var(--navy);margin-bottom:10px;}
+.blog-card-excerpt{font-size:13px;color:var(--text-secondary);line-height:1.65;font-weight:300;margin-bottom:16px;}
+.blog-card-footer{display:flex;align-items:center;justify-content:space-between;}
+.blog-card-tag{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;padding:3px 9px;border-radius:10px;}
+.bct-medicare{background:rgba(52,152,219,0.1);color:#185FA5;}
+.bct-aca{background:rgba(29,158,117,0.1);color:#0F6E56;}
+.bct-vida{background:rgba(155,89,182,0.1);color:#5B3487;}
+.bct-general{background:var(--gold-light);color:var(--gold-dark);}
+.blog-card-arrow{width:28px;height:28px;border-radius:8px;background:var(--off-white);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:all 0.18s;}
+.blog-card:hover .blog-card-arrow{background:var(--navy);border-color:var(--navy);}
+.blog-card:hover .blog-card-arrow svg{stroke:#fff;}
+.blog-featured{grid-column:span 3;display:grid;grid-template-columns:1fr 1fr;border-radius:16px;overflow:hidden;border:1px solid var(--border);}
+.blog-featured-img{background:linear-gradient(135deg,#001c3d 0%,#003a80 60%,#0a5fa0 100%);display:flex;align-items:center;justify-content:center;min-height:280px;position:relative;overflow:hidden;}
+.blog-featured-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 70% 30%,rgba(245,166,35,0.2) 0%,transparent 60%);}
+.blog-featured-img-icon{width:80px;height:80px;border-radius:20px;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;position:relative;z-index:2;}
+.blog-featured-body{padding:36px;display:flex;flex-direction:column;justify-content:center;}
+.blog-featured-eyebrow{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:12px;}
+.blog-featured-title{font-family:var(--font-display);font-size:26px;font-weight:700;line-height:1.2;color:var(--navy);margin-bottom:14px;}
+.blog-featured-title em{color:var(--gold);font-style:italic;}
+.blog-featured-excerpt{font-size:14px;color:var(--text-secondary);line-height:1.7;font-weight:300;margin-bottom:22px;}
+.blog-featured-cta{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--navy);text-decoration:none;transition:gap 0.18s;}
+.blog-newsletter{background:var(--navy);border-radius:16px;padding:40px 44px;margin-top:56px;display:flex;align-items:center;justify-content:space-between;gap:32px;}
+.blog-newsletter-title{font-family:var(--font-display);font-size:24px;font-weight:700;color:var(--white);margin-bottom:8px;}
+.blog-newsletter-title em{color:var(--gold);font-style:italic;}
+.blog-newsletter-sub{font-size:14px;color:rgba(255,255,255,0.55);font-weight:300;}
+.blog-newsletter-form{display:flex;gap:10px;flex-shrink:0;}
+.blog-newsletter-input{font-family:var(--font-body);font-size:14px;padding:12px 18px;border-radius:10px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);color:var(--white);outline:none;width:260px;}
+.blog-newsletter-input::placeholder{color:rgba(255,255,255,0.35);}
+@media(max-width:900px){.blog-grid{grid-template-columns:1fr 1fr;}.blog-featured{grid-column:span 2;}.blog-newsletter{flex-direction:column;text-align:center;}}
+@media(max-width:600px){.blog-grid{grid-template-columns:1fr;}.blog-featured{grid-column:span 1;grid-template-columns:1fr;}.blog-main{padding:40px 20px 60px;}.blog-hero{padding:48px 24px 44px;}.blog-hero-title{font-size:30px;}}
+
+</style>
+</head>
+<body>
+<nav class="nav" id="top">
+  <div class="nav-logo"><a href="/"><img src="/logo.svg" alt="Lopcha Insurance" style="height:36px;width:auto;display:block;"></a></div>
+  <div class="nav-links">
+    <a href="/#ensuro" class="nav-link" data-es="Ensuro IA" data-en="Ensuro AI">Ensuro IA</a>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-trigger"><span data-es="Seguros" data-en="Insurance">Seguros</span><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg></button>
+      <div class="nav-dropdown-menu">
+        <a href="/medicare" class="nav-dropdown-item"><span class="nav-dropdown-dot nd-medicare"></span><span>Medicare</span></a>
+        <a href="/aca" class="nav-dropdown-item"><span class="nav-dropdown-dot nd-aca"></span><span>ACA / Obamacare</span></a>
+        <a href="/vida" class="nav-dropdown-item"><span class="nav-dropdown-dot nd-vida"></span><span data-es="Seguro de Vida" data-en="Life Insurance">Seguro de Vida</span></a>
+      </div>
+    </div>
+    <a href="/#agencia" class="nav-link" data-es="Agencia Partner" data-en="Partner Agency">Agencia Partner</a>
+    <a href="/#faq" class="nav-link">FAQ</a>
+    <a href="/blog" class="nav-link">Blog</a>
+  </div>
+  <div class="nav-right">
+    <a href="tel:+17544651469" class="nav-link" style="display:flex;align-items:center;gap:5px;color:rgba(255,255,255,0.5);font-size:12px;"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>(754) 465-1469</a>
+    <button class="nav-lang" onclick="toggleLang()" id="langBtn">EN</button>
+    <a href="/#contacto" class="nav-cta" data-es="Agenda una reunión" data-en="Schedule a meeting">Agenda una reunión</a>
+  </div>
+</nav>
+
+<section class="blog-hero">
+  <p class="blog-hero-eyebrow">Educación · Seguros · South Florida</p>
+  <h1 class="blog-hero-title">Guías y artículos sobre <em>seguros de salud</em></h1>
+  <p class="blog-hero-sub">Todo lo que necesitas saber sobre Medicare, ACA y Seguro de Vida — explicado en simple, en español.</p>
+</section>
+
+<div class="blog-main">
+  <div class="blog-filter">
+    <span class="blog-filter-label">Filtrar:</span>
+    <button class="filter-btn active">Todos</button>
+    <button class="filter-btn">Medicare</button>
+    <button class="filter-btn">ACA / Obamacare</button>
+    <button class="filter-btn">Seguro de Vida</button>
+  </div>
+  <div class="blog-grid">
+    <div class="blog-featured">
+      <div class="blog-featured-img"><div class="blog-featured-img-icon"><svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="rgba(255,255,255,0.85)" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div></div>
+      <div class="blog-featured-body">
+        <p class="blog-featured-eyebrow">⭐ Artículo destacado · Medicare</p>
+        <h2 class="blog-featured-title">Medicare Advantage en 2025:<br><em>Guía completa para Florida</em></h2>
+        <p class="blog-featured-excerpt">Todo lo que necesitas saber sobre los planes Medicare Advantage en Miami, Hialeah, Doral y todo el sur de Florida. Cubrimos costos, beneficios, y cómo elegir el plan correcto para ti o tu cliente.</p>
+        <a href="/blog/medicare-advantage-florida-2025" class="blog-featured-cta">Leer artículo completo <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+      </div>
+    </div>
+    <a href="/blog/medicare-supplement-vs-advantage" class="blog-card">
+      <div class="blog-card-img bci-medicare"><span class="blog-card-category bcat-medicare">Medicare</span><div class="blog-card-icon"><svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="rgba(255,255,255,0.85)" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg></div></div>
+      <div class="blog-card-body"><div class="blog-card-meta"><span class="blog-card-date">10 abril 2025</span><span class="blog-card-dot"></span><span class="blog-card-read">5 min</span></div><h3 class="blog-card-title">Medicare Supplement vs Medicare Advantage: ¿Cuál elegir?</h3><p class="blog-card-excerpt">Comparamos los dos tipos de cobertura complementaria de Medicare para que puedas asesorar mejor a tus clientes en Florida.</p><div class="blog-card-footer"><span class="blog-card-tag bct-medicare">Medicare</span><div class="blog-card-arrow"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></div></div></div>
+    </a>
+    <a href="/blog/aca-costos-south-florida-2025" class="blog-card">
+      <div class="blog-card-img bci-aca"><span class="blog-card-category bcat-aca">ACA / Obamacare</span><div class="blog-card-icon"><svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="rgba(255,255,255,0.85)" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div></div>
+      <div class="blog-card-body"><div class="blog-card-meta"><span class="blog-card-date">28 marzo 2025</span><span class="blog-card-dot"></span><span class="blog-card-read">6 min</span></div><h3 class="blog-card-title">¿Cuánto cuesta el seguro ACA en South Florida en 2025?</h3><p class="blog-card-excerpt">Analizamos los subsidios disponibles, los rangos de ingresos que califican y los costos reales en Miami-Dade y Broward County.</p><div class="blog-card-footer"><span class="blog-card-tag bct-aca">ACA / Obamacare</span><div class="blog-card-arrow"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></div></div></div>
+    </a>
+    <a href="/blog/seguro-de-vida-valor-en-efectivo" class="blog-card">
+      <div class="blog-card-img bci-vida"><span class="blog-card-category bcat-vida">Seguro de Vida</span><div class="blog-card-icon"><svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="rgba(255,255,255,0.85)" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div></div>
+      <div class="blog-card-body"><div class="blog-card-meta"><span class="blog-card-date">15 marzo 2025</span><span class="blog-card-dot"></span><span class="blog-card-read">4 min</span></div><h3 class="blog-card-title">Seguro de Vida con valor en efectivo: ¿qué es y cómo funciona?</h3><p class="blog-card-excerpt">Explicamos qué es el valor en efectivo de una póliza de vida, cómo acceder a él y por qué puede ser una herramienta financiera poderosa.</p><div class="blog-card-footer"><span class="blog-card-tag bct-vida">Seguro de Vida</span><div class="blog-card-arrow"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></div></div></div>
+    </a>
+    <a href="/blog/periodo-inscripcion-medicare-2026" class="blog-card">
+      <div class="blog-card-img bci-medicare"><span class="blog-card-category bcat-medicare">Medicare</span><div class="blog-card-icon"><svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="rgba(255,255,255,0.85)" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div></div>
+      <div class="blog-card-body"><div class="blog-card-meta"><span class="blog-card-date">5 marzo 2025</span><span class="blog-card-dot"></span><span class="blog-card-read">3 min</span></div><h3 class="blog-card-title">Período de Inscripción Abierta Medicare 2026: fechas y pasos</h3><p class="blog-card-excerpt">AEP (Oct 15–Dic 7) y OEP (Ene 1–Mar 31): conoce las fechas clave, qué cambios puedes hacer y cómo prepararte antes de cada período.</p><div class="blog-card-footer"><span class="blog-card-tag bct-medicare">Medicare</span><div class="blog-card-arrow"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></div></div></div>
+    </a>
+    <a href="/blog/como-ser-agente-partner-lopcha" class="blog-card">
+      <div class="blog-card-img bci-general"><span class="blog-card-category bcat-general">Agente Partner</span><div class="blog-card-icon"><svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="rgba(255,255,255,0.85)" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div></div>
+      <div class="blog-card-body"><div class="blog-card-meta"><span class="blog-card-date">20 febrero 2025</span><span class="blog-card-dot"></span><span class="blog-card-read">5 min</span></div><h3 class="blog-card-title">Cómo convertirte en Agencia Partner de Lopcha en South Florida</h3><p class="blog-card-excerpt">Descubre los beneficios: overrides competitivos, tecnología Ensuro con IA y soporte para escalar tu agencia en Medicare y ACA.</p><div class="blog-card-footer"><span class="blog-card-tag bct-general">Agente Partner</span><div class="blog-card-arrow"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></div></div></div>
+    </a>
+  </div>
+  <div class="blog-newsletter">
+    <div><h3 class="blog-newsletter-title">Recibe artículos sobre <em>seguros</em> en tu correo</h3><p class="blog-newsletter-sub">Una guía mensual sobre Medicare, ACA y Vida — sin spam, solo información útil.</p></div>
+    <div class="blog-newsletter-form"><input class="blog-newsletter-input" type="email" placeholder="tu@correo.com"><a href="/#contacto" class="btn-gold" style="white-space:nowrap;">Suscribirme</a></div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div style="max-width:960px;margin:0 auto;padding:56px 48px 40px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;">
+      <div><img src="/logo.svg" alt="Lopcha" style="height:28px;filter:brightness(10);margin-bottom:14px;"><p style="font-size:12px;color:rgba(255,255,255,0.4);line-height:1.6;font-weight:300;">Agencia de seguros en South Florida. Medicare, ACA y Seguro de Vida.</p></div>
+      <div><p style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:14px;">Seguros</p><div style="display:flex;flex-direction:column;gap:8px;"><a href="/medicare" style="font-size:13px;color:rgba(255,255,255,0.55);text-decoration:none;">Medicare Advantage</a><a href="/aca" style="font-size:13px;color:rgba(255,255,255,0.55);text-decoration:none;">ACA / Obamacare</a><a href="/vida" style="font-size:13px;color:rgba(255,255,255,0.55);text-decoration:none;" data-es="Seguro de Vida" data-en="Life Insurance">Seguro de Vida</a></div></div>
+      <div><p style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:14px;">Empresa</p><div style="display:flex;flex-direction:column;gap:8px;"><a href="/#agencia" style="font-size:13px;color:rgba(255,255,255,0.55);text-decoration:none;" data-es="Agencia Partner" data-en="Partner Agency">Agencia Partner</a><a href="/blog" style="font-size:13px;color:rgba(255,255,255,0.55);text-decoration:none;">Blog</a><a href="/#faq" style="font-size:13px;color:rgba(255,255,255,0.55);text-decoration:none;">FAQ</a></div></div>
+      <div><p style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:14px;" data-es="Contacto" data-en="Contact">Contacto</p><div style="display:flex;flex-direction:column;gap:8px;"><a href="tel:+17544651469" style="font-size:13px;color:rgba(255,255,255,0.55);text-decoration:none;">(754) 465-1469</a><a href="https://www.instagram.com/lopchainsurance/" target="_blank" style="font-size:13px;color:rgba(255,255,255,0.55);text-decoration:none;">@lopchainsurance</a></div></div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+      <p style="font-size:11px;color:rgba(255,255,255,0.25);" data-es="© 2025 Lopcha Services LLC. Todos los derechos reservados." data-en="© 2025 Lopcha Services LLC. All rights reserved.">© 2025 Lopcha Services LLC. Todos los derechos reservados.</p>
+      <p style="font-size:11px;color:rgba(255,255,255,0.25);">South Florida · Miami · Hialeah · Doral · Broward</p>
+    </div>
+  </div>
+</footer>
+<script>
+
+// ── LANGUAGE TOGGLE ──
+let currentLang = localStorage.getItem('lopcha_lang') || 'es';
+(function(){
+  if(currentLang === 'en'){
+    document.getElementById('langBtn').textContent = 'ES';
+    document.querySelectorAll('[data-es]').forEach(el => {
+      const t = el.getAttribute('data-en');
+      if(t) el.innerHTML = t;
+    });
+  }
+})();
+function toggleLang() {
+  currentLang = currentLang === 'es' ? 'en' : 'es';
+  localStorage.setItem('lopcha_lang', currentLang);
+  document.getElementById('langBtn').textContent = currentLang === 'es' ? 'EN' : 'ES';
+  document.querySelectorAll('[data-es]').forEach(el => {
+    const text = el.getAttribute('data-' + currentLang);
+    if (text) el.innerHTML = text;
+  });
+  updateFormText();
+}
+
+// ── FAQ TOGGLE ──
+function toggleFaq(q) {
+  const item = q.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+document.querySelector('.faq-item').classList.add('open');
+
+// ── FORM PROFILE TOGGLE ──
+function updateForm(profile) {
+  const isEs = currentLang === 'es';
+  const eyebrow = document.getElementById('fEyebrow');
+  const title = document.getElementById('fTitle');
+  const subtitle = document.getElementById('fSubtitle');
+  const submit = document.getElementById('fSubmit');
+  const agencyField = document.getElementById('fAgencyField');
+  const tipoInput = document.getElementById('tipoContacto');
+
+  if (profile === 'agencia') {
+    eyebrow.textContent = isEs ? 'Reunión exploratoria · Agencia' : 'Exploratory meeting · Agency';
+    title.textContent = isEs ? 'Cuéntanos sobre tu agencia' : 'Tell us about your agency';
+    subtitle.textContent = isEs ? 'Alguien de nuestro equipo se pone en contacto en menos de 24 horas para coordinar.' : 'Someone from our team will contact you within 24 hours to coordinate.';
+    submit.textContent = isEs ? 'Solicitar reunión como agencia →' : 'Request meeting as agency →';
+    tipoInput.value = 'Agencia';
+    agencyField.classList.add('visible');
+  } else {
+    eyebrow.textContent = isEs ? 'Reunión exploratoria · Agente' : 'Exploratory meeting · Agent';
+    title.textContent = isEs ? 'Cuéntanos sobre ti' : 'Tell us about yourself';
+    subtitle.textContent = isEs ? 'Alguien de nuestro equipo se pone en contacto en menos de 24 horas para coordinar.' : 'Someone from our team will contact you within 24 hours to coordinate.';
+    submit.textContent = isEs ? 'Solicitar reunión como agente →' : 'Request meeting as agent →';
+    tipoInput.value = 'Agente individual';
+    agencyField.classList.remove('visible');
+  }
+}
+
+function updateFormText() {
+  const selected = document.querySelector('input[name="profileForm"]:checked');
+  if (selected) updateForm(selected.value === 'Agencia' ? 'agencia' : 'agente');
+}
+
+// ── FORM SUBMIT ──
+async function handleSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = document.getElementById('fSubmit');
+  const isEs = currentLang === 'es';
+  btn.disabled = true;
+  btn.textContent = isEs ? 'Enviando...' : 'Sending...';
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      form.style.display = 'none';
+      document.getElementById('formSuccess').classList.add('visible');
+    } else {
+      btn.disabled = false;
+      btn.textContent = isEs ? 'Error — intenta de nuevo' : 'Error — try again';
+    }
+  } catch {
+    btn.disabled = false;
+    btn.textContent = isEs ? 'Error — intenta de nuevo' : 'Error — try again';
+  }
+}
+
+// ── INIT ──
+updateForm('agente');
+
+document.querySelectorAll('.filter-btn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');});});
+</script>
+</body>
+</html>
