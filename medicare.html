@@ -31,45 +31,35 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{font-family:var(--font-body);color:var(--text-primary);background:var(--white);overflow-x:hidden;line-height:1;}
-a{color:inherit;text-decoration:none;}
-img{max-width:100%;height:auto;display:block;}
-.container{max-width:1200px;margin:0 auto;padding:0 20px;}
-section{padding:60px 0;}.hero{background:linear-gradient(135deg, #001c3d 0%, #002a5c 100%);color:var(--white);padding:80px 0;text-align:center;}
-.hero h1{font-family:var(--font-display);font-size:48px;margin-bottom:20px;line-height:1.2;}
-.hero p{font-size:18px;margin-bottom:30px;opacity:0.95;max-width:600px;margin-left:auto;margin-right:auto;}
-.btn{display:inline-block;padding:12px 28px;border-radius:6px;font-weight:600;cursor:pointer;border:none;transition:all 0.3s ease;font-size:16px;}
-.btn-primary{background-color:var(--navy);color:var(--white);}
-.btn-primary:hover{background-color:var(--navy-mid);transform:translateY(-2px);box-shadow:0 8px 16px rgba(0,28,61,0.15);}
-.btn-secondary{background-color:var(--gold);color:var(--navy);}
-.btn-secondary:hover{background-color:var(--gold-dark);transform:translateY(-2px);box-shadow:0 8px 16px rgba(245,166,35,0.2);}
-.btn-outline{background-color:transparent;color:var(--navy);border:2px solid var(--navy);padding:10px 26px;}
-.btn-outline:hover{background-color:var(--navy);color:var(--white);}
-.hero-buttons{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:40px;}
-.plan-card{background:var(--white);padding:40px;border-radius:12px;box-shadow:0 4px 12px rgba(0,28,61,0.08);position:relative;overflow:hidden;transition:all 0.3s ease;}
-.plan-card:hover{transform:translateY(-8px);box-shadow:0 12px 32px rgba(0,28,61,0.16);}
-.plan-icon{font-size:48px;margin-bottom:16px;}
-.plan-badge{background:var(--gold-light);color:var(--navy);padding:8px 16px;border-radius:20px;font-size:12px;font-weight:600;display:inline-block;margin-bottom:12px;}
-.plan-name{font-family:var(--font-display);font-size:24px;margin:16px 0;color:var(--navy);}
-.plan-desc{color:var(--text-secondary);font-size:14px;margin-bottom:20px;line-height:1.6;}
-.plan-features{list-style:none;margin:20px 0;}
-.plan-feat{color:var(--text-secondary);font-size:13px;padding:8px 0;display:flex;align-items:center;}.feat-check{color:var(--gold);font-weight:700;margin-right:6px;}
-.plan-features li::before{content:'✓';color:var(--gold);font-weight:700;margin-right:10px;}
-.plan-cta{display:inline-block;margin-top:20px;color:var(--gold);font-weight:600;text-decoration:none;transition:color 0.3s;}
-.plan-cta:hover{color:var(--gold-dark);}
-.plans-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:30px;margin-top:40px;}
-@media (max-width:1024px){.plans-grid{grid-template-columns:1fr 1fr;}}
-@media (max-width:768px){.plans-grid{grid-template-columns:1fr;}}
-.process-section{background:var(--gold-light);padding:80px 0;border-radius:12px;margin:60px 0;}
-.process-steps{display:grid;grid-template-columns:repeat(4, 1fr);gap:30px;margin-top:40px;}
-.step{text-align:center;}
-.step-num{font-family:var(--font-display);font-size:48px;font-weight:700;color:var(--navy);margin-bottom:12px;}
-.step-title{font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--navy);margin-bottom:12px;}
-.step-desc{color:var(--text-secondary);font-size:14px;line-height:1.6;}
-@media (max-width:768px){.process-steps{grid-template-columns:1fr 1fr;}}
-.faq-section{margin:60px 0;}
-.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;}
-.faq-item{background:var(--white);padding:24px;border-radius:8px;border:1px solid var(--border);}
-.faq-q{font-weight:600;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;}14px;margin-bottom:28px;}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:64px;background:var(--navy);position:sticky;top:0;z-index:100;}
+.nav-logo img{height:36px;width:auto;display:block;}
+.nav-links{display:flex;align-items:center;gap:26px;}
+.nav-link{font-size:13px;color:rgba(255,255,255,0.6);cursor:pointer;transition:color 0.2s;font-weight:400;text-decoration:none;}
+.nav-link:hover{color:var(--white);}
+.nav-link.active{color:var(--gold);}
+.nav-right{display:flex;align-items:center;gap:10px;}
+.nav-lang{font-size:12px;color:rgba(255,255,255,0.5);background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:6px;padding:5px 10px;cursor:pointer;transition:all 0.2s;}
+.nav-lang:hover{background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.9);}
+.nav-cta{font-family:var(--font-body);font-size:13px;font-weight:600;background:var(--gold);color:var(--navy);border:none;border-radius:8px;padding:9px 20px;cursor:pointer;transition:all 0.2s;text-decoration:none;}
+.nav-cta:hover{background:#e8960f;}
+.breadcrumb{padding:14px 48px;background:var(--off-white);border-bottom:1px solid var(--border-soft);}
+.bc-inner{display:flex;align-items:center;gap:8px;font-size:12px;}
+.bc-link{color:var(--text-muted);text-decoration:none;}
+.bc-link:hover{color:var(--navy);}
+.bc-sep{color:var(--text-muted);}
+.bc-current{color:var(--navy);font-weight:500;}
+.footer{padding:32px 48px;background:var(--navy);display:flex;align-items:flex-start;justify-content:space-between;gap:32px;}
+.footer-logo img{height:28px;width:auto;display:block;margin-bottom:10px;}
+.footer-copy{font-size:12px;color:rgba(255,255,255,0.3);line-height:1.6;max-width:440px;}
+.footer-links{display:flex;gap:20px;margin-bottom:8px;}
+.footer-link{font-size:12px;color:rgba(255,255,255,0.4);cursor:pointer;text-decoration:none;}
+.footer-link:hover{color:rgba(255,255,255,0.8);}
+
+
+.hero{position:relative;overflow:hidden;padding:90px 48px 80px;background:linear-gradient(160deg,#001c3d 0%,#002a5c 55%,#0a3d6b 100%);}
+.hero-bg{position:absolute;inset:0;background-image:radial-gradient(circle at 80% 20%,rgba(245,166,35,0.08) 0%,transparent 50%),radial-gradient(circle at 10% 80%,rgba(255,255,255,0.03) 0%,transparent 40%);pointer-events:none;}
+.hero-inner{position:relative;z-index:2;max-width:700px;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,166,35,0.15);border:1px solid rgba(245,166,35,0.3);border-radius:20px;padding:6px 14px;margin-bottom:28px;}
 .hero-badge-dot{width:7px;height:7px;background:var(--gold);border-radius:50%;}
 .hero-badge-text{font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);}
 .hero-title{font-family:var(--font-display);font-size:52px;font-weight:700;line-height:1.07;letter-spacing:-0.02em;color:var(--white);margin-bottom:22px;}
@@ -79,10 +69,11 @@ section{padding:60px 0;}.hero{background:linear-gradient(135deg, #001c3d 0%, #00
 .hero-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:48px;}
 .btn-primary{font-family:var(--font-body);font-size:15px;font-weight:700;background:var(--gold);color:var(--navy);border:none;border-radius:10px;padding:15px 32px;cursor:pointer;transition:all 0.2s;text-decoration:none;display:inline-flex;align-items:center;gap:8px;}
 .btn-primary:hover{background:#e8960f;transform:translateY(-1px);box-shadow:0 8px 24px rgba(245,166,35,0.35);}
-.btn-secondary{font-family:var(--font-body);font-size:15px;font-weight:500;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.9);border:1px solid rgba(255,255,255,0.2);border-radius:10px;padding:15px 32px;cursor:pointer;transition:all 0.2s;display:inline-flex;align-items:center;gap:8px;}
-.btn-secondary:hover{background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.3);}
-@media (max-width:1024px){.hero h1{font-size:40px;}}
-@media (max-width:768px){.hero{padding:40px 0;}.hero h1{font-size:32px;}.hero p{font-size:14px;}.hero-actions{flex-direction:column;}.hero-actions a, .hero-actions button{width:100%;}255,255,0.45);font-weight:300;margin-top:2px;}
+.btn-secondary{font-family:var(--font-body);font-size:15px;font-weight:500;background:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.2);border-radius:10px;padding:15px 28px;cursor:pointer;transition:all 0.2s;text-decoration:none;}
+.btn-secondary:hover{background:rgba(255,255,255,0.15);}
+.hero-stats{display:flex;gap:36px;flex-wrap:wrap;}
+.h-stat-num{font-family:var(--font-display);font-size:28px;font-weight:700;color:var(--gold);}
+.h-stat-label{font-size:12px;color:rgba(255,255,255,0.45);font-weight:300;margin-top:2px;}
 .section{padding:80px 48px;}
 .section-label{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:12px;}
 .section-title{font-family:var(--font-display);font-size:40px;font-weight:700;line-height:1.12;color:var(--navy);margin-bottom:16px;letter-spacing:-0.01em;}
@@ -96,208 +87,211 @@ section{padding:60px 0;}.hero{background:linear-gradient(135deg, #001c3d 0%, #00
 .plan-card.featured .plan-name{color:var(--white);}
 .plan-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:3px 10px;border-radius:6px;margin-bottom:12px;background:var(--gold-light);color:var(--gold-dark);}
 .plan-card.featured .plan-badge{background:rgba(245,166,35,0.2);color:var(--gold);}
-.plan-desc{font-size:13px;color:var(--text-secondary);line-height:1.8;margin-bottom:20px;}
-.plan-card.featured .plan-desc{color:rgba(255,255,255,0.8);}
-.plan-features{list-style:none;margin:24px 0;}
-.plan-feat{font-size:13px;color:var(--text-secondary);padding:8px 0;display:flex;align-items:center;}
+.plan-desc{font-size:13px;color:var(--text-secondary);line-height:1.65;font-weight:300;margin-bottom:20px;}
+.plan-card.featured .plan-desc{color:rgba(255,255,255,0.6);}
+.plan-features{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:24px;}
+.plan-feat{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-secondary);}
 .plan-card.featured .plan-feat{color:rgba(255,255,255,0.7);}
-.plan-feat span:first-child{margin-right:10px;}.feat-check{color:var(--gold);margin-right:6px;font-weight:700;}
-.plan-cta{margin-top:20px;color:var(--gold);font-weight:600;text-decoration:none;transition:color 0.3s ease;}
-.plan-card.featured .plan-cta{color:var(--gold-light);}
-.plan-cta:hover{color:var(--gold-dark);}
-@media (max-width:1024px){.plans-grid{grid-template-columns:repeat(2, 1fr);}}
-@media (max-width:768px){.plans-grid{grid-template-columns:1fr;}}
-.process-section{background:linear-gradient(135deg, #F5A623 0%, #FDF3E0 100%);padding:80px 48px;border-radius:24px;margin:80px 0;}
-.process-steps{display:grid;grid-template-columns:repeat(4, 1fr);gap:32px;margin-top:56px;}
-.step{text-align:center;position:relative;}
-.step:not(:last-child)::after{content:'';position:absolute;top:24px;right:-16px;width:32px;height:2px;background:var(--navy);opacity:0.2;}
-.step-num{font-family:var(--font-display);font-size:56px;font-weight:700;color:var(--navy);margin-bottom:12px;}
-.step-title{font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--navy);margin-bottom:12px;}
-.step-desc{font-size:14px;color:var(--text-secondary);line-height:1.6;}
-@media (max-width:1024px){.process-steps{grid-template-columns:repeat(2, 1fr);}}
-@media (max-width:768px){.process-steps{grid-template-columns:1fr;}.step:not(:last-child)::after{display:none;}}
-.faq-section{margin:80px 0;}
-.faq-grid{display:grid;grid-template-columns:repeat(2, 1fr);gap:20px;margin-top:40px;}
-.faq-item{background:var(--white);padding:24px;border-radius:12px;border:1px solid var(--border);}.faq-q{font-weight:600;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:0;background:none;border:none;width:100%;text-align:left;font-size:15px;}
-.faq-q:hover{color:var(--gold);}
-.faq-a{color:var(--text-secondary);font-size:14px;line-height:1.7;margin-top:12px;display:none;}
-.faq-item.open .faq-a{display:block;}
-@media (max-width:768px){.faq-grid{grid-template-columns:1fr;}}
-.cta-section{background:linear-gradient(135deg, #001c3d 0%, #002a5c 100%);color:var(--white);padding:80px 48px;text-align:center;border-radius:24px;margin:80px 0;position:relative;overflow:hidden;}
-.cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 20%, rgba(245,166,35,0.1) 0%, transparent 50%);pointer-events:none;}
-.cta-title{font-family:var(--font-display);font-size:44px;font-weight:700;line-height:1.1;margin-bottom:16px;}
-.cta-sub{font-size:16px;color:rgba(255,255,255,0.8);margin-bottom:32px;font-weight:300;}
-.cta-actions{display:flex;justify-content:center;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:32px;}
-.trust-row{display:flex;justify-content:center;align-items:center;gap:32px;flex-wrap:wrap;margin-top:40px;padding-top:40px;border-top:1px solid rgba(255,255,255,0.1);}
-.trust-item{display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(255,255,255,0.8);}
-.trust-dot{width:6px;height:6px;background:var(--gold);border-radius:50%;}
-@media (max-width:768px){.cta-section{padding:40px 24px;}.cta-title{font-size:32px;}.cta-actions{flex-direction:column;}.trust-row{flex-direction:column;gap:16px;}}.footer{background:var(--navy);color:var(--white);padding:60px 48px 20px;}
-.footer-logo{margin-bottom:20px;}
-.footer-logo img{height:40px;width:auto;}
-.footer-copy{font-size:13px;color:rgba(255,255,255,0.6);margin-bottom:32px;line-height:1.6;}
-.footer-links{display:flex;flex-direction:column;gap:12px;}
-.footer-link{color:var(--gold);text-decoration:none;font-size:13px;transition:color 0.3s;}
-.footer-link:hover{color:var(--gold-light);}
-@media (max-width:768px){.footer{padding:40px 24px 20px;}}
+.feat-check{color:var(--gold);font-size:14px;flex-shrink:0;margin-top:0px;}
+.plan-cta{display:block;text-align:center;font-size:13px;font-weight:600;padding:12px;border-radius:10px;text-decoration:none;transition:all 0.2s;background:var(--off-white);color:var(--navy);}
+.plan-cta:hover{background:var(--navy);color:var(--white);}
+.plan-card.featured .plan-cta{background:var(--gold);color:var(--navy);}
+.plan-card.featured .plan-cta:hover{background:#e8960f;}
+.process-section{padding:80px 48px;background:var(--off-white);}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px;}
+.step{text-align:center;padding:32px 20px;}
+.step-num{width:48px;height:48px;background:var(--navy);border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--gold);margin:0 auto 16px;}
+.step-title{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:8px;}
+.step-desc{font-size:13px;color:var(--text-secondary);line-height:1.6;font-weight:300;}
+.faq-section{padding:80px 48px;}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:960px;margin:48px auto 0;}
+.faq-item{background:var(--off-white);border:1px solid var(--border-soft);border-radius:16px;padding:22px 24px;}
+.faq-q{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:8px;line-height:1.4;}
+.faq-a{font-size:13px;color:var(--text-secondary);line-height:1.65;font-weight:300;}
+.cta-section{padding:80px 48px;background:var(--navy);text-align:center;}
+.cta-title{font-family:var(--font-display);font-size:42px;font-weight:700;color:var(--white);margin-bottom:16px;}
+.cta-sub{font-size:16px;color:rgba(255,255,255,0.6);margin-bottom:36px;font-weight:300;line-height:1.6;}
+.cta-actions{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;}
+.trust-row{display:flex;align-items:center;justify-content:center;gap:28px;margin-top:36px;flex-wrap:wrap;}
+.trust-item{font-size:12px;color:rgba(255,255,255,0.4);display:flex;align-items:center;gap:6px;}
+.trust-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,0.2);}
+@media(max-width:900px){
+  .hero{padding:60px 24px 60px;}
+  .hero-title{font-size:38px;}
+  .plans-grid{grid-template-columns:1fr;}
+  .process-steps{grid-template-columns:1fr 1fr;}
+  .faq-grid{grid-template-columns:1fr;}
+  .section,.process-section,.faq-section,.cta-section{padding:60px 24px;}
+}
+
 </style>
 </head>
 <body>
-<header class="header">
-  <div class="container">
-    <div class="nav">
-      <div class="logo">🏥 Lopcha Insurance</div>
-      <ul class="nav-links">
-        <li><a href="https://lopcha.com" data-es="Inicio" data-en="Home">Inicio</a></li>
-        <li><a href="/medicare">Medicare</a></li>
-        <li><a href="/aca" data-es="ACA" data-en="ACA">ACA</a></li>
-        <li><a href="/vida" data-es="Vida" data-en="Life">Vida</a></li>
-      </ul>
-      <div class="nav-cta">
-        <button id="langBtn" class="lang-toggle" onclick="toggleLang()">EN</button>
-        <a href="/#contacto" class="nav-btn" data-es="Consulta Gratis" data-en="Free Consultation">Consulta Gratis</a>
-      </div>
-    </div>
+<nav class="nav" id="top">
+  <div class="nav-logo">
+    <a href="/"><img src="/logo.svg" alt="Lopcha Insurance Agency"></a>
   </div>
-</header>
+  <div class="nav-links">
+    <a href="/medicare" class="nav-link active" data-es="Medicare" data-en="Medicare">Medicare</a>
+    <a href="/aca" class="nav-link " data-es="ACA" data-en="ACA">ACA</a>
+    <a href="/vida" class="nav-link " data-es="Vida" data-en="Life">Vida</a>
+    <a href="/#ensuro" class="nav-link" data-es="Ensuro IA" data-en="Ensuro AI">Ensuro IA</a>
+    <a href="/#agencia" class="nav-link" data-es="Agencia Partner" data-en="Partner Agency">Agencia Partner</a>
+  </div>
+  <div class="nav-right">
+    <a href="tel:+17544651469" class="nav-link" style="display:flex;align-items:center;gap:5px;color:rgba(255,255,255,0.5);font-size:12px;"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>(754) 465-1469</a>
+    <button class="nav-lang" onclick="toggleLang()" id="langBtn">EN</button>
+    <a href="/#contacto" class="nav-cta" data-es="Cotización gratis" data-en="Free quote">Cotización gratis</a>
+  </div>
+</nav>
+<div class="breadcrumb">
+  <div class="bc-inner">
+    <a href="/" class="bc-link" data-es="Lopcha" data-en="Lopcha">Lopcha</a>
+    <span class="bc-sep">›</span>
+    <span class="bc-current" data-es="Medicare" data-en="Medicare">Medicare</span>
+  </div>
+</div>
 <section class="hero">
   <div class="hero-bg"></div>
-  <div class="container">
-    <div class="hero-inner">
-      <div class="hero-badge">
-        <span class="hero-badge-dot"></span>
-        <span class="hero-badge-text" data-es="Los mejores planes de salud" data-en="The best health plans">Los mejores planes de salud</span>
-      </div>
-      <h1 class="hero-title" data-es="Encuentra tu plan de <span class="accent">Medicare</span>" data-en="Find your <span class="accent">Medicare</span> plan">Encuentra tu plan de <span class="accent">Medicare</span></h1>
-      <p class="hero-sub" data-es="<strong>Agentes bilingues certificados</strong> en multiples estados. Comparamos todos los planes disponibles para encontrar el que mejor se ajusta a ti. <strong>Consulta completamente gratuita.</strong>" data-en="<strong>Bilingual certified agents</strong> in multiple states. We compare all available plans to find the best fit for you. <strong>Completely free consultation.</strong>"><strong>Agentes bilingues certificados</strong> en multiples estados. Comparamos todos los planes disponibles para encontrar el que mejor se ajusta a ti. <strong>Consulta completamente gratuita.</strong></p>
-      <div class="hero-actions">
-        <a href="/#contacto" class="btn-primary" data-es="Hablar con un agente →" data-en="Talk to an agent →">Hablar con un agente →</a>
-        <a href="tel:+17544651469" class="btn-secondary">📞 (754) 465-1469</a>
-      </div>
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      <span class="hero-badge-text" data-es="Medicare · Todo EE.UU." data-en="Medicare · All USA">Medicare · Todo EE.UU.</span>
+    </div>
+    <h1 class="hero-title" data-es="Medicare sin <span class='accent'>complicaciones.</span>" data-en="Medicare without <span class='accent'>the hassle.</span>">Medicare sin <span class="accent">complicaciones.</span></h1>
+    <p class="hero-sub" data-es="Encuentra el plan correcto — <strong>Medicare Advantage, Suplementario o Part D</strong> — con un agente certificado que habla tu idioma. Servicio en multiples estados, donde tu estes." data-en="Find the right plan — <strong>Medicare Advantage, Supplemental or Part D</strong> — with a certified agent who speaks your language. Service across multiple states, wherever you are.">Encuentra el plan correcto — <strong>Medicare Advantage, Suplementario o Part D</strong> — con un agente certificado que habla tu idioma. Servicio en multiples estados, donde tu estes.</p>
+    <div class="hero-actions">
+      <a href="/#contacto" class="btn-primary" data-es="Consulta gratuita →" data-en="Free consultation →">Consulta gratuita →</a>
+      <a href="#planes" class="btn-secondary" data-es="Ver planes disponibles" data-en="See available plans">Ver planes disponibles</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="h-stat-num">$0</div><div class="h-stat-label" data-es="Costo de la asesoria" data-en="Advisory cost">Costo de la asesoria</div></div>
+      <div><div class="h-stat-num">3+</div><div class="h-stat-label" data-es="Tipos de plan Medicare" data-en="Medicare plan types">Tipos de plan Medicare</div></div>
+      <div><div class="h-stat-num">48h</div><div class="h-stat-label" data-es="Respuesta garantizada" data-en="Guaranteed response">Respuesta garantizada</div></div>
+      <div><div class="h-stat-num">ES/EN</div><div class="h-stat-label" data-es="Servicio bilingue" data-en="Bilingual service">Servicio bilingue</div></div>
     </div>
   </div>
 </section>
-<section>
-  <div class="container">
-    <div class="section-label" data-es="Planes disponibles" data-en="Available plans">Planes disponibles</div>
-    <h2 class="section-title" data-es="Elige el plan perfecto para ti" data-en="Choose the perfect plan for you">Elige el plan perfecto para ti</h2>
-    <p class="section-sub" data-es="Cada persona es diferente. Por eso te ayudamos a encontrar el plan que se adapte a tus necesidades de salud y presupuesto." data-en="Everyone is different. That's why we help you find the plan that fits your health needs and budget.">Cada persona es diferente. Por eso te ayudamos a encontrar el plan que se adapte a tus necesidades de salud y presupuesto.</p>
-    <div class="plans-grid">
-      <div class="plan-card">
-        <div class="plan-icon">🏥</div>
-        <div class="plan-badge" data-es="Lo más popular" data-en="Most popular">Lo más popular</div>
-        <div class="plan-name">Medicare Advantage</div>
-        <p class="plan-desc" data-es="Cobertura completa de hospital y medico, frecuentemente con beneficios adicionales como dental y vision. Prima mensual muy baja o incluso $0." data-en="Complete hospital and doctor coverage, often with additional benefits like dental and vision. Very low monthly premium or even $0.">Cobertura completa de hospital y medico, frecuentemente con beneficios adicionales como dental y vision. Prima mensual muy baja o incluso $0.</p>
-        <ul class="plan-features">
-          <li class="plan-feat"><span class="feat-check">✓</span><span data-es="Prima baja o $0" data-en="Low or $0 premium">Prima baja o $0</span></li>
-          <li class="plan-feat"><span class="feat-check">✓</span><span data-es="Beneficios adicionales (dental, vision)" data-en="Extra benefits (dental, vision)">Beneficios adicionales (dental, vision)</span></li>
-          <li class="plan-feat"><span class="feat-check">✓</span><span data-es="Todo en un plan" data-en="Everything in one plan">Todo en un plan</span></li>
-          <li class="plan-feat"><span class="feat-check">✓</span><span data-es="Red de doctores disponible" data-en="Doctor network available">Red de doctores disponible</span></li>
-        </ul>
-        <a href="/#contacto" class="plan-cta" data-es="Explorar →" data-en="Explore →">Explorar →</a>
-      </div>
-      <div class="plan-card featured">
-        <div class="plan-icon">🎯</div>
-        <div class="plan-badge" data-es="Recomendado" data-en="Recommended">Recomendado</div>
-        <div class="plan-name" style="color:var(--white);">Suplementario (Medigap)</div>
-        <p class="plan-desc" data-es="Se compra junto a Medicare Original. Te protege contra los costos que Original no cubre. Flexibilidad total de doctores." data-en="Purchased with Original Medicare. Protects you against costs Original doesn't cover. Complete doctor flexibility.">Se compra junto a Medicare Original. Te protege contra los costos que Original no cubre. Flexibilidad total de doctores.</p>
-        <ul class="plan-features">
-          <li class="plan-feat"><span class="feat-check">✓</span><span data-es="Ve a cualquier medico" data-en="See any doctor">Ve a cualquier medico</span></li>
-          <li class="plan-feat"><span class="feat-check">✓</span><span data-es="Sin restricciones de red" data-en="No network restrictions">Sin restricciones de red</span></li>
-          <li class="plan-feat"><span class="feat-check">✓</span><span data-es="Cubre deducibles y copagos" data-en="Covers deductibles and copays">Cubre deducibles y copagos</span></li>
-          <li class="plan-feat"><span class="feat-check">✓</span><span data-es="Proteccion en el extranjero" data-en="Coverage abroad">Proteccion en el extranjero</span></li>
-        </ul>
-        <a href="/#contacto" class="plan-cta" data-es="Cotizar ahora →" data-en="Quote now →">Cotizar ahora →</a>
-      </div>
-      <div class="plan-card">
-        <div class="plan-icon">💊</div>
-        <div class="plan-badge" data-es="Medicamentos" data-en="Medications">Medicamentos</div>
-        <div class="plan-name">Part D (Medicinas)</div>
-        <p class="plan-desc" data-es="Cobertura especifica para medicamentos recetados. Se agrega a Medicare Original o a un plan Advantage para reducir costos." data-en="Specific coverage for prescription medications. Added to Original Medicare or Advantage plan to reduce costs.">Cobertura especifica para medicamentos recetados. Se agrega a Medicare Original o a un plan Advantage para reducir costos.</p>
-        <ul class="plan-features">
-          <li class="plan-feat"><span class="feat-check">✓</span><span data-es="Medicinas de marca y genericas" data-en="Brand and generic drugs">Medicinas de marca y genericas</span></li>
-          <li class="plan-feat"><span class="feat-check">✓</span><span data-es="Red amplia de farmacias" data-en="Wide pharmacy network">Red amplia de farmacias</span></li>
-          <li class="plan-feat"><span class="feat-check">✓</span><span data-es="Subsidios disponibles (Extra Help)" data-en="Subsidies available (Extra Help)">Subsidios disponibles (Extra Help)</span></li>
-          <li class="plan-feat"><span class="feat-check">✓</span><span data-es="Comparamos todas las opciones" data-en="We compare all options">Comparamos todas las opciones</span></li>
-        </ul>
-        <a href="/#contacto" class="plan-cta" data-es="Ver detalles →" data-en="See details →">Ver detalles →</a>
-      </div>
+
+<section class="section" id="planes">
+  <div class="section-label" data-es="Tipos de plan" data-en="Plan types">Tipos de plan</div>
+  <h2 class="section-title" data-es="¿Cual Medicare es el tuyo?" data-en="Which Medicare is right for you?">¿Cual Medicare es el tuyo?</h2>
+  <p class="section-sub" data-es="Cada persona tiene necesidades distintas. Te ayudamos a elegir el plan que mas te conviene sin costo alguno." data-en="Every person has different needs. We help you choose the best plan at no cost to you.">Cada persona tiene necesidades distintas. Te ayudamos a elegir el plan que mas te conviene sin costo alguno.</p>
+  <div class="plans-grid">
+    <div class="plan-card featured">
+      <div class="plan-icon">⭐</div>
+      <div class="plan-badge" data-es="Mas popular" data-en="Most popular">Mas popular</div>
+      <div class="plan-name" data-es="Medicare Advantage" data-en="Medicare Advantage">Medicare Advantage</div>
+      <p class="plan-desc" data-es="Reemplaza tu Medicare original con cobertura adicional: dental, vision, medicamentos y mas. Muchos planes tienen prima $0." data-en="Replaces original Medicare with additional coverage: dental, vision, medications and more. Many plans have $0 premium.">Reemplaza tu Medicare original con cobertura adicional: dental, vision, medicamentos y mas. Muchos planes tienen prima $0.</p>
+      <ul class="plan-features">
+        <li class="plan-feat"><span class="feat-check">✓</span><span data-es="Dental y vision incluidos" data-en="Dental and vision included">Dental y vision incluidos</span></li>
+        <li class="plan-feat"><span class="feat-check">✓</span><span data-es="Medicamentos (Part D) integrado" data-en="Medications (Part D) integrated">Medicamentos (Part D) integrado</span></li>
+        <li class="plan-feat"><span class="feat-check">✓</span><span data-es="Red de medicos local" data-en="Local doctor network">Red de medicos local</span></li>
+        <li class="plan-feat"><span class="feat-check">✓</span><span data-es="Prima desde $0/mes" data-en="Premium from $0/month">Prima desde $0/mes</span></li>
+      </ul>
+      <a href="/#contacto" class="plan-cta" data-es="Comparar planes →" data-en="Compare plans →">Comparar planes →</a>
+    </div>
+    <div class="plan-card">
+      <div class="plan-icon">🛡️</div>
+      <div class="plan-badge" data-es="Maxima cobertura" data-en="Maximum coverage">Maxima cobertura</div>
+      <div class="plan-name" data-es="Medicare Suplementario" data-en="Medicare Supplemental">Medicare Suplementario</div>
+      <p class="plan-desc" data-es="Cubre los gastos que Medicare Original no paga: copagos, deducibles y costos de hospitalizacion. Acepta cualquier medico que acepte Medicare." data-en="Covers costs that Original Medicare doesn't pay: copays, deductibles and hospitalization costs. Accepted by any doctor who accepts Medicare.">Cubre los gastos que Medicare Original no paga: copagos, deducibles y costos de hospitalizacion. Acepta cualquier medico que acepte Medicare.</p>
+      <ul class="plan-features">
+        <li class="plan-feat"><span class="feat-check">✓</span><span data-es="Sin red restrictiva de medicos" data-en="No restrictive doctor network">Sin red restrictiva de medicos</span></li>
+        <li class="plan-feat"><span class="feat-check">✓</span><span data-es="Cubre hasta el 100% del deducible" data-en="Covers up to 100% of deductible">Cubre hasta el 100% del deducible</span></li>
+        <li class="plan-feat"><span class="feat-check">✓</span><span data-es="Cobertura de emergencias en el extranjero" data-en="Emergency coverage abroad">Cobertura de emergencias en el extranjero</span></li>
+        <li class="plan-feat"><span class="feat-check">✓</span><span data-es="Renovacion garantizada" data-en="Guaranteed renewal">Renovacion garantizada</span></li>
+      </ul>
+      <a href="/#contacto" class="plan-cta" data-es="Ver opciones →" data-en="See options →">Ver opciones →</a>
+    </div>
+    <div class="plan-card">
+      <div class="plan-icon">💊</div>
+      <div class="plan-badge" data-es="Medicamentos" data-en="Medications">Medicamentos</div>
+      <div class="plan-name">Medicare Part D</div>
+      <p class="plan-desc" data-es="Cobertura especifica para medicamentos recetados. Se puede agregar a Medicare Original o a un plan Suplementario para reducir el costo de tus farmacos." data-en="Specific coverage for prescription medications. Can be added to Original Medicare or a Supplemental plan to reduce your drug costs.">Cobertura especifica para medicamentos recetados. Se puede agregar a Medicare Original o a un plan Suplementario para reducir el costo de tus farmacos.</p>
+      <ul class="plan-features">
+        <li class="plan-feat"><span class="feat-check">✓</span><span data-es="Cubre medicamentos de marca y genericos" data-en="Covers brand and generic medications">Cubre medicamentos de marca y genericos</span></li>
+        <li class="plan-feat"><span class="feat-check">✓</span><span data-es="Red amplia de farmacias" data-en="Wide pharmacy network">Red amplia de farmacias</span></li>
+        <li class="plan-feat"><span class="feat-check">✓</span><span data-es="Subsidios disponibles (Extra Help)" data-en="Subsidies available (Extra Help)">Subsidios disponibles (Extra Help)</span></li>
+        <li class="plan-feat"><span class="feat-check">✓</span><span data-es="Comparamos todas las opciones" data-en="We compare all options">Comparamos todas las opciones</span></li>
+      </ul>
+      <a href="/#contacto" class="plan-cta" data-es="Cotizar Part D →" data-en="Quote Part D →">Cotizar Part D →</a>
     </div>
   </div>
 </section>
+
 <section class="process-section">
-  <div class="container">
-    <div class="section-label" data-es="Como funciona" data-en="How it works">Como funciona</div>
-    <h2 class="section-title" data-es="Tu Medicare en 4 pasos simples" data-en="Your Medicare in 4 simple steps">Tu Medicare en 4 pasos simples</h2>
-    <div class="process-steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-title" data-es="Agendar" data-en="Schedule">Agendar</div>
-        <p class="step-desc" data-es="Llama o completa el formulario. Totalmente gratis, sin presion, en tu idioma." data-en="Call or complete the form. Totally free, no pressure, in your language.">Llama o completa el formulario. Totalmente gratis, sin presion, en tu idioma.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-title" data-es="Analizar" data-en="Analyze">Analizar</div>
-        <p class="step-desc" data-es="Revisamos tus medicos, medicamentos y necesidades para encontrar opciones que te funcionan." data-en="We review your doctors, medications and needs to find options that work for you.">Revisamos tus medicos, medicamentos y necesidades para encontrar opciones que te funcionan.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-title" data-es="Comparar" data-en="Compare">Comparar</div>
-        <p class="step-desc" data-es="Te mostramos todos los planes disponibles en tu estado con sus ventajas y desventajas." data-en="We show you all available plans in your state with their pros and cons.">Te mostramos todos los planes disponibles en tu estado con sus ventajas y desventajas.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <div class="step-title" data-es="Inscribir" data-en="Enroll">Inscribir</div>
-        <p class="step-desc" data-es="Manejamos todo el proceso de inscripcion. Nuestro servicio es completamente gratis para ti." data-en="We handle the entire enrollment process. Our service is completely free for you.">Manejamos todo el proceso de inscripcion. Nuestro servicio es completamente gratis para ti.</p>
-      </div>
+  <div class="section-label" data-es="Como funciona" data-en="How it works">Como funciona</div>
+  <h2 class="section-title" data-es="Tu Medicare en 4 pasos" data-en="Your Medicare in 4 steps">Tu Medicare en 4 pasos</h2>
+  <div class="process-steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-title" data-es="Agenda tu consulta" data-en="Schedule your consultation">Agenda tu consulta</div>
+      <p class="step-desc" data-es="Llama o completa el formulario. Sin costo, sin presion, en tu idioma." data-en="Call or complete the form. No cost, no pressure, in your language.">Llama o completa el formulario. Sin costo, sin presion, en tu idioma.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-title" data-es="Analizamos tu situacion" data-en="We analyze your situation">Analizamos tu situacion</div>
+      <p class="step-desc" data-es="Revisamos tus medicos, medicamentos y necesidades para encontrar el mejor plan." data-en="We review your doctors, medications and needs to find the best plan.">Revisamos tus medicos, medicamentos y necesidades para encontrar el mejor plan.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-title" data-es="Comparamos opciones" data-en="We compare options">Comparamos opciones</div>
+      <p class="step-desc" data-es="Te presentamos las mejores alternativas disponibles en tu estado." data-en="We present the best alternatives available in your state.">Te presentamos las mejores alternativas disponibles en tu estado.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-title" data-es="Te inscribimos" data-en="We enroll you">Te inscribimos</div>
+      <p class="step-desc" data-es="Manejamos todo el proceso de inscripcion. Nuestro servicio no tiene costo para ti." data-en="We handle the entire enrollment process. Our service is at no cost to you.">Manejamos todo el proceso de inscripcion. Nuestro servicio no tiene costo para ti.</p>
     </div>
   </div>
 </section>
+
 <section class="faq-section" id="faq">
-  <div class="container">
+  <div style="text-align:center;max-width:700px;margin:0 auto;">
     <div class="section-label" data-es="Preguntas frecuentes" data-en="Frequently asked questions">Preguntas frecuentes</div>
-    <h2 class="section-title" data-es="Todo lo que necesitas saber sobre Medicare" data-en="Everything you need to know about Medicare">Todo lo que necesitas saber sobre Medicare</h2>
-    <div class="faq-grid">
-      <div class="faq-item">
-        <div class="faq-q" data-es="¿Cuando me puedo inscribir en Medicare?" data-en="When can I enroll in Medicare?">¿Cuando me puedo inscribir en Medicare?</div>
-        <p class="faq-a" data-es="Tu periodo de inscripcion inicial comienza 3 meses antes de tu cumpleaños numero 65 y termina 3 meses despues (7 meses total). Si tienes seguro de empleador activo, puedes inscribirte en cualquier momento con un Periodo Especial de Inscripcion (SEP)." data-en="Your initial enrollment period starts 3 months before your 65th birthday and ends 3 months after (7 months total). If you have active employer insurance, you can enroll anytime with a Special Enrollment Period (SEP).">Tu periodo de inscripcion inicial comienza 3 meses antes de tu cumpleaños numero 65 y termina 3 meses despues (7 meses total). Si tienes seguro de empleador activo, puedes inscribirte en cualquier momento con un Periodo Especial de Inscripcion (SEP).</p>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" data-es="¿Medicare cubre medicamentos recetados?" data-en="Does Medicare cover prescription medications?">¿Medicare cubre medicamentos recetados?</div>
-        <p class="faq-a" data-es="Medicare Original (Parte A y B) no cubre la mayoria de medicamentos recetados. Para eso existe Medicare Part D, que se puede agregar a tu plan actual. Los planes Medicare Advantage frecuentemente incluyen cobertura de medicamentos automáticamente." data-en="Original Medicare (Parts A and B) doesn't cover most prescription medications. That's what Medicare Part D is for, which can be added to your current plan. Medicare Advantage plans often include drug coverage automatically.">Medicare Original (Parte A y B) no cubre la mayoria de medicamentos recetados. Para eso existe Medicare Part D, que se puede agregar a tu plan actual. Los planes Medicare Advantage frecuentemente incluyen cobertura de medicamentos automáticamente.</p>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" data-es="¿Cuanto cuesta Medicare Advantage?" data-en="How much does Medicare Advantage cost?">¿Cuanto cuesta Medicare Advantage?</div>
-        <p class="faq-a" data-es="Muchos planes Medicare Advantage tienen una prima mensual de $0 (aparte de la Prima B que ya pagas a Medicare). Los costos exactos dependen del plan especifico y tu estado de residencia. Nuestro servicio es completamente gratis para comparar opciones." data-en="Many Medicare Advantage plans have a $0 monthly premium (separate from the Part B premium you already pay Medicare). Exact costs depend on your specific plan and state. Our service is completely free to compare options.">Muchos planes Medicare Advantage tienen una prima mensual de $0 (aparte de la Prima B que ya pagas a Medicare). Los costos exactos dependen del plan especifico y tu estado de residencia. Nuestro servicio es completamente gratis para comparar opciones.</p>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" data-es="¿Mi medico funciona con Medicare Advantage?" data-en="Does my doctor work with Medicare Advantage?">¿Mi medico funciona con Medicare Advantage?</div>
-        <p class="faq-a" data-es="Depende del plan. Antes de inscribirte, verificamos si tu medico esta en la red del plan. Si prefieres libertad total de doctores, un plan Suplementario (Medigap) es mejor porque puedes ver a cualquier medico que acepte Medicare." data-en="It depends on the plan. Before you enroll, we verify if your doctor is in the plan's network. If you prefer complete freedom of doctors, a Supplemental (Medigap) plan is better because you can see any doctor who accepts Medicare.">Depende del plan. Antes de inscribirte, verificamos si tu medico esta en la red del plan. Si prefieres libertad total de doctores, un plan Suplementario (Medigap) es mejor porque puedes ver a cualquier medico que acepte Medicare.</p>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" data-es="¿Puedo cambiar mi plan Medicare durante el año?" data-en="Can I change my Medicare plan during the year?">¿Puedo cambiar mi plan Medicare durante el año?</div>
-        <p class="faq-a" data-es="Si, pero solo durante ciertos periodos. El Periodo de Inscripcion Abierta (AEP) es del 15 de octubre al 7 de diciembre cada año. También hay Periodos Especiales de Inscripcion (SEP) si tienes cambios de vida importantes como mudanza o perdida de otro seguro." data-en="Yes, but only during certain periods. The Annual Enrollment Period (AEP) is October 15 - December 7 each year. There are also Special Enrollment Periods (SEP) if you have major life changes like moving or losing other insurance.">Si, pero solo durante ciertos periodos. El Periodo de Inscripcion Abierta (AEP) es del 15 de octubre al 7 de diciembre cada año. También hay Periodos Especiales de Inscripcion (SEP) si tienes cambios de vida importantes como mudanza o perdida de otro seguro.</p>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" data-es="¿Atienden en mi estado?" data-en="Do you serve my state?">¿Atienden en mi estado?</div>
-        <p class="faq-a" data-es="Nuestros agentes estan licenciados en multiples estados. Podemos ayudarte sin importar donde vivas en Estados Unidos, completamente por telefono o videollamada. Llama al (754) 465-1469 para confirmar." data-en="Our agents are licensed in multiple states. We can help you no matter where you live in the United States, completely by phone or video call. Call (754) 465-1469 to confirm.">Nuestros agentes estan licenciados en multiples estados. Podemos ayudarte sin importar donde vivas en Estados Unidos, completamente por telefono o videollamada. Llama al (754) 465-1469 para confirmar.</p>
-      </div>
+    <h2 class="section-title" data-es="Todo sobre Medicare" data-en="Everything about Medicare">Todo sobre Medicare</h2>
+  </div>
+  <div class="faq-grid">
+    <div class="faq-item">
+      <div class="faq-q" data-es="¿Cuando me puedo inscribir en Medicare?" data-en="When can I enroll in Medicare?">¿Cuando me puedo inscribir en Medicare?</div>
+      <p class="faq-a" data-es="La inscripcion inicial comienza 3 meses antes de tu cumpleanos numero 65 y termina 3 meses despues. Si tienes seguro de empleador activo, puedes inscribirte en cualquier momento con un Periodo Especial de Inscripcion." data-en="Initial enrollment starts 3 months before your 65th birthday and ends 3 months after. If you have active employer insurance, you can enroll anytime with a Special Enrollment Period.">La inscripcion inicial comienza 3 meses antes de tu cumpleanos numero 65 y termina 3 meses despues. Si tienes seguro de empleador activo, puedes inscribirte en cualquier momento con un Periodo Especial de Inscripcion.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" data-es="¿Medicare cubre medicamentos?" data-en="Does Medicare cover medications?">¿Medicare cubre medicamentos?</div>
+      <p class="faq-a" data-es="Medicare Original (Parte A y B) no cubre la mayoria de medicamentos recetados. Para eso existe el Part D, que se puede agregar a tu plan actual. Medicare Advantage frecuentemente incluye cobertura de medicamentos." data-en="Original Medicare (Part A and B) doesn't cover most prescription drugs. That's what Part D is for, which can be added to your current plan. Medicare Advantage frequently includes medication coverage.">Medicare Original (Parte A y B) no cubre la mayoria de medicamentos recetados. Para eso existe el Part D, que se puede agregar a tu plan actual. Medicare Advantage frecuentemente incluye cobertura de medicamentos.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" data-es="¿Cuanto cuesta Medicare Advantage?" data-en="How much does Medicare Advantage cost?">¿Cuanto cuesta Medicare Advantage?</div>
+      <p class="faq-a" data-es="Muchos planes de Medicare Advantage tienen prima de $0 al mes (ademas de la Prima B que ya pagas a Medicare). Los costos exactos dependen del plan y tu estado. Te ayudamos a comparar sin costo." data-en="Many Medicare Advantage plans have a $0 monthly premium (in addition to the Part B premium you already pay Medicare). Exact costs depend on the plan and your state. We help you compare at no cost.">Muchos planes de Medicare Advantage tienen prima de $0 al mes (ademas de la Prima B que ya pagas a Medicare). Los costos exactos dependen del plan y tu estado. Te ayudamos a comparar sin costo.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" data-es="¿Funciona mi medico con Medicare Advantage?" data-en="Does my doctor accept Medicare Advantage?">¿Funciona mi medico con Medicare Advantage?</div>
+      <p class="faq-a" data-es="Depende del plan. Antes de inscribirte, verificamos si tu medico esta en la red del plan. Si prefiere libertad total de medicos, un plan Suplementario puede ser mejor opcion." data-en="It depends on the plan. Before you enroll, we verify if your doctor is in the plan's network. If you prefer complete freedom of doctors, a Supplemental plan may be a better option.">Depende del plan. Antes de inscribirte, verificamos si tu medico esta en la red del plan. Si prefiere libertad total de medicos, un plan Suplementario puede ser mejor opcion.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" data-es="¿Puedo cambiar mi plan Medicare?" data-en="Can I change my Medicare plan?">¿Puedo cambiar mi plan Medicare?</div>
+      <p class="faq-a" data-es="Si. Cada año hay un Periodo de Inscripcion Abierta (octubre 15 - diciembre 7) donde puedes cambiar de plan. Tambien hay periodos especiales si tienes cambios de vida como mudanza o perdida de otro seguro." data-en="Yes. Every year there is an Open Enrollment Period (October 15 - December 7) where you can change plans. There are also special periods for life changes like moving or losing other insurance.">Si. Cada año hay un Periodo de Inscripcion Abierta (octubre 15 - diciembre 7) donde puedes cambiar de plan. Tambien hay periodos especiales si tienes cambios de vida como mudanza o perdida de otro seguro.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" data-es="¿Atienden fuera de Florida?" data-en="Do you serve outside of Florida?">¿Atienden fuera de Florida?</div>
+      <p class="faq-a" data-es="Si. Nuestros agentes estan licenciados en multiples estados. Podemos ayudarte sin importar donde vivas en EE.UU., todo por telefono o videollamada." data-en="Yes. Our agents are licensed in multiple states. We can help you no matter where you live in the USA, all by phone or video call.">Si. Nuestros agentes estan licenciados en multiples estados. Podemos ayudarte sin importar donde vivas en EE.UU., todo por telefono o videollamada.</p>
     </div>
   </div>
 </section>
-<section class="cta-section" id="contacto">
-  <div class="container">
-    <h2 class="cta-title" data-es="Encuentra tu plan Medicare ideal" data-en="Find your ideal Medicare plan">Encuentra tu plan Medicare ideal</h2>
-    <p class="cta-sub" data-es="Consulta gratuita · Sin presion · En tu idioma · Licenciados en multiples estados" data-en="Free consultation · No pressure · In your language · Licensed in multiple states">Consulta gratuita · Sin presion · En tu idioma · Licenciados en multiples estados</p>
-    <div class="cta-actions">
-      <a href="tel:+17544651469" class="btn-primary" style="font-size:16px;padding:17px 36px;">📞 Llamar: (754) 465-1469</a>
-      <a href="/#contacto" class="btn-secondary" style="font-size:16px;padding:17px 36px;" data-es="Hablar con un agente →" data-en="Talk to an agent →">Hablar con un agente →</a>
-    </div>
-    <div class="trust-row">
-      <span class="trust-item"><span class="trust-dot"></span><span data-es="Agentes con licencia federal" data-en="Federally licensed agents">Agentes con licencia federal</span></span>
-      <span class="trust-item"><span class="trust-dot"></span><span data-es="Servicio en espanol e ingles" data-en="Service in Spanish and English">Servicio en espanol e ingles</span></span>
-      <span class="trust-item"><span class="trust-dot"></span><span data-es="Sunrise, FL · Multiples estados" data-en="Sunrise, FL · Multiple states">Sunrise, FL · Multiples estados</span></span>
-      <span class="trust-item"><span class="trust-dot"></span><span data-es="Cotizacion sin compromiso" data-en="No-commitment quote">Cotizacion sin compromiso</span></span>
-    </div>
+
+<section class="cta-section">
+  <h2 class="cta-title" data-es="Encuentra tu plan Medicare hoy." data-en="Find your Medicare plan today.">Encuentra tu plan Medicare hoy.</h2>
+  <p class="cta-sub" data-es="Consulta gratuita · Sin presion · Servicio en espanol · Multiples estados" data-en="Free consultation · No pressure · Spanish service · Multiple states">Consulta gratuita · Sin presion · Servicio en espanol · Multiples estados</p>
+  <div class="cta-actions">
+    <a href="/#contacto" class="btn-primary" style="font-size:16px;padding:17px 36px;" data-es="Hablar con un agente →" data-en="Talk to an agent →">Hablar con un agente →</a>
+    <a href="tel:+17544651469" class="btn-secondary" style="font-size:16px;padding:17px 28px;">📞 (754) 465-1469</a>
+  </div>
+  <div class="trust-row">
+    <span class="trust-item"><span class="trust-dot"></span><span data-es="Agentes con licencia federal" data-en="Federally licensed agents">Agentes con licencia federal</span></span>
+    <span class="trust-item"><span class="trust-dot"></span><span data-es="Servicio en espanol e ingles" data-en="Service in Spanish and English">Servicio en espanol e ingles</span></span>
+    <span class="trust-item"><span class="trust-dot"></span><span data-es="Sunrise, FL · Multiples estados" data-en="Sunrise, FL · Multiple states">Sunrise, FL · Multiples estados</span></span>
+    <span class="trust-item"><span class="trust-dot"></span><span data-es="Cotizacion sin compromiso" data-en="No-commitment quote">Cotizacion sin compromiso</span></span>
   </div>
 </section>
 <footer class="footer">
