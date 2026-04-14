@@ -1,9 +1,15 @@
 {
   "cleanUrls": true,
-  "rewrites": [
+  "redirects": [
+    {
+      "source": "/admin",
+      "destination": "https://lopcha-admin.vercel.app/admin",
+      "permanent": false
+    },
     {
       "source": "/admin/:path*",
-      "destination": "https://lopcha-admin.vercel.app/admin/:path*"
+      "destination": "https://lopcha-admin.vercel.app/admin/:path*",
+      "permanent": false
     }
   ]
 }
