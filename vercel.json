@@ -1,3 +1,9 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/admin/:path*",
+      "destination": "https://lopcha-admin.vercel.app/admin/:path*"
+    }
+  ]
 }
