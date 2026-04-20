@@ -282,7 +282,7 @@
 .perk-text{font-size:14px;color:var(--ink-secondary);line-height:1.5;font-weight:300;}
 .perk-text strong{color:var(--navy);font-weight:600;}
 .meeting-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-2xl);padding:36px;}
-.profile-selector{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px;}
+.profile-selector{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:20px;}
 .profile-option{position:relative;}
 .profile-option input[type="radio"]{position:absolute;opacity:0;width:0;height:0;}
 .profile-label{display:flex;align-items:center;gap:10px;padding:13px 14px;border-radius:var(--radius-md);border:1.5px solid var(--border);background:var(--cream);cursor:pointer;transition:all 0.2s;user-select:none;}
@@ -342,6 +342,11 @@
   .profiles-addressed{grid-template-columns:1fr;}
   .profile-selector{grid-template-columns:1fr;}
 }
+.license-field{transition:max-height 0.3s ease,opacity 0.25s ease,margin 0.3s ease;}
+.license-field.hidden{max-height:0;overflow:hidden;opacity:0;margin-bottom:0;}
+.license-field.visible{max-height:100px;opacity:1;margin-bottom:14px;}
+.interest-field{transition:max-height 0.3s ease,opacity 0.25s ease,margin 0.3s ease;overflow:hidden;max-height:0;opacity:0;margin-bottom:0;}
+.interest-field.visible{max-height:100px;opacity:1;margin-bottom:14px;}
 </style>
 <script type="application/ld+json">
 {
@@ -989,6 +994,17 @@
             </div>
           </label>
         </div>
+        <div class="profile-option">
+          <input type="radio" name="profileForm" id="f-cliente" value="Cliente" onchange="updateForm('cliente')">
+          <label class="profile-label" for="f-cliente">
+            <div class="profile-radio"><div class="profile-radio-dot"></div></div>
+            <div style="font-size:18px;line-height:1;">🛡️</div>
+            <div class="profile-info">
+              <div class="profile-name" data-es="Busco seguro" data-en="I need insurance">Busco seguro</div>
+              <div class="profile-sub" data-es="Quiero cotizar un plan" data-en="I want to get a quote">Quiero cotizar un plan</div>
+            </div>
+          </label>
+        </div>
       </div>
       <hr class="form-divider">
       <div class="form-dynamic-header">
@@ -1012,9 +1028,19 @@
           <label class="form-label" data-es="Nombre de tu agencia" data-en="Agency name">Nombre de tu agencia</label>
           <input type="text" name="agencia" class="form-input" placeholder="Mi Agencia LLC">
         </div>
-        <div class="form-group">
+        <div class="interest-field" id="fInterestField">
+          <label class="form-label" data-es="¿Qué tipo de seguro te interesa?" data-en="What type of insurance are you interested in?">¿Qué tipo de seguro te interesa?</label>
+          <select name="interes" class="form-select">
+            <option value="" disabled selected data-es="Selecciona una opción…" data-en="Select an option…">Selecciona una opción…</option>
+            <option value="Medicare" data-es="Medicare Advantage" data-en="Medicare Advantage">Medicare Advantage</option>
+            <option value="ACA" data-es="ACA / Obamacare" data-en="ACA / Obamacare">ACA / Obamacare</option>
+            <option value="Vida" data-es="Seguro de Vida" data-en="Life Insurance">Seguro de Vida</option>
+            <option value="No estoy seguro" data-es="No estoy seguro" data-en="I'm not sure">No estoy seguro</option>
+          </select>
+        </div>
+        <div class="license-field visible" id="fLicenseField">
           <label class="form-label" data-es="Estado donde tienes licencia" data-en="State where you are licensed">Estado donde tienes licencia</label>
-          <select name="estado" class="form-select" required>
+          <select name="estado" class="form-select">
             <option value="" disabled selected data-es="Selecciona tu estado…" data-en="Select your state…">Selecciona tu estado…</option>
             <option value="FL">Florida</option>
             <option value="TX">Texas</option>
@@ -1027,7 +1053,7 @@
           </select>
         </div>
         <button type="submit" class="btn-primary" id="fSubmit" style="width:100%;margin-top:8px;" data-es="Solicitar reunión como agente →" data-en="Request meeting as agent →">Solicitar reunión como agente →</button>
-        <p style="font-size:11px;color:var(--stone);text-align:center;margin-top:12px;line-height:1.5;" data-es="Solo para agentes licenciados. Respondemos en menos de 24 horas." data-en="For licensed agents only. We respond within 24 hours.">Solo para agentes licenciados. Respondemos en menos de 24 horas.</p>
+        <p style="font-size:11px;color:var(--stone);text-align:center;margin-top:12px;line-height:1.5;" data-es="Sin costo. Respondemos en menos de 24 horas." data-en="Free of charge. We respond within 24 hours.">Sin costo. Respondemos en menos de 24 horas.</p>
       </form>
     </div>
   </div>
@@ -1109,6 +1135,8 @@ function updateForm(type) {
   const submit = document.getElementById('fSubmit');
   const tipoInput = document.getElementById('tipoContacto');
   const agencyField = document.getElementById('fAgencyField');
+  const licenseField = document.getElementById('fLicenseField');
+  const interestField = document.getElementById('fInterestField');
   if (type === 'agencia') {
     eyebrow.textContent = isEs ? 'Reunión exploratoria · Agencia' : 'Exploratory meeting · Agency';
     title.textContent = isEs ? 'Cuéntanos sobre tu agencia' : 'Tell us about your agency';
@@ -1116,6 +1144,19 @@ function updateForm(type) {
     submit.textContent = isEs ? 'Solicitar reunión como agencia →' : 'Request meeting as agency →';
     tipoInput.value = 'Agencia';
     agencyField.classList.add('visible');
+    licenseField.classList.add('visible');
+    licenseField.classList.remove('hidden');
+    interestField.classList.remove('visible');
+  } else if (type === 'cliente') {
+    eyebrow.textContent = isEs ? 'Cotización gratuita · Cliente' : 'Free quote · Client';
+    title.textContent = isEs ? 'Cuéntanos qué buscas' : 'Tell us what you need';
+    subtitle.textContent = isEs ? 'Un asesor certificado te contacta en menos de 24 horas con opciones personalizadas.' : 'A certified advisor will contact you within 24 hours with personalized options.';
+    submit.textContent = isEs ? 'Solicitar cotización gratis →' : 'Get free quote →';
+    tipoInput.value = 'Cliente';
+    agencyField.classList.remove('visible');
+    licenseField.classList.remove('visible');
+    licenseField.classList.add('hidden');
+    interestField.classList.add('visible');
   } else {
     eyebrow.textContent = isEs ? 'Reunión exploratoria · Agente' : 'Exploratory meeting · Agent';
     title.textContent = isEs ? 'Cuéntanos sobre ti' : 'Tell us about yourself';
@@ -1123,12 +1164,19 @@ function updateForm(type) {
     submit.textContent = isEs ? 'Solicitar reunión como agente →' : 'Request meeting as agent →';
     tipoInput.value = 'Agente individual';
     agencyField.classList.remove('visible');
+    licenseField.classList.add('visible');
+    licenseField.classList.remove('hidden');
+    interestField.classList.remove('visible');
   }
 }
 
 function updateFormText() {
   const selected = document.querySelector('input[name="profileForm"]:checked');
-  if (selected) updateForm(selected.value === 'Agencia' ? 'agencia' : 'agente');
+  if (selected) {
+    if (selected.value === 'Agencia') updateForm('agencia');
+    else if (selected.value === 'Cliente') updateForm('cliente');
+    else updateForm('agente');
+  }
 }
 
 // ── FORM SUBMIT ──
@@ -1145,7 +1193,7 @@ async function handleSubmit(e) {
 
   const fd = new FormData(form);
   const payload = {
-    profile_type: fd.get('tipo_de_contacto') === 'Agencia' ? 'agencia' : 'agente',
+    profile_type: fd.get('tipo_de_contacto') === 'Agencia' ? 'agencia' : fd.get('tipo_de_contacto') === 'Cliente' ? 'cliente' : 'agente',
     full_name: fd.get('nombre'),
     phone: fd.get('telefono'),
     email: fd.get('email'),
