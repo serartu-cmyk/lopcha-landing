@@ -1055,9 +1055,22 @@
 
 <script>
 // ── LANGUAGE TOGGLE ──
-let currentLang = 'es';
+let currentLang = localStorage.getItem('lopcha_lang') || 'es';
+// Apply saved language on load
+if (currentLang === 'en') {
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('langToggle').textContent = 'ES';
+    document.documentElement.lang = 'en';
+    document.querySelectorAll('[data-es][data-en]').forEach(el => {
+      const text = el.getAttribute('data-en');
+      if (text !== null) el.innerHTML = text;
+    });
+    updateFormText();
+  });
+}
 function toggleLang() {
   currentLang = currentLang === 'es' ? 'en' : 'es';
+  localStorage.setItem('lopcha_lang', currentLang);
   document.getElementById('langToggle').textContent = currentLang === 'es' ? 'EN' : 'ES';
   document.documentElement.lang = currentLang;
   document.querySelectorAll('[data-es][data-en]').forEach(el => {
