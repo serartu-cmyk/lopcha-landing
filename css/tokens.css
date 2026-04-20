@@ -1,0 +1,86 @@
+/*
+ * LOPCHA — Design Tokens v1.0
+ * Manual de Marca · abril 2026
+ * ─────────────────────────────────────────────────
+ * Regla 70 / 20 / 5:
+ *   Navy   70% — columna vertebral
+ *   Coral  20% — vida y acción (CTAs, resaltes)
+ *   Amber   5% — firma de autoridad (logo, eyebrows)
+ */
+
+:root {
+
+  /* ─── Primarios ─────────────────────────────── */
+  --navy:        #0B1E3F;   /* Lopcha Navy  · PMS 282 C  */
+  --navy-deep:   #07152E;   /* Navy más oscuro (hover, fondo hero) */
+  --navy-soft:   #1A2F54;   /* Navy suavizado (Lopcha/.life) */
+
+  --coral:       #FF6B5B;   /* Lopcha Coral · PMS 178 C  */
+  --coral-warm:  #E85545;   /* Coral profundo (hover, error) */
+  --coral-soft:  #FFB3A8;   /* Coral pastel (fondos suaves) */
+
+  --amber:       #F5A623;   /* Lopcha Amber · PMS 1375 C */
+  --amber-warm:  #E89519;   /* Amber oscuro (hover) */
+
+  /* ─── Neutros / Papel ───────────────────────── */
+  --paper:       #FBF9F4;   /* Fondo principal cálido */
+  --cream:       #F5F1E8;   /* Fondo secundario */
+  --white:       #FFFFFF;
+
+  /* ─── Tinta ─────────────────────────────────── */
+  --ink:         #0B1E3F;   /* Texto principal (= navy) */
+  --ink-soft:    #384152;   /* Texto secundario */
+  --muted:       #6B7380;   /* Texto terciario, captions */
+
+  /* ─── Sub-marcas (líneas de negocio) ────────── */
+  --line-medicare: var(--coral);      /* Lopcha/.medicare */
+  --line-aca:      var(--amber);      /* Lopcha/.aca */
+  --line-life:     var(--navy-soft);  /* Lopcha/.life */
+  --line-agents:   #7B6FEC;           /* Lopcha/.agents · violeta */
+
+  /* ─── Bordes / Reglas ───────────────────────── */
+  --rule:        rgba(11, 30, 63, 0.10);
+  --rule-warm:   rgba(255, 107, 91, 0.15);
+
+  /* ─── Sombras ───────────────────────────────── */
+  --shadow-sm:   0 2px 8px rgba(11, 30, 63, 0.08);
+  --shadow-md:   0 4px 20px rgba(11, 30, 63, 0.10);
+  --shadow-lg:   0 8px 40px rgba(11, 30, 63, 0.14);
+
+  /* ─── Radio ─────────────────────────────────── */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-pill: 100px;
+
+  /* ─── Spacing (base 8) ──────────────────────── */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-7:  48px;
+  --space-8:  64px;
+  --space-9:  96px;
+  --space-10: 128px;
+
+  /* ─── Layout ────────────────────────────────── */
+  --max-width:    1440px;
+  --content-width: 1200px;
+  --nav-height:   64px;
+
+  /* ─── Transiciones ──────────────────────────── */
+  --transition-fast:   0.15s ease;
+  --transition-base:   0.20s ease;
+  --transition-slow:   0.30s ease;
+
+  /* ─── Accesibilidad WCAG (pares aprobados) ───
+   *  Navy / Blanco  → 15.4:1  AAA
+   *  Coral / Navy   →  5.1:1  AA
+   *  Amber / Navy   →  7.4:1  AAA
+   *  Paper / Navy   → 15.1:1  AAA
+   *  Coral / Blanco →  3.2:1  AA grande (solo títulos 18pt+)
+   * ─────────────────────────────────────────── */
+}
