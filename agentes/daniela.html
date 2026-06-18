@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Información Medicare Gratis — Daniela Chacin · Lopcha</title>
+  <meta name="description" content="Solicita información gratuita sobre planes Medicare. Agente certificada Daniela Chacin, Lopcha Services LLC, South Florida.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#0B1E3F;--navy-deep:#07152E;--navy-soft:#1A2F54;--navy-mid:#132846;--coral:#FF6B5B;--coral-deep:#E85545;--amber:#F5A623;--paper:#FBF9F4;--ink:#0B1E3F;--ink-soft:#384152;--muted:#6B7380;--rule:rgba(11,30,63,0.1)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{font-size:16px;-webkit-font-smoothing:antialiased}
+    body{background:var(--navy-deep);font-family:'Inter',sans-serif;color:var(--ink);min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:24px 16px 48px}
+    .page-card{width:100%;max-width:520px;background:var(--navy);border-radius:20px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.45)}
+    /* Header */
+    .hd{padding:20px 28px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.06)}
+    .logo{font-family:'Fraunces',serif;font-weight:500;font-size:21px;color:#fff;letter-spacing:-0.3px;text-decoration:none}
+    .logo em{color:var(--amber);font-style:italic}
+    .badge{background:rgba(255,107,91,0.14);border:1px solid rgba(255,107,91,0.3);border-radius:20px;padding:3px 11px;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;color:var(--coral);letter-spacing:.1em;text-transform:uppercase}
+    /* Hero */
+    .hero{padding:28px 28px 20px;text-align:center}
+    .eyebrow{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.38);margin-bottom:10px}
+    .hero-title{font-family:'Fraunces',serif;font-size:28px;font-weight:500;color:#fff;line-height:1.2;margin-bottom:10px}
+    .t-coral{color:var(--coral);font-style:italic}
+    .t-amber{color:var(--amber);font-style:italic}
+    .hero-sub{font-size:13px;color:rgba(255,255,255,0.48);line-height:1.65;max-width:360px;margin:0 auto}
+    /* Agent strip */
+    .agent-strip{background:var(--navy-mid);border-top:1px solid rgba(255,255,255,0.05);border-bottom:1px solid rgba(255,255,255,0.05);padding:16px 28px;display:flex;align-items:center;gap:14px}
+    .agent-photo-wrap{position:relative;flex-shrink:0}
+    .agent-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--coral);display:block}
+    .agent-fallback{width:56px;height:56px;border-radius:50%;background:var(--navy-soft);border:2px solid var(--coral);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:18px;font-weight:500;color:#fff}
+    .agent-verified{position:absolute;bottom:-1px;right:-1px;width:16px;height:16px;background:var(--amber);border-radius:50%;border:2px solid var(--navy-mid);display:flex;align-items:center;justify-content:center}
+    .agent-info{flex:1;min-width:0}
+    .agent-tag{font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--coral);margin-bottom:3px}
+    .agent-name{font-family:'Fraunces',serif;font-size:16px;font-weight:500;color:#fff;margin-bottom:5px}
+    .agent-contacts{display:flex;flex-wrap:wrap;gap:10px}
+    .agent-contact{font-size:11px;color:rgba(255,255,255,0.48);display:flex;align-items:center;gap:5px;text-decoration:none;transition:color .15s}
+    .agent-contact:hover{color:rgba(255,255,255,0.75)}
+    .agent-cert{background:rgba(245,166,35,0.12);border:1px solid rgba(245,166,35,0.25);border-radius:6px;padding:5px 10px;font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:600;color:var(--amber);letter-spacing:.07em;text-align:center;flex-shrink:0;line-height:1.5}
+    /* Form area */
+    .form-area{background:var(--paper);padding:26px 28px 30px}
+    .sec-label{font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+    .sec-label::after{content:'';flex:1;height:.5px;background:var(--rule)}
+    .g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+    .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:12px}
+    .field{display:flex;flex-direction:column;gap:5px}
+    .field label{font-size:11px;font-weight:600;color:var(--navy);letter-spacing:.01em}
+    .req{color:var(--coral);margin-left:2px}
+    .field input,.field select{height:38px;background:#fff;border:1px solid rgba(11,30,63,0.16);border-radius:8px;padding:0 12px;font-family:'Inter',sans-serif;font-size:13px;color:var(--ink);outline:none;transition:border-color .15s,box-shadow .15s;appearance:none;-webkit-appearance:none;width:100%}
+    .field input::placeholder{color:#b0b7c0}
+    .field input:focus,.field select:focus{border-color:var(--coral);box-shadow:0 0 0 3px rgba(255,107,91,0.12)}
+    .field select{background-image:url("data:image/svg+xml,%3Csvg width='10' height='6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%236B7380' stroke-width='1.5' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px}
+    /* Consent */
+    .consent-box{background:#fff;border:1px solid rgba(11,30,63,0.1);border-radius:12px;padding:16px;margin:16px 0 20px;transition:outline .15s}
+    .consent-head{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+    .shield{width:30px;height:30px;background:var(--navy);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .consent-title{font-size:12px;font-weight:600;color:var(--navy);margin-bottom:2px}
+    .consent-sub{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.04em}
+    .consent-text{font-size:11px;color:var(--ink-soft);line-height:1.7;padding:11px 12px;background:var(--paper);border-radius:7px;border-left:2.5px solid var(--coral);margin-bottom:13px}
+    .consent-text strong{color:var(--navy);font-weight:600}
+    .check-row{display:flex;align-items:flex-start;gap:10px;cursor:pointer}
+    .check-row input[type=checkbox]{width:16px;height:16px;min-width:16px;border-radius:4px;margin-top:1px;cursor:pointer;accent-color:var(--navy);flex-shrink:0}
+    .check-lbl{font-size:11px;color:var(--ink-soft);line-height:1.6;font-weight:500;cursor:pointer}
+    .check-lbl span{color:var(--muted)}
+    /* Button */
+    .btn-submit{width:100%;height:46px;background:var(--coral);border:none;border-radius:11px;font-family:'Inter',sans-serif;font-size:14px;font-weight:600;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;transition:background .15s,transform .1s}
+    .btn-submit:hover{background:var(--coral-deep)}
+    .btn-submit:active{transform:scale(.98)}
+    .btn-submit:disabled{opacity:.6;cursor:not-allowed}
+    .submit-note{text-align:center;font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.05em;margin-top:9px;line-height:1.6}
+    /* Success */
+    .success-state{display:none;text-align:center;padding:40px 20px}
+    .success-state.visible{display:block}
+    .success-icon{width:56px;height:56px;background:rgba(255,107,91,0.1);border:2px solid var(--coral);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+    .success-title{font-family:'Fraunces',serif;font-size:20px;font-weight:500;color:var(--navy);margin-bottom:8px}
+    .success-sub{font-size:13px;color:var(--ink-soft);line-height:1.65}
+    .success-sub a{color:var(--coral);font-weight:600;text-decoration:none}
+    /* Footer */
+    .pg-footer{background:var(--navy-deep);padding:13px 28px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .ft{font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,0.22);letter-spacing:.04em}
+    .ft-seal{display:flex;align-items:center;gap:5px;font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,0.28)}
+    .seal-dot{width:5px;height:5px;background:var(--amber);border-radius:50%}
+    .bottom-link{margin-top:18px;text-align:center;font-size:11px;color:rgba(255,255,255,0.25)}
+    .bottom-link a{color:rgba(255,255,255,0.4);text-decoration:none}
+    .bottom-link a:hover{color:rgba(255,255,255,0.65)}
+    @media(max-width:480px){
+      body{padding:16px 12px 40px}
+      .hd,.hero,.agent-strip,.form-area,.pg-footer{padding-left:20px;padding-right:20px}
+      .hero-title{font-size:24px}
+      .g2,.g3{grid-template-columns:1fr}
+      .agent-cert{display:none}
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-card">
+
+  <!-- Header -->
+  <div class="hd">
+    <a href="https://lopcha.com" class="logo">L<em>o</em>pcha</a>
+    <div class="badge">Medicare · Permit to Call</div>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="eyebrow">Información gratuita · Sin compromiso</div>
+    <h1 class="hero-title">Medicare <span class="t-coral">ya no es</span> tan <span class="t-amber">complicado.</span></h1>
+    <p class="hero-sub">Déjanos tus datos y te contactamos para revisar tus opciones de cobertura — sin costo ni compromiso.</p>
+  </div>
+
+  <!-- Agent strip -->
+  <div class="agent-strip">
+    <div class="agent-photo-wrap">
+      <div class="agent-fallback" id="agentFallback">DC</div>
+      <div class="agent-verified">
+        <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#0B1E3F" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+    </div>
+    <div class="agent-info">
+      <div class="agent-tag">Tu agente asignada</div>
+      <div class="agent-name">Daniela Chacin</div>
+      <div class="agent-contacts">
+        <a href="tel:+19546442463" class="agent-contact">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.64A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (954) 644-2463
+        </a>
+        <a href="mailto:daniela@lopcha.com" class="agent-contact">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          daniela@lopcha.com
+        </a>
+      </div>
+    </div>
+    <div class="agent-cert">Agente<br>certificada<br>Medicare</div>
+  </div>
+
+  <!-- Form area -->
+  <div class="form-area">
+
+    <form id="permitForm" action="https://formspree.io/f/mpqonznr" method="POST" novalidate>
+      <input type="hidden" name="agente" value="Daniela Chacin">
+      <input type="hidden" name="agente_email" value="daniela@lopcha.com">
+      <input type="hidden" name="tipo_de_contacto" value="Cliente Medicare">
+      <input type="hidden" name="source_page" value="permit-daniela">
+
+      <div class="sec-label">Información personal</div>
+
+      <div class="g2">
+        <div class="field">
+          <label for="nombre">Nombre <span class="req">*</span></label>
+          <input type="text" id="nombre" name="nombre" placeholder="María" autocomplete="given-name" required>
+        </div>
+        <div class="field">
+          <label for="apellido">Apellido <span class="req">*</span></label>
+          <input type="text" id="apellido" name="apellido" placeholder="González" autocomplete="family-name" required>
+        </div>
+      </div>
+
+      <div class="g3">
+        <div class="field">
+          <label for="telefono">Teléfono <span class="req">*</span></label>
+          <input type="tel" id="telefono" name="telefono" placeholder="(305) 555-0192" autocomplete="tel" required>
+        </div>
+        <div class="field">
+          <label for="fecha_nacimiento">Fecha de nacimiento <span class="req">*</span></label>
+          <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+        </div>
+        <div class="field">
+          <label for="codigo_postal">Código postal <span class="req">*</span></label>
+          <input type="text" id="codigo_postal" name="codigo_postal" placeholder="33135" maxlength="5" inputmode="numeric" required>
+        </div>
+      </div>
+
+      <div class="g2" style="margin-bottom:18px">
+        <div class="field">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="maria@email.com" autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="horario">Mejor horario para llamar</label>
+          <select id="horario" name="horario">
+            <option value="">Seleccionar...</option>
+            <option value="manana">Mañana (9am – 12pm)</option>
+            <option value="tarde">Tarde (12pm – 5pm)</option>
+            <option value="noche">Noche (5pm – 7pm)</option>
+            <option value="cualquiera">Cualquier hora</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="sec-label">Autorización · Permit to Call</div>
+
+      <div class="consent-box" id="consentBox">
+        <div class="consent-head">
+          <div class="shield">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F5A623" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <div class="consent-title">Consentimiento expreso escrito (TCPA)</div>
+            <div class="consent-sub">Requerido por regulación federal de Medicare</div>
+          </div>
+        </div>
+        <p class="consent-text">
+          Al marcar esta casilla, doy mi consentimiento expreso y por escrito para que <strong>Lopcha Services LLC</strong> y la agente <strong>Daniela Chacin</strong> me contacten al número de teléfono proporcionado — incluyendo llamadas automáticas, mensajes de texto y mensajes pregrabados — con información sobre planes Medicare Advantage, Medicare Supplement y programas relacionados. Entiendo que mi consentimiento <strong>no es condición</strong> para obtener ningún bien o servicio. Puedo revocar este consentimiento en cualquier momento.
+        </p>
+        <label class="check-row">
+          <input type="checkbox" id="consentimiento" name="consentimiento" value="Si — Permit to Call otorgado" required>
+          <span class="check-lbl">Acepto ser contactado por Lopcha Services LLC y Daniela Chacin según los términos descritos arriba. <span>(Requerido)</span></span>
+        </label>
+      </div>
+
+      <button type="submit" class="btn-submit" id="submitBtn">
+        Solicitar información gratuita
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+      <p class="submit-note">Sin costo · Sin compromiso · Agente con licencia en Florida</p>
+    </form>
+
+    <div class="success-state" id="successState">
+      <div class="success-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF6B5B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div class="success-title">¡Listo! Daniela te llama pronto.</div>
+      <p class="success-sub">
+        Recibimos tus datos. Daniela Chacin se pondrá en contacto contigo al número que proporcionaste.<br><br>
+        ¿Preguntas antes? Llámala directamente al <a href="tel:+19546442463">(954) 644-2463</a>.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="pg-footer">
+    <div class="ft">© 2026 Lopcha Services LLC · NPN disponible al solicitarlo</div>
+    <div class="ft-seal"><div class="seal-dot"></div>Página segura · SSL</div>
+  </div>
+
+</div>
+
+<div class="bottom-link"><a href="https://lopcha.com">lopcha.com</a> · Lopcha Services LLC · South Florida</div>
+
+<script>
+  const SUPABASE_URL  = 'https://naredrujpqyarprhkgkq.supabase.co';
+  const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5hcmVkcnVqcHF5YXJwcmhrZ2txIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMwNzQzMDMsImV4cCI6MjA4ODY1MDMwM30.mrWruSqCc9B3sNSIb6BRzWvcOQYhBIOPTxqwyiaYlio';
+
+  const form      = document.getElementById('permitForm');
+  const btn       = document.getElementById('submitBtn');
+  const successEl = document.getElementById('successState');
+  const consentBox = document.getElementById('consentBox');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const consent = document.getElementById('consentimiento');
+    if (!consent.checked) {
+      consentBox.style.outline = '2px solid #FF6B5B';
+      consentBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+    btn.disabled = true;
+    btn.textContent = 'Enviando...';
+    const fd = new FormData(form);
+    const payload = {
+      profile_type:  'cliente',
+      full_name:     (fd.get('nombre') + ' ' + fd.get('apellido')).trim(),
+      phone:         fd.get('telefono'),
+      email:         fd.get('email') || null,
+      agency_name:   'Daniela Chacin — Permit to Call',
+      state_license: fd.get('codigo_postal'),
+      source_page:   'permit-daniela',
+      notes: JSON.stringify({
+        fecha_nacimiento: fd.get('fecha_nacimiento'),
+        codigo_postal:    fd.get('codigo_postal'),
+        horario:          fd.get('horario'),
+        consentimiento:   fd.get('consentimiento'),
+        agente:           'Daniela Chacin'
+      })
+    };
+    try {
+      const sbRes = await fetch(SUPABASE_URL + '/rest/v1/website_inquiries', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'apikey': SUPABASE_ANON, 'Authorization': 'Bearer ' + SUPABASE_ANON, 'Prefer': 'return=minimal' },
+        body: JSON.stringify(payload)
+      });
+      fetch(form.action, { method: 'POST', body: fd, headers: { 'Accept': 'application/json' } });
+      if (sbRes.ok || sbRes.status === 201) {
+        form.style.display = 'none';
+        successEl.classList.add('visible');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else { throw new Error('sb ' + sbRes.status); }
+    } catch {
+      try {
+        const fs = await fetch(form.action, { method: 'POST', body: fd, headers: { 'Accept': 'application/json' } });
+        if (fs.ok) { form.style.display = 'none'; successEl.classList.add('visible'); return; }
+      } catch {}
+      btn.disabled = false;
+      btn.textContent = 'Error — intenta de nuevo';
+    }
+  });
+
+  document.getElementById('consentimiento').addEventListener('change', function() {
+    consentBox.style.outline = '';
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 72" height="40" role="img" aria-label="Lopcha">
+  <title>Lopcha</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,500&amp;display=swap');
+    </style>
+  </defs>
+  <!--
+    Wordmark: L o pcha
+    Font: Fraunces 500
+    "o" → italic + amber #F5A623
+    Tracking: −3.5%
+    Clearspace: 1× = altura de la "o"
+  -->
+  <text
+    x="0"
+    y="56"
+    font-family="'Fraunces', 'Playfair Display', Georgia, serif"
+    font-weight="500"
+    font-size="64"
+    letter-spacing="-2.24"
+    fill="#0B1E3F"
+  >L</text>
+  <text
+    x="41"
+    y="56"
+    font-family="'Fraunces', 'Playfair Display', Georgia, serif"
+    font-weight="500"
+    font-size="64"
+    font-style="italic"
+    fill="#F5A623"
+  >o</text>
+  <text
+    x="82"
+    y="56"
+    font-family="'Fraunces', 'Playfair Display', Georgia, serif"
+    font-weight="500"
+    font-size="64"
+    letter-spacing="-2.24"
+    fill="#0B1E3F"
+  >pcha</text>
+</svg>

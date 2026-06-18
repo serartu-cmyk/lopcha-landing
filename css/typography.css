@@ -1,0 +1,216 @@
+/*
+ * LOPCHA — Typography System v1.0
+ * Manual de Marca · Cap. 04 · abril 2026
+ * ─────────────────────────────────────────────────
+ * Tres familias:
+ *   Fraunces      → Display / Editorial (titulares, eslogan, logo)
+ *   Inter         → Body / UI (párrafos, botones, formularios)
+ *   JetBrains Mono→ Técnica (eyebrows, códigos, legal, metadata)
+ */
+
+/* ─── Google Fonts Import ───────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+/* ─── Font Variables ────────────────────────────── */
+:root {
+  --font-serif: 'Fraunces', 'Playfair Display', Georgia, serif;
+  --font-sans:  'Inter', ui-sans-serif, -apple-system, system-ui, sans-serif;
+  --font-mono:  'JetBrains Mono', 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+}
+
+/* ─── Reset base ────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 1rem;           /* 16px */
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Escala tipográfica (8 niveles) ────────────── *
+ *
+ *  Display  120px  Fraunces 500  portadas, eslogan, hero cover
+ *  H1        72px  Fraunces 500  sección principal
+ *  H2        48px  Fraunces 500  subsección, titulares de card
+ *  H3        28px  Fraunces 500  componentes, sidebar headers
+ *  Lead      22px  Inter 400     párrafo introductorio bajo H1
+ *  Body      16px  Inter 400     texto de cuerpo (default)
+ *  Small     13px  Inter 400     metadatos, captions, notas
+ *  Eyebrow   12px  JetBrains 700 categorías sobre títulos
+ *
+ * ─────────────────────────────────────────────────*/
+
+/* Display */
+.type-display {
+  font-family: var(--font-serif);
+  font-size: clamp(60px, 7vw, 120px);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+  color: var(--navy);
+}
+
+/* H1 */
+h1, .type-h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(40px, 5vw, 72px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.030em;
+  color: var(--navy);
+  margin: 0;
+}
+
+/* H2 */
+h2, .type-h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: 500;
+  line-height: 1.10;
+  letter-spacing: -0.025em;
+  color: var(--navy);
+  margin: 0;
+}
+
+/* H3 */
+h3, .type-h3 {
+  font-family: var(--font-serif);
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 500;
+  line-height: 1.20;
+  letter-spacing: -0.015em;
+  color: var(--navy);
+  margin: 0;
+}
+
+/* Lead — párrafo introductorio */
+.type-lead {
+  font-family: var(--font-sans);
+  font-size: clamp(17px, 1.8vw, 22px);
+  font-weight: 400;
+  line-height: 1.60;
+  color: var(--ink-soft);
+}
+
+/* Body */
+p, .type-body {
+  font-family: var(--font-sans);
+  font-size: 1rem;           /* 16px */
+  font-weight: 400;
+  line-height: 1.70;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* Small */
+.type-small {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;     /* 13px */
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+/* Eyebrow — sobre títulos, categorías, metadata */
+.type-eyebrow,
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;        /* 12px */
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--coral);
+}
+
+/* ─── Utilidades ────────────────────────────────── */
+
+/* La "o" itálica ámbar — firma del logo y elemento gráfico */
+.brand-o {
+  font-style: italic;
+  color: var(--amber);
+}
+
+/* Itálica coral — énfasis emocional (eslogan) */
+.italic-coral {
+  font-style: italic;
+  color: var(--coral);
+}
+
+/* Itálica ámbar — énfasis autoridad */
+.italic-amber {
+  font-style: italic;
+  color: var(--amber);
+}
+
+/* Eslogan completo con marcado correcto */
+.slogan {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: var(--navy);
+}
+
+/* Sub-brand route notation: Lopcha/.medicare */
+.subbrand-route {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.5em;          /* 50% del wordmark padre */
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+.subbrand-route--medicare { color: var(--coral); }
+.subbrand-route--aca      { color: var(--amber); }
+.subbrand-route--life     { color: var(--navy-soft); }
+.subbrand-route--agents   { color: var(--line-agents); }
+
+/* ─── Links ─────────────────────────────────────── */
+a {
+  color: var(--coral);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+a:hover { color: var(--coral-warm); }
+
+/* ─── Strong / Bold ─────────────────────────────── */
+strong, b { font-weight: 600; color: var(--navy); }
+
+/* ─── Listas con "o" como bullet ────────────────── */
+.list-brand {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.list-brand li {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+.list-brand li::before {
+  content: 'o';
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.1em;
+  color: var(--coral);
+  flex-shrink: 0;
+  line-height: 1;
+}
