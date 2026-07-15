@@ -1265,9 +1265,6 @@ function updateFormText() {
 }
 
 // ── FORM SUBMIT ──
-const SUPABASE_URL = 'https://naredrujpqyarprhkgkq.supabase.co';
-const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5hcmVkcnVqcHF5YXJwcmhrZ2txIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMwNzQzMDMsImV4cCI6MjA4ODY1MDMwM30.mrWruSqCc9B3sNSIb6BRzWvcOQYhBIOPTxqwyiaYlio';
-
 async function handleSubmit(e) {
   e.preventDefault();
   const form = e.target;
@@ -1277,33 +1274,8 @@ async function handleSubmit(e) {
   btn.textContent = isEs ? 'Enviando...' : 'Sending...';
 
   const fd = new FormData(form);
-  const payload = {
-    profile_type: fd.get('tipo_de_contacto') === 'Agencia' ? 'agencia' : fd.get('tipo_de_contacto') === 'Cliente' ? 'cliente' : 'agente',
-    full_name: fd.get('nombre'),
-    phone: fd.get('telefono'),
-    email: fd.get('email'),
-    agency_name: fd.get('agencia') || null,
-    state_license: fd.get('estado'),
-    source_page: 'index'
-  };
 
-  // Supabase (base de datos) — no bloquea el éxito si falla
-  let sbOk = false;
-  try {
-    const sbRes = await fetch(SUPABASE_URL + '/rest/v1/website_inquiries', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'apikey': SUPABASE_ANON,
-        'Authorization': 'Bearer ' + SUPABASE_ANON,
-        'Prefer': 'return=minimal'
-      },
-      body: JSON.stringify(payload)
-    });
-    sbOk = sbRes.ok || sbRes.status === 201;
-  } catch {}
-
-  // Formspree (email) — canal principal
+  // Formspree (email)
   let fsOk = false;
   try {
     const fs = await fetch(form.action, {
@@ -1314,7 +1286,7 @@ async function handleSubmit(e) {
     fsOk = fs.ok;
   } catch {}
 
-  if (sbOk || fsOk) {
+  if (fsOk) {
     form.style.display = 'none';
     document.getElementById('formSuccess').classList.add('visible');
   } else {
