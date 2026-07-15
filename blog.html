@@ -480,8 +480,22 @@ body{font-family:var(--font-body);color:var(--text-primary);background:var(--whi
   <div class="nav-right">
     <button class="nav-lang" onclick="toggleLang()" id="langBtn">EN</button>
     <a href="/#contacto" class="btn-primary btn-sm" data-es="Agenda una reunión" data-en="Book a meeting">Agenda una reunión</a>
+    <button class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<!-- MOBILE MENU -->
+<div class="nav-mobile" id="navMobile">
+  <a href="/ensuro" class="nav-mobile-link" data-es="Ensuro IA" data-en="Ensuro AI">Ensuro IA</a>
+  <a href="/medicare" class="nav-mobile-link">Lopcha/.medicare</a>
+  <a href="/aca" class="nav-mobile-link">Lopcha/.aca</a>
+  <a href="/vida" class="nav-mobile-link">Lopcha/.life</a>
+  <a href="/#faq" class="nav-mobile-link">FAQ</a>
+  <a href="/blog" class="nav-mobile-link">Blog</a>
+  <a href="/#contacto" class="nav-mobile-link nav-mobile-cta" data-es="Agenda una reunión" data-en="Book a meeting">Agenda una reunión</a>
+</div>
+
 
 <section class="blog-hero">
   <p class="blog-hero-eyebrow" data-es="Educación · Seguros · Florida &amp; más estados" data-en="Education · Insurance · Florida &amp; more states">Educación · Seguros · Florida &amp; más estados</p>
@@ -721,6 +735,18 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
+  });
+});
+</script>
+<script>
+function toggleMobileMenu() {
+  document.getElementById('navMobile').classList.toggle('open');
+  document.getElementById('navHamburger').classList.toggle('open');
+}
+document.querySelectorAll('.nav-mobile-link').forEach(function(link) {
+  link.addEventListener('click', function() {
+    document.getElementById('navMobile').classList.remove('open');
+    document.getElementById('navHamburger').classList.remove('open');
   });
 });
 </script>

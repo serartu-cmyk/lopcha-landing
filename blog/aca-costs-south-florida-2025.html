@@ -87,8 +87,22 @@
   <div class="nav-right">
     <button class="nav-lang" onclick="toggleLang()" id="langBtn">EN</button>
     <a href="/#contacto" class="btn-primary btn-sm" data-es="Agenda una reunión" data-en="Book a meeting">Agenda una reunión</a>
+    <button class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<!-- MOBILE MENU -->
+<div class="nav-mobile" id="navMobile">
+  <a href="/ensuro" class="nav-mobile-link">Ensuro AI</a>
+  <a href="/medicare" class="nav-mobile-link">Lopcha/.medicare</a>
+  <a href="/aca" class="nav-mobile-link">Lopcha/.aca</a>
+  <a href="/vida" class="nav-mobile-link">Lopcha/.life</a>
+  <a href="/#faq" class="nav-mobile-link">FAQ</a>
+  <a href="/blog" class="nav-mobile-link">Blog</a>
+  <a href="/#contacto" class="nav-mobile-link nav-mobile-cta">Book a meeting</a>
+</div>
+
 
 <div class="article-hero">
   <div class="article-hero-inner">
@@ -245,6 +259,18 @@
 function toggleLang() {
   window.location.href = '/blog/aca-costos-south-florida-2025';
 }
+</script>
+<script>
+function toggleMobileMenu() {
+  document.getElementById('navMobile').classList.toggle('open');
+  document.getElementById('navHamburger').classList.toggle('open');
+}
+document.querySelectorAll('.nav-mobile-link').forEach(function(link) {
+  link.addEventListener('click', function() {
+    document.getElementById('navMobile').classList.remove('open');
+    document.getElementById('navHamburger').classList.remove('open');
+  });
+});
 </script>
 </body>
 </html>

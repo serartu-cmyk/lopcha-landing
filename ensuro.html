@@ -213,10 +213,32 @@ body{font-family:var(--font-body);color:var(--text-primary);background:var(--whi
     <div class="ensuro-wordmark"><span class="e">e</span>nsuro<span class="ensuro-tag">.ai</span></div>
   </div>
   <div class="nav-links">
-    <a href="/" class="nav-link" data-es="Inicio" data-en="Home">Inicio</a>
-    <a href="/ensuro" class="nav-link active">Ensuro AI</a>
-    <a href="/medicare" class="nav-link">Medicare</a>
-    <a href="/aca" class="nav-link">ACA</a>
+    <a href="/ensuro" class="nav-link active" data-es="Ensuro IA" data-en="Ensuro AI">Ensuro IA</a>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-trigger" data-es="Seguros" data-en="Insurance">
+        Seguros
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-dropdown-menu">
+        <a href="/medicare" class="nav-dropdown-item">
+          <span class="nav-dropdown-dot" style="background:var(--coral)"></span>
+          <span>Lopcha<span style="color:var(--coral);font-style:italic;font-weight:600">/.medicare</span></span>
+        </a>
+        <a href="/aca" class="nav-dropdown-item">
+          <span class="nav-dropdown-dot" style="background:var(--amber)"></span>
+          <span>Lopcha<span style="color:var(--amber);font-style:italic;font-weight:600">/.aca</span></span>
+        </a>
+        <a href="/vida" class="nav-dropdown-item">
+          <span class="nav-dropdown-dot" style="background:var(--navy-soft)"></span>
+          <span>Lopcha<span style="color:var(--navy-soft);font-style:italic;font-weight:600">/.life</span></span>
+        </a>
+        <a href="/#contacto" class="nav-dropdown-item">
+          <span class="nav-dropdown-dot" style="background:#7B6FEC"></span>
+          <span>Lopcha<span style="color:#7B6FEC;font-style:italic;font-weight:600">/.agents</span></span>
+        </a>
+      </div>
+    </div>
+    <a href="/#faq" class="nav-link">FAQ</a>
     <a href="/blog" class="nav-link">Blog</a>
   </div>
   <div class="nav-right">
@@ -225,8 +247,21 @@ body{font-family:var(--font-body);color:var(--text-primary);background:var(--whi
       Acceso agentes
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
+    <button class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<!-- MOBILE MENU -->
+<div class="nav-mobile" id="navMobile">
+  <a href="/medicare" class="nav-mobile-link">Lopcha/.medicare</a>
+  <a href="/aca" class="nav-mobile-link">Lopcha/.aca</a>
+  <a href="/vida" class="nav-mobile-link">Lopcha/.life</a>
+  <a href="/#faq" class="nav-mobile-link">FAQ</a>
+  <a href="/blog" class="nav-mobile-link">Blog</a>
+  <a href="https://ensuro.lopcha.com" target="_blank" rel="noopener" class="nav-mobile-link nav-mobile-cta" data-es="Acceso agentes" data-en="Agent access">Acceso agentes</a>
+</div>
+
 
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
@@ -534,6 +569,18 @@ function toggleLang() {
   document.getElementById('langBtn').textContent = currentLang === 'es' ? 'EN' : 'ES';
   applyLang(currentLang);
 }
+</script>
+<script>
+function toggleMobileMenu() {
+  document.getElementById('navMobile').classList.toggle('open');
+  document.getElementById('navHamburger').classList.toggle('open');
+}
+document.querySelectorAll('.nav-mobile-link').forEach(function(link) {
+  link.addEventListener('click', function() {
+    document.getElementById('navMobile').classList.remove('open');
+    document.getElementById('navHamburger').classList.remove('open');
+  });
+});
 </script>
 </body>
 </html>
