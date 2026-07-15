@@ -243,6 +243,51 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 
 
+/* Mobile menu */
+.nav-mobile {
+  display: none;
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  background: var(--navy);
+  padding: var(--space-4) var(--space-5);
+  flex-direction: column;
+  gap: 4px;
+  z-index: 99;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: var(--shadow-lg);
+}
+.nav-mobile.open {
+  display: flex;
+}
+.nav-mobile-link {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+.nav-mobile-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+}
+.nav-mobile-cta {
+  margin-top: 8px;
+  background: var(--coral);
+  color: #fff !important;
+  font-weight: 600;
+  text-align: center;
+  border-radius: var(--radius-md);
+}
+.nav-mobile-cta:hover {
+  background: var(--coral-warm);
+}
+
+
 /* ══════════════════════════════════════════════════
    4. BOTONES
    ══════════════════════════════════════════════════ */
@@ -267,6 +312,39 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 .btn:hover { transform: translateY(-1px); }
 .btn:active { transform: translateY(0); }
+
+/* Shared base styles for all btn variants */
+.btn-primary,
+.btn-secondary,
+.btn-outline,
+.btn-outline-light,
+.btn-amber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  line-height: 1;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 14px 28px;
+  cursor: pointer;
+  transition: background var(--transition-base), transform var(--transition-fast), box-shadow var(--transition-base);
+  white-space: nowrap;
+}
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-outline:hover,
+.btn-outline-light:hover,
+.btn-amber:hover { transform: translateY(-1px); }
+.btn-primary:active,
+.btn-secondary:active,
+.btn-outline:active,
+.btn-outline-light:active,
+.btn-amber:active { transform: translateY(0); }
 
 /* Primary — coral (CTA principal) */
 .btn-primary {

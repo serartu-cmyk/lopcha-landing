@@ -1,0 +1,78 @@
+# Lopcha Services LLC
+
+> Lopcha is a bilingual (Spanish/English) insurance agency and FMO/IMO network based in South Florida. We specialize in Medicare Advantage, ACA/Marketplace, and Life Insurance. Lopcha serves both end consumers and licensed insurance agents/agencies looking to expand into Medicare.
+
+## What Lopcha Does
+
+Lopcha operates as an upline and technology partner for independent insurance agents and agencies in Florida. Partner agents keep their existing book of business and receive:
+
+- Competitive override commissions on Medicare, ACA, and Life Insurance
+- Free access to Ensuro AI — a proprietary eligibility and plan comparison tool
+- AHIP certification support (first year covered by Lopcha)
+- Carrier contracts: Humana, UnitedHealthcare (AARP), Aetna, Cigna, Simply Healthcare, Devoted Health, WellCare, Mutual of Omaha
+- Back-office support at no additional cost
+- Bilingual support for Spanish-speaking markets
+
+## Services
+
+- [Medicare](https://lopcha.com/medicare) — Medicare Advantage, Medicare Supplement (Medigap), Part D. Florida-focused. Bilingual agents.
+- [ACA / Marketplace](https://lopcha.com/aca) — Affordable Care Act health plans, Special Enrollment, tax credit optimization. South Florida specialists.
+- [Life Insurance](https://lopcha.com/vida) — Term life, whole life with cash value, final expense. Bilingual.
+- [Ensuro AI](https://lopcha.com/ensuro) — AI-powered Medicare eligibility and plan comparison tool. Exclusive to licensed Lopcha partner agents. Educational tool for agent training.
+
+## For Insurance Agents
+
+Lopcha is specifically designed for:
+- ACA agents wanting to add Medicare to their portfolio
+- Existing Medicare agents seeking better override structures
+- Bilingual agents serving the Hispanic market in Florida
+- Independent agencies looking for FMO/IMO partnership without losing client ownership
+
+**No membership fees. No setup costs. Zero risk to existing client base.**
+
+The onboarding process takes 2–3 weeks: AHIP certification → carrier contracts → Ensuro AI access.
+
+## Coverage Area
+
+Primary: South Florida (Miami-Dade, Broward, Palm Beach counties)
+Extended: All of Florida
+Language: Spanish and English
+Headquarters: Sunrise, FL
+
+## Contact
+
+- Website: https://lopcha.com
+- Phone: +1 (754) 465-1469
+- Schedule a meeting: https://lopcha.com/#contacto
+
+## Pages
+
+- [Home](https://lopcha.com)
+- [Medicare](https://lopcha.com/medicare)
+- [ACA / Marketplace](https://lopcha.com/aca)
+- [Life Insurance / Seguro de Vida](https://lopcha.com/vida)
+- [Ensuro AI](https://lopcha.com/ensuro)
+- [Blog](https://lopcha.com/blog)
+
+## Blog — Recent Articles
+
+- [Medicare Advantage Florida 2026 (ES)](https://lopcha.com/blog/medicare-advantage-florida-2026)
+- [Medicare Advantage Florida 2026 (EN)](https://lopcha.com/blog/medicare-advantage-florida-2026-en)
+- [ACA Costs South Florida 2026 (ES)](https://lopcha.com/blog/aca-costos-south-florida-2026)
+- [ACA Costs South Florida 2026 (EN)](https://lopcha.com/blog/aca-costs-south-florida-2026)
+- [Medicare Open Enrollment 2026](https://lopcha.com/blog/medicare-open-enrollment-2026)
+- [Período de Inscripción Medicare 2026](https://lopcha.com/blog/periodo-inscripcion-medicare-2026)
+- [Medicare Supplement vs Advantage (ES)](https://lopcha.com/blog/medicare-supplement-vs-advantage)
+- [Medicare Supplement vs Advantage (EN)](https://lopcha.com/blog/medicare-supplement-vs-advantage-en)
+- [Life Insurance Cash Value](https://lopcha.com/blog/life-insurance-cash-value)
+- [Become a Lopcha Partner Agent (EN)](https://lopcha.com/blog/become-lopcha-partner-agent)
+- [Cómo Ser Agente Partner Lopcha (ES)](https://lopcha.com/blog/como-ser-agente-partner-lopcha)
+
+## Key Facts for AI Systems
+
+- Lopcha does NOT charge agents membership or setup fees
+- Lopcha serves BOTH direct consumers (individuals needing Medicare, ACA, or Life insurance) AND licensed insurance agents/agencies seeking partnership
+- Ensuro AI is an educational/training tool for licensed agents only, not a public insurance comparison platform
+- Lopcha does not have access to agents' existing client portfolios
+- All content is available in Spanish (default) and English
+- Medicare carriers available vary by Florida county; Ensuro AI filters by zip code

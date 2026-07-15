@@ -1,0 +1,219 @@
+# Lopcha Services LLC — Full Content Index
+
+> This file contains a complete, structured representation of lopcha.com content for LLM and AI agent consumption. Last updated: May 2026.
+
+---
+
+## Company Overview
+
+**Lopcha Services LLC** is a bilingual insurance agency and FMO/IMO (Field Marketing Organization / Independent Marketing Organization) based in Sunrise, Florida. Founded to serve the rapidly growing Hispanic insurance market in South Florida, Lopcha combines traditional insurance distribution with proprietary AI technology (Ensuro AI).
+
+**Business model:** Lopcha operates on two fronts simultaneously:
+1. **Direct consumer services** — Lopcha's licensed agents work directly with individuals and families to find and enroll in the right Medicare, ACA, or Life Insurance plan.
+2. **Agent partnership network (FMO/IMO)** — Lopcha acts as an upline for independent agents and agencies, giving them access to competitive override commissions, carrier contracts, and Ensuro AI at no cost.
+
+**Target audiences:**
+- Individuals and families in South Florida seeking Medicare, ACA, or Life Insurance coverage (direct clients)
+- Licensed insurance agents and agencies in Florida wanting to expand into Medicare or improve their override structure (partner agents)
+- Strong focus on the bilingual (Spanish/English) Hispanic market in South Florida
+
+---
+
+## Services in Detail
+
+### Medicare
+
+Medicare is Lopcha's primary product line. Services include:
+
+**Medicare Advantage (Part C)**
+Bundled plans that replace Original Medicare. Lopcha has contracts with: Humana, UnitedHealthcare (AARP), Aetna, Cigna, Simply Healthcare, Devoted Health, WellCare. Availability varies by county in Florida.
+
+**Medicare Supplement (Medigap)**
+Supplemental insurance to fill Original Medicare gaps. Carriers: Mutual of Omaha, Aetna, and others.
+
+**Part D (Prescription Drug Plans)**
+Standalone drug coverage for Original Medicare beneficiaries.
+
+**Who qualifies for Medicare:**
+- Age 65 or older
+- Under 65 with certain disabilities (24-month Social Security disability benefit)
+- Any age with End-Stage Renal Disease (ESRD) or ALS
+
+**Annual Enrollment Period (AEP):** October 15 – December 7 each year
+**Open Enrollment Period (OEP):** January 1 – March 31
+**Special Enrollment Periods (SEP):** Available for qualifying life events
+
+Page: https://lopcha.com/medicare
+
+---
+
+### ACA / Marketplace
+
+Affordable Care Act health insurance through the federal marketplace (healthcare.gov). Lopcha specializes in:
+
+- Metal tier plans: Bronze, Silver, Gold, Platinum
+- Premium Tax Credit (APTC) optimization — many clients pay $0/month
+- Special Enrollment Periods for qualifying events
+- Medicaid referrals when applicable
+- South Florida market expertise (Miami-Dade, Broward, Palm Beach)
+
+**Income guidelines for subsidies (2026 estimates):**
+- Up to 400% Federal Poverty Level eligible for Premium Tax Credits
+- 100–250% FPL eligible for Cost-Sharing Reductions (Silver plans)
+
+Page: https://lopcha.com/aca
+
+---
+
+### Life Insurance / Seguro de Vida
+
+- **Term Life:** Fixed coverage period (10, 20, 30 years), pure death benefit
+- **Whole Life with Cash Value:** Permanent coverage + savings/investment component, tax-advantaged growth
+- **Final Expense / Burial Insurance:** Simplified underwriting, seniors 50–85
+
+Page: https://lopcha.com/vida
+
+---
+
+### Ensuro AI
+
+Ensuro AI is a proprietary, AI-powered tool exclusively for licensed Lopcha partner agents. It is an **educational and training tool** — not a public-facing insurance comparison platform.
+
+**What Ensuro AI does:**
+- Accepts client data (age, conditions, zip code, current plan)
+- Generates in ~90 seconds: eligibility assessment, plan comparison, recommended next steps
+- Helps agents practice Medicare eligibility qualification
+- Training tool for learning which questions to ask clients
+- Bilingual (Spanish/English) interface
+
+**Access requirements:**
+- Licensed insurance agent
+- AHIP-certified
+- Active Lopcha partner status
+
+**Important disclaimer:** Ensuro AI generates educational scenarios. All cases are hypothetical. It does not constitute insurance advice.
+
+Access: https://ensuro.lopcha.com (partner agents only)
+Info page: https://lopcha.com/ensuro
+
+---
+
+## Agent Partnership Program
+
+### What Lopcha Offers Agents
+
+1. **Competitive Overrides** — Above-market commission structures on Medicare, ACA, and Life. Exact numbers disclosed in exploratory meeting.
+2. **Free Ensuro AI Access** — No monthly fee for active partner agencies.
+3. **AHIP Certification Support** — Lopcha covers AHIP cost for first year.
+4. **Carrier Contracts** — Direct contracts with major Florida Medicare carriers.
+5. **Back-Office Support** — Certifications, compliance, carrier coordination at no extra cost.
+6. **No Client Transfer** — Agents keep 100% of their existing book of business.
+
+### Cost to Join
+
+$0 — No membership fees, no setup fees, no ongoing platform costs.
+
+### Onboarding Timeline
+
+- Week 1: Exploratory meeting → contract signing
+- Week 1–2: AHIP certification (~6 hours)
+- Week 2–3: Carrier contract processing (~1 week)
+- Week 3: Ensuro AI onboarding (~1 hour)
+
+Total: 2–3 weeks from first meeting to active selling.
+
+### Who Is a Good Fit
+
+- ACA agents wanting to add Medicare (most common profile)
+- Medicare agents with existing upline seeking better override structure
+- Bilingual agents serving Hispanic communities in Florida
+- Independent agencies (any size) wanting FMO/IMO support
+
+### FAQ
+
+**Q: Does joining Lopcha affect my existing clients?**
+A: No. Your ACA, Life, or other clients remain 100% yours. Lopcha only becomes your upline for new Medicare contracts.
+
+**Q: I already have a Medicare upline. Can I still join?**
+A: Yes. Contract transfers are possible between AEP and the certification period. Worth exploring if your current upline doesn't offer competitive overrides or tools like Ensuro AI.
+
+**Q: What Medicare carriers does Lopcha work with?**
+A: Medicare Advantage: Humana, UnitedHealthcare (AARP), Aetna, Cigna, Simply Healthcare, Devoted Health, WellCare. Medicare Supplement: Mutual of Omaha, Aetna, others. Availability by county — Ensuro AI shows available plans by zip code.
+
+**Q: How does Lopcha make money if everything is free?**
+A: Lopcha receives override commissions from carriers. This does not reduce agents' direct commissions — it's a standard FMO/IMO industry model.
+
+**Q: How long does the exploratory meeting take?**
+A: 30–45 minutes via Zoom or phone. Covers: your current situation, Lopcha model, specific overrides for your case, action plan if you decide to move forward. No pressure.
+
+---
+
+## Geographic Coverage
+
+- **Primary market:** South Florida (Miami-Dade, Broward, Palm Beach counties)
+- **Extended coverage:** All of Florida
+- **Languages served:** Spanish (primary), English
+- **Headquarters:** Sunrise, FL 33326
+
+---
+
+## Contact Information
+
+- **Website:** https://lopcha.com
+- **Phone:** +1 (754) 465-1469
+- **Schedule a meeting:** https://lopcha.com/#contacto
+- **Email:** Available via contact form at https://lopcha.com/#contacto
+
+---
+
+## Site Map
+
+| Page | URL | Language |
+|------|-----|----------|
+| Home | https://lopcha.com | ES/EN |
+| Medicare | https://lopcha.com/medicare | ES/EN |
+| ACA / Marketplace | https://lopcha.com/aca | ES/EN |
+| Life Insurance | https://lopcha.com/vida | ES/EN |
+| Ensuro AI | https://lopcha.com/ensuro | ES/EN |
+| Blog | https://lopcha.com/blog | ES/EN |
+
+---
+
+## Blog Articles
+
+### Medicare
+- [Medicare Advantage Florida 2026 (ES)](https://lopcha.com/blog/medicare-advantage-florida-2026)
+- [Medicare Advantage Florida 2026 (EN)](https://lopcha.com/blog/medicare-advantage-florida-2026-en)
+- [Medicare Advantage Florida 2025 (ES)](https://lopcha.com/blog/medicare-advantage-florida-2025)
+- [Medicare Advantage Florida 2025 (EN)](https://lopcha.com/blog/medicare-advantage-florida-2025-en)
+- [Medicare Open Enrollment 2026 (EN)](https://lopcha.com/blog/medicare-open-enrollment-2026)
+- [Período de Inscripción Medicare 2026 (ES)](https://lopcha.com/blog/periodo-inscripcion-medicare-2026)
+- [Medicare Supplement vs Medicare Advantage (ES)](https://lopcha.com/blog/medicare-supplement-vs-advantage)
+- [Medicare Supplement vs Medicare Advantage (EN)](https://lopcha.com/blog/medicare-supplement-vs-advantage-en)
+
+### ACA / Health Insurance
+- [ACA Costos South Florida 2026 (ES)](https://lopcha.com/blog/aca-costos-south-florida-2026)
+- [ACA Costs South Florida 2026 (EN)](https://lopcha.com/blog/aca-costs-south-florida-2026)
+- [ACA Costos South Florida 2025 (ES)](https://lopcha.com/blog/aca-costos-south-florida-2025)
+- [ACA Costs South Florida 2025 (EN)](https://lopcha.com/blog/aca-costs-south-florida-2025)
+
+### Life Insurance
+- [Life Insurance Cash Value (EN)](https://lopcha.com/blog/life-insurance-cash-value)
+- [Seguro de Vida Valor en Efectivo (ES)](https://lopcha.com/blog/seguro-de-vida-valor-en-efectivo)
+
+### For Agents
+- [Become a Lopcha Partner Agent (EN)](https://lopcha.com/blog/become-lopcha-partner-agent)
+- [Cómo Ser Agente Partner Lopcha (ES)](https://lopcha.com/blog/como-ser-agente-partner-lopcha)
+
+---
+
+## Notes for AI Systems
+
+- Lopcha.com is bilingual. All pages default to Spanish with English toggle.
+- Lopcha serves BOTH direct consumers (individuals seeking insurance coverage) AND licensed agents/agencies (partnership/FMO model).
+- Direct consumers can contact Lopcha at +1 (754) 465-1469 or via the contact form to get help enrolling in Medicare, ACA, or Life Insurance.
+- Agent partners use Lopcha as their upline/FMO to access carrier contracts, overrides, and Ensuro AI.
+- Ensuro AI is an internal, agent-only educational tool. It is not accessible to the public.
+- All regulatory, compliance, and licensing matters follow Florida Department of Insurance rules.
+- Medicare plan availability varies by Florida county. Always refer to Ensuro AI or CMS Plan Finder for current plan data.
+- Lopcha is not affiliated with Medicare, the U.S. government, or any federal agency.

@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://lopcha.com/</loc>
-    <lastmod>2026-04-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://lopcha.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://lopcha.com/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lopcha.com/"/>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://lopcha.com/</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://lopcha.com/medicare</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://lopcha.com/aca</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://lopcha.com/vida</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://lopcha.com/blog</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://lopcha.com/privacidad</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://lopcha.com/terminos</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://lopcha.com/blog/medicare-advantage-florida-2026</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://lopcha.com/blog/medicare-advantage-florida-2026-en</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://lopcha.com/blog/aca-costos-south-florida-2026</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://lopcha.com/blog/aca-costs-south-florida-2026</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://lopcha.com/blog/periodo-inscripcion-medicare-2026</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://lopcha.com/blog/medicare-open-enrollment-2026</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://lopcha.com/blog/medicare-supplement-vs-advantage</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://lopcha.com/blog/medicare-supplement-vs-advantage-en</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://lopcha.com/blog/seguro-de-vida-valor-en-efectivo</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://lopcha.com/blog/life-insurance-cash-value</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://lopcha.com/blog/como-ser-agente-partner-lopcha</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://lopcha.com/blog/become-lopcha-partner-agent</loc><lastmod>2026-07-15</lastmod></url>
 </urlset>
