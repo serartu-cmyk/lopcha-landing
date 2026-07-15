@@ -1295,8 +1295,9 @@ async function handleSubmit(e) {
     source_page: 'index'
   };
 
+  // Supabase (base de datos) — no bloquea el éxito si falla
+  let sbOk = false;
   try {
-    // Guardar en Supabase
     const sbRes = await fetch(SUPABASE_URL + '/rest/v1/website_inquiries', {
       method: 'POST',
       headers: {
@@ -1307,22 +1308,24 @@ async function handleSubmit(e) {
       },
       body: JSON.stringify(payload)
     });
+    sbOk = sbRes.ok || sbRes.status === 201;
+  } catch {}
 
-    // También enviar a Formspree como backup/email
-    fetch(form.action, {
+  // Formspree (email) — canal principal
+  let fsOk = false;
+  try {
+    const fs = await fetch(form.action, {
       method: 'POST',
       body: fd,
       headers: { 'Accept': 'application/json' }
     });
+    fsOk = fs.ok;
+  } catch {}
 
-    if (sbRes.ok || sbRes.status === 201) {
-      form.style.display = 'none';
-      document.getElementById('formSuccess').classList.add('visible');
-    } else {
-      btn.disabled = false;
-      btn.textContent = isEs ? 'Error — intenta de nuevo' : 'Error — try again';
-    }
-  } catch {
+  if (sbOk || fsOk) {
+    form.style.display = 'none';
+    document.getElementById('formSuccess').classList.add('visible');
+  } else {
     btn.disabled = false;
     btn.textContent = isEs ? 'Error — intenta de nuevo' : 'Error — try again';
   }
