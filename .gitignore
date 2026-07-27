@@ -13,3 +13,4 @@ my-video/
 fotos blog/
 .write_test
 AUDITORIA_COMPLETA_2026-07.md
+*.tar.gz
